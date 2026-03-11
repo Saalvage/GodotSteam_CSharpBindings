@@ -4,8 +4,8 @@
   "description": "Applies manual patches to automatically generated GodotSteam C# gluecode",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
-  "author": "Laura Sofia Heimann",
+  "author": "Laura Sofia Heimann (Indiegesindel)",
   "license": "MIT"
 }

@@ -1,21 +1,27 @@
 # GodotSteam C# Bindings
-
 C# Bindings for GodotSteam
 
-**WORK IN PROGRESS REWRITE, NOT READY FOR PRODUCTIVE USE.**
+### Open Beta
+We are currently working on this new version of the C# Bindings. Please try it out and give us feedback through the GitHub Issue system!
 
 ## Table of Contents
 - [Support](#support)
 - [Getting started](#getting-started)
+- [Contributing](#contributing)
 - [Special Thanks](#special-thanks)
 - [Donations](#donations)
 - [License](#license)
 
 ### Support
-Currently, we support **Godot 4.4** with the **GodotSteam 4.4** plugin.
+Currently, we support **Godot 4.4+** with the **GodotSteam 4.6.1** plugin.
 
 ### Getting started
-TODO
+Install the GodotSteam C# Bindings by adding the addon to your project's addons folder.
+
+### Contributing
+The initial set of bindings were created by the CSharp-Wrapper-Generator-for-GDExtension project. For better usability, we have developed a patcher system that applies changes to the auto-generated gluecode.
+These patches and the script for applying them are located in the `godotsteam-patcher` folder.
+Please check out the patchers [README](godotsteam-patcher/README.md) for more information.
 
 ### Special Thanks
 - **Gramps** & the GodotSteam **contributors** for their GodotSteam project
