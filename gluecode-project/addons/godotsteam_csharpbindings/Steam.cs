@@ -7999,8 +7999,8 @@ public enum RemoteStoragePlatform
     public new PersonaState GetFriendPersonaState(long steamId) =>
         Call(GDExtensionMethodName.GetFriendPersonaState, [steamId]).As<PersonaState>();
 
-    public new long/* "Empty Enum Constant String" */ GetFriendRelationship(long steamId) => 
-        Call(GDExtensionMethodName.GetFriendRelationship, [steamId]).As<long/* "Empty Enum Constant String" */>();
+    public new FriendRelationship GetFriendRelationship(long steamId) =>
+        Call(GDExtensionMethodName.GetFriendRelationship, [steamId]).As<FriendRelationship>();
 
     public new string GetFriendRichPresence(long friendId, string key) => 
         Call(GDExtensionMethodName.GetFriendRichPresence, [friendId, key]).As<string>();
