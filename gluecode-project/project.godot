@@ -24,4 +24,9 @@ project/assembly_name="gluecode-project"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csharp_wrapper_generator_for_gdextension/plugin.cfg")
+enabled=PackedStringArray("res://addons/csharp_wrapper_generator_for_gdextension/plugin.cfg", "res://addons/godotsteam_csharpbindings/plugin.cfg")
+
+[steam]
+
+initialization/app_id=480
+initialization/initialize_on_startup=true
