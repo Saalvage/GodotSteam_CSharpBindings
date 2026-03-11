@@ -8,8 +8,9 @@ content_margin_top = 25.0
 content_margin_right = 25.0
 content_margin_bottom = 25.0
 
-[node name="Test001Persona" type="CanvasLayer" unique_id=1293946785]
+[node name="Test001Persona" type="CanvasLayer" unique_id=1293946785 node_paths=PackedStringArray("ResultLabel")]
 script = ExtResource("1_de2yt")
+ResultLabel = NodePath("PanelContainer/HBoxContainer/Label2")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2079387569]
 anchors_preset = 15
