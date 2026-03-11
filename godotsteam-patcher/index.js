@@ -65,6 +65,30 @@ function ensureArrayOfLines(code) {
   return String(code).split(/\r?\n/);
 }
 
+function getIndentOfLine(line) {
+  const m = String(line).match(/^\s*/);
+  return m ? m[0] : "";
+}
+
+function indentLines(lines, indent) {
+  if (!indent) return lines.slice();
+  return lines.map(l => (l.length === 0 ? l : indent + l));
+}
+
+function normalizeToAnchorIndent(lines, anchorIndent) {
+  const arr = Array.isArray(lines) ? lines.slice() : ensureArrayOfLines(lines);
+  const nonEmpty = arr.filter(l => l.trim().length > 0);
+  if (nonEmpty.length === 0) return arr;
+  const base = Math.min(...nonEmpty.map(l => (l.match(/^\s*/)[0].length)));
+  return arr.map(l => {
+    if (l.trim().length === 0) return l;
+    const lead = l.match(/^\s*/)[0].length;
+    const remove = Math.min(lead, base);
+    const rest = l.slice(remove);
+    return anchorIndent + rest;
+  });
+}
+
 function applyOperation(op, state) {
   const { newline } = state;
   let changed = false;
@@ -94,8 +118,16 @@ function applyOperation(op, state) {
     case "replaceLine": {
       const idx = findLineIndex(state.lines, op.pattern, { useRegex: op.useRegex, caseInsensitive: op.caseInsensitive, normalize: op.normalizeWhitespace !== false, occurrence: op.occurrence || 1 });
       if (idx === -1) return { changed: false, message: `replaceLine not found: ${op.id || op.pattern}` };
-      if (op.skipIfPresent && state.lines[idx] === op.code) return { changed: false, message: `replaceLine skipped (already same): ${op.id || op.pattern}` };
-      const newLines = ensureArrayOfLines(op.code);
+      const indent = getIndentOfLine(state.lines[idx]);
+      const rawNew = ensureArrayOfLines(op.code);
+      const newLines = normalizeToAnchorIndent(rawNew, indent);
+      if (op.skipIfPresent) {
+        let same = true;
+        for (let i = 0; i < newLines.length; i++) {
+          if (state.lines[idx + i] !== newLines[i]) { same = false; break; }
+        }
+        if (same) return { changed: false, message: `replaceLine skipped (already same): ${op.id || op.pattern}` };
+      }
       state.lines.splice(idx, 1, ...newLines);
       changed = true;
       return { changed, message: `replaceLine applied: ${op.id || op.pattern}` };
@@ -105,7 +137,9 @@ function applyOperation(op, state) {
     case "insertAfter": {
       const idx = findLineIndex(state.lines, op.pattern, { useRegex: op.useRegex, caseInsensitive: op.caseInsensitive, normalize: op.normalizeWhitespace !== false, occurrence: op.occurrence || 1 });
       if (idx === -1) return { changed: false, message: `${op.op} anchor not found: ${op.id || op.pattern}` };
-      const insertion = ensureArrayOfLines(op.code);
+      const anchorIndent = getIndentOfLine(state.lines[idx]);
+      const rawInsertion = ensureArrayOfLines(op.code);
+      const insertion = normalizeToAnchorIndent(rawInsertion, anchorIndent);
       const fileText = state.lines.join(newline);
       if (op.skipIfPresent && insertion.every(l => l.length === 0 || fileText.includes(l))) {
         return { changed: false, message: `${op.op} skipped (already present): ${op.id || op.pattern}` };
@@ -123,7 +157,10 @@ function applyOperation(op, state) {
       const endIdx = findLineIndex(state.lines, op.end, { useRegex: op.useRegex, caseInsensitive: op.caseInsensitive, normalize: op.normalizeWhitespace !== false, startIndex: from, occurrence: op.endOccurrence || 1 });
       if (endIdx === -1) return { changed: false, message: `replaceBetween end not found: ${op.id || op.end}` };
       const to = op.includeEnd ? endIdx + 1 : endIdx;
-      const replacement = ensureArrayOfLines(op.code);
+      const anchorIndex = Math.min(startIdx + (op.includeStart ? 0 : 1), state.lines.length - 1);
+      const anchorIndent = getIndentOfLine(state.lines[anchorIndex] || "");
+      const rawReplacement = ensureArrayOfLines(op.code);
+      const replacement = normalizeToAnchorIndent(rawReplacement, anchorIndent);
       state.lines.splice(from, to - from, ...replacement);
       changed = true;
       return { changed, message: `replaceBetween applied: ${op.id || `${op.start}…${op.end}`}` };

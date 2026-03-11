@@ -7996,8 +7996,8 @@ public enum RemoteStoragePlatform
     public new string GetFriendPersonaNameHistory(long steamId, long nameHistory) => 
         Call(GDExtensionMethodName.GetFriendPersonaNameHistory, [steamId, nameHistory]).As<string>();
 
-public new PersonaState GetFriendPersonaState(long steamId) =>
-Call(GDExtensionMethodName.GetFriendPersonaState, [steamId]).As<PersonaState>();
+    public new PersonaState GetFriendPersonaState(long steamId) =>
+        Call(GDExtensionMethodName.GetFriendPersonaState, [steamId]).As<PersonaState>();
 
     public new long/* "Empty Enum Constant String" */ GetFriendRelationship(long steamId) => 
         Call(GDExtensionMethodName.GetFriendRelationship, [steamId]).As<long/* "Empty Enum Constant String" */>();
@@ -8038,8 +8038,8 @@ Call(GDExtensionMethodName.GetFriendPersonaState, [steamId]).As<PersonaState>();
     public new string GetPersonaName() => 
         Call(GDExtensionMethodName.GetPersonaName, []).As<string>();
 
-public new PersonaState GetPersonaState() =>
-Call(GDExtensionMethodName.GetPersonaState, []).As<PersonaState>();
+    public new PersonaState GetPersonaState() =>
+        Call(GDExtensionMethodName.GetPersonaState, []).As<PersonaState>();
 
     public new void GetPlayerAvatar(long size = 2, long steamId = 0) => 
         Call(GDExtensionMethodName.GetPlayerAvatar, [size, steamId]);
