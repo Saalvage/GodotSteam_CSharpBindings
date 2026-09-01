@@ -1,4 +1,4 @@
-# GodotSteam for GDExtension | Community Edition
+# GodotSteam for Godot Engine 4.x | Community Edition
 An ecosystem of tools for [Godot Engine](https://godotengine.org) and [Valve's Steam](https://store.steampowered.com). For the Windows, Linux, and Mac platforms.
 
 
@@ -73,6 +73,18 @@ Known Issues
 ---
 - Steam Overlay ***may not*** work when running your game from Godot but the exported project should work perfectly fine in the Steam client. [Read more.](https://godotsteam.com/issues/common_issues/#steam-overlay)
 - If using the Steam version of Godot on Windows, you may need to manually update Godot's steam_api64.dll or steam_api.dll with GodotSteam's version as it is sometimes outdated and may cause the plug-in to fail to load. [Read more.](https://godotsteam.com/issues/windows_issues/#failure-to-load-steam-version)
+
+
+Quick How-To
+---
+For complete instructions on how to build the Godot 4.x version of GodotSteam from scratch as either a custom editor or GDExtension, both apply to this branch:
+
+- [Custom editor (module)](https://godotsteam.com/howto/modules)
+- [GDExtension](https://godotsteam.com/howto/gdextension)
+
+It will have the most up-to-date information.
+
+Alternatively, you can skip compiling it and [download the precompiled versions in our Releases section](https://codeberg.org/godotsteam/godotsteam/releases), [the Godot Asset Library](https://godotengine.org/asset-library/asset/2445), or [the Godot Asset Store](https://store.godotengine.org/asset/godotsteam/godotsteam-gdextension/).
 
 
 No LLM Policy / No "AI" Policy
