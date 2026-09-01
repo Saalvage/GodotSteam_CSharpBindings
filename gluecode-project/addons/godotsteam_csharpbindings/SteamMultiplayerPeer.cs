@@ -67,11 +67,27 @@ public partial class SteamMultiplayerPeer : MultiplayerPeerExtension
         Steam = 2,
     }
 
-    public new static class GDExtensionPropertyName
+    public new class GDExtensionSignalName : MultiplayerPeerExtension.SignalName
     {
+    }
+
+    public new class GDExtensionPropertyName : MultiplayerPeerExtension.PropertyName
+    {
+        /// <summary>
+        /// Cached name for the 'no_delay' member.
+        /// </summary>
         public new static readonly StringName NoDelay = "no_delay";
+        /// <summary>
+        /// Cached name for the 'no_nagle' member.
+        /// </summary>
         public new static readonly StringName NoNagle = "no_nagle";
+        /// <summary>
+        /// Cached name for the 'server_relay' member.
+        /// </summary>
         public new static readonly StringName ServerRelay = "server_relay";
+        /// <summary>
+        /// Cached name for the 'debug_level' member.
+        /// </summary>
         public new static readonly StringName DebugLevel = "debug_level";
     }
 
@@ -99,15 +115,39 @@ public partial class SteamMultiplayerPeer : MultiplayerPeerExtension
         set => Set(GDExtensionPropertyName.DebugLevel, Variant.From(value));
     }
 
-    public new static class GDExtensionMethodName
+    public new class GDExtensionMethodName : MultiplayerPeerExtension.MethodName
     {
+        /// <summary>
+        /// Cached name for the 'create_host' member.
+        /// </summary>
         public new static readonly StringName CreateHost = "create_host";
+        /// <summary>
+        /// Cached name for the 'create_client' member.
+        /// </summary>
         public new static readonly StringName CreateClient = "create_client";
+        /// <summary>
+        /// Cached name for the 'add_peer' member.
+        /// </summary>
         public new static readonly StringName AddPeer = "add_peer";
+        /// <summary>
+        /// Cached name for the 'get_peer' member.
+        /// </summary>
         public new static readonly StringName GetPeer = "get_peer";
+        /// <summary>
+        /// Cached name for the 'host_with_lobby' member.
+        /// </summary>
         public new static readonly StringName HostWithLobby = "host_with_lobby";
+        /// <summary>
+        /// Cached name for the 'connect_to_lobby' member.
+        /// </summary>
         public new static readonly StringName ConnectToLobby = "connect_to_lobby";
+        /// <summary>
+        /// Cached name for the 'get_steam_id_for_peer_id' member.
+        /// </summary>
         public new static readonly StringName GetSteamIdForPeerId = "get_steam_id_for_peer_id";
+        /// <summary>
+        /// Cached name for the 'get_peer_id_for_steam_id' member.
+        /// </summary>
         public new static readonly StringName GetPeerIdForSteamId = "get_peer_id_for_steam_id";
     }
 
@@ -135,4 +175,16 @@ public partial class SteamMultiplayerPeer : MultiplayerPeerExtension
     public new long GetPeerIdForSteamId(long steamId) => 
         Call(GDExtensionMethodName.GetPeerIdForSteamId, [steamId]).As<long>();
 
+}
+
+file static class DebugLevelEnumExtensions
+{
+public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
 }

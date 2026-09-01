@@ -73,12 +73,35 @@ public partial class SteamPacketPeer : PacketPeerExtension
         Dead = -3,
     }
 
-    public new static class GDExtensionMethodName
+    public new class GDExtensionSignalName : PacketPeerExtension.SignalName
     {
+    }
+
+    public new class GDExtensionPropertyName : PacketPeerExtension.PropertyName
+    {
+    }
+
+    public new class GDExtensionMethodName : PacketPeerExtension.MethodName
+    {
+        /// <summary>
+        /// Cached name for the 'get_steam_id' member.
+        /// </summary>
         public new static readonly StringName GetSteamId = "get_steam_id";
+        /// <summary>
+        /// Cached name for the 'get_connection_handle' member.
+        /// </summary>
         public new static readonly StringName GetConnectionHandle = "get_connection_handle";
+        /// <summary>
+        /// Cached name for the 'get_peer_id' member.
+        /// </summary>
         public new static readonly StringName GetPeerId = "get_peer_id";
+        /// <summary>
+        /// Cached name for the 'get_state' member.
+        /// </summary>
         public new static readonly StringName GetState = "get_state";
+        /// <summary>
+        /// Cached name for the 'disconnect_peer' member.
+        /// </summary>
         public new static readonly StringName DisconnectPeer = "disconnect_peer";
     }
 
@@ -97,4 +120,16 @@ public partial class SteamPacketPeer : PacketPeerExtension
     public new void DisconnectPeer(bool force = false) => 
         Call(GDExtensionMethodName.DisconnectPeer, [force]);
 
+}
+
+file static class PeerStateExtensions
+{
+public static int SafeAsInt32(this SteamPacketPeer.PeerState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this SteamPacketPeer.PeerState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this SteamPacketPeer.PeerState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
 }

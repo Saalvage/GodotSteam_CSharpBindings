@@ -38,6 +38,18 @@ public partial class WrapperGeneratorMain
 
             return depth;
         }
+
+        public bool IsInheritedFrom(GodotName other)
+        {
+            var currentType = ParentType;
+            while (currentType != null)
+            {
+                if (currentType.GodotTypeName == other) return true;
+                currentType = (currentType as GodotClassType)?.ParentType;
+            }
+
+            return false;
+        }
         
         public GodotNamedType ParentType { get; set; }
         public List<GodotFunctionInfo> Methods { get; } = [];
@@ -63,6 +75,7 @@ public partial class WrapperGeneratorMain
         private const string BindMethodName = "Bind";
         private const string TypeGDExtensionCacheName = "NativeName";
         private const string WrapperConstructorName = "Instantiate";
+        private const string WrapperResourceLoadMethodName = "Load";
 
         public void RenderClass(StringBuilder classBuilder, string nameSpace, string indent, GenerationLogger logger)
         {
@@ -156,6 +169,21 @@ public partial class WrapperGeneratorMain
                 );
             }
 
+            if (IsInheritedFrom(new GodotName("Resource")))
+            {
+                classBuilder.AppendLine(
+                    $"""
+                     {indent}/// <summary>
+                     {indent}/// Loads the resource at the specified path, then attaches the corresponding wrapper script instance.
+                     {indent}/// </summary>
+                     {indent}/// <param name="path">The resource path to load.</param>
+                     {indent}/// <returns>The wrapper instance linked to the underlying GDExtension "{GodotTypeName}" type.</returns>
+                     {indent}public new static {CSharpTypeName} {WrapperResourceLoadMethodName}(string path) => {BindMethodName}(ResourceLoader.Load(path));
+
+                     """
+                );
+            }
+
             foreach (var enumInfo in Enums)
             {
                 enumInfo.RenderEnum(classBuilder, indent, logger);
@@ -165,6 +193,7 @@ public partial class WrapperGeneratorMain
             RenderCacheString(
                 classBuilder,
                 "GDExtensionSignalName",
+                "SignalName",
                 indent,
                 Signals,
                 info => (info.CSharpFunctionName, info.GodotFunctionName)
@@ -179,6 +208,7 @@ public partial class WrapperGeneratorMain
             RenderCacheString(
                 classBuilder,
                 "GDExtensionPropertyName",
+                "PropertyName",
                 indent,
                 Properties,
                 info => (info.CSharpPropertyName, info.GodotPropertyName)
@@ -193,6 +223,7 @@ public partial class WrapperGeneratorMain
             RenderCacheString(
                 classBuilder,
                 "GDExtensionMethodName",
+                "MethodName",
                 indent,
                 Methods,
                 info => (info.CSharpFunctionName, info.GodotFunctionName)
@@ -206,15 +237,31 @@ public partial class WrapperGeneratorMain
 
             classBuilder
                 .AppendLine("}");
+
+            foreach (var enumInfo in Enums)
+                enumInfo.RenderEnumSafeAsInt32Extensions(classBuilder, "", logger);
         }
 
-        private static void RenderCacheString<T>(StringBuilder builder, string className, string indent, IList<T> elements, Func<T, (CSharpName, GodotName)> selector)
+        private void RenderCacheString<T>(
+            StringBuilder builder,
+            string className,
+            string builtinClassName,
+            string indent,
+            IList<T> elements,
+            Func<T, (CSharpName, GodotName)> selector
+        )
         {
-            if (elements.Count == 0) return;
+            var parentCacheNameClass = ParentType switch
+            {
+                GodotClassType parentClassType when parentClassType.IsGDExtensionType => $"{parentClassType.CSharpTypeName}.{className}",
+                GodotClassType parentClassType => $"{parentClassType.CSharpTypeName}.{builtinClassName}",
+                GodotAnnotatedVariantType { VariantType: Variant.Type.Object } => $"{nameof(GodotObject)}.{builtinClassName}",
+                _ => throw new UnreachableException()
+            };
 
             builder.AppendLine(
                 $$"""
-                  {{indent}}public new static class {{className}}
+                  {{indent}}public new class {{className}} : {{parentCacheNameClass}}
                   {{indent}}{
                   """
             );
@@ -222,7 +269,14 @@ public partial class WrapperGeneratorMain
             foreach (var element in elements)
             {
                 var (elementCSharpName, elementGodotName) = selector(element);
-                builder.AppendLine($"{indent + indent}public new static readonly StringName {elementCSharpName} = \"{elementGodotName}\";");
+                builder.AppendLine(
+                    $$"""
+                      {{indent + indent}}/// <summary>
+                      {{indent + indent}}/// Cached name for the '{{elementGodotName}}' member.
+                      {{indent + indent}}/// </summary>
+                      {{indent + indent}}public new static readonly StringName {{elementCSharpName}} = "{{elementGodotName}}";
+                      """
+                );
             }
 
             builder.AppendLine(
@@ -328,6 +382,35 @@ public partial class WrapperGeneratorMain
         {
             builder.Append(CSharpTypeName);
             if (UseAlias) builder.Append(IsBitField ? "Flags" : "Enum");
+        }
+
+        private void RenderExtensionsClassName(StringBuilder builder)
+        {
+            RenderEnumName(builder);
+            builder.Append("Extensions");
+        }
+
+        public void RenderEnumSafeAsInt32Extensions(StringBuilder builder, string indent, GenerationLogger logger)
+        {
+            using var _ = logger.BeginScope(GodotTypeName.ToString());
+            var qualifiedEnumName = new StringBuilder();
+            RenderType(qualifiedEnumName, logger);
+
+            var extensionsClassName = new StringBuilder();
+            RenderExtensionsClassName(extensionsClassName);
+
+            builder.AppendLine();
+            builder.Append(indent).Append("file static class ").Append(extensionsClassName).AppendLine();
+            builder.Append(indent).AppendLine("{");
+            builder.Append(indent).Append(indent).Append("public static int SafeAsInt32(this ").Append(qualifiedEnumName).AppendLine(" enumValue) =>");
+            builder.Append(indent).Append(indent).Append(indent).AppendLine("Convert.ToInt32(enumValue);");
+            builder.AppendLine();
+            builder.Append(indent).Append(indent).Append("public static int SafeAsInt32(this ").Append(qualifiedEnumName).AppendLine(" enumValue, int defaultValue) =>");
+            builder.Append(indent).Append(indent).Append(indent).AppendLine("Convert.ToInt32(enumValue);");
+            builder.AppendLine();
+            builder.Append(indent).Append(indent).Append("public static int SafeAsInt32(this ").Append(qualifiedEnumName).AppendLine("? enumValue, int defaultValue = 0) =>");
+            builder.Append(indent).Append(indent).Append(indent).AppendLine("enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;");
+            builder.Append(indent).AppendLine("}");
         }
 
         public static string FormatEnumName(GodotName enumName, GodotName enumConstName)
@@ -526,6 +609,27 @@ public partial class WrapperGeneratorMain
         }
     }
 
+    private record GodotPropertyMeta(
+        GodotName Name,
+        GodotName ClassName,
+        Variant.Type Type,
+        PropertyHint Hint,
+        string HintString,
+        PropertyUsageFlags Usage
+    )
+    {
+        public static GodotPropertyMeta Create(Godot.Collections.Dictionary propertyInfo)
+        {
+            var name = propertyInfo["name"].AsString();
+            var className = propertyInfo["class_name"].AsString();
+            var type = (Variant.Type)propertyInfo["type"].AsInt64();
+            var hint = (PropertyHint)propertyInfo["hint"].AsInt64();
+            var hintString = propertyInfo["hint_string"].AsString();
+            var usage = (PropertyUsageFlags)propertyInfo["usage"].AsInt64();
+            return new GodotPropertyMeta(new(name), new(className), type, hint, hintString, usage);
+        }
+    }
+
     private record GodotPropertyInfo(
         GodotName GodotName,
         CSharpName CSharpName,
@@ -535,6 +639,15 @@ public partial class WrapperGeneratorMain
         PropertyUsageFlags Usage
     )
     {
+        public static GodotPropertyInfo Create(GodotPropertyMeta meta, GodotType propertyType)
+        {
+            var name = meta.Name;
+            var hint = meta.Hint;
+            var hintString = meta.HintString;
+            var usage = meta.Usage;
+            return new(name, new(name.String.ToCamelCase()), propertyType, hint, hintString, usage);
+        }
+        
         public bool IsGDExtensionType => Type is GodotClassType godotClass && godotClass.IsGDExtensionType;
 
         public override string ToString() => $"{Type} {CSharpName.EscapedString}";
@@ -946,6 +1059,7 @@ public partial class WrapperGeneratorMain
         public Dictionary<GodotNamedType, Dictionary<GodotName, GodotEnumType>> PreregisteredEnumTypes { get; } = [];
         public Dictionary<NormalizedEnumConstantsString, Dictionary<GodotType, Dictionary<GodotName, GodotEnumType>>> PreregisteredEnumTypesByName { get; } = [];
         public Dictionary<GodotName, GodotEnumType> GlobalScopeEnumTypes { get; } = [];
+        public Dictionary<string, Type> GodotCsharpTypes { get; } = [];
 
         public bool TryGetVariantType(Variant.Type variantTypeEnum, out GodotAnnotatedVariantType variantType)
         {

@@ -88,7 +88,7 @@ public partial class Steam : GodotObject
         Max = 11,
     }
 
-    public enum ApiCallFailure
+    public enum APICallFailure
     {
         SteamApiCallFailureNone = -1,
         SteamApiCallFailureSteamGone = 0,
@@ -219,7 +219,7 @@ public partial class Steam : GodotObject
     }
 
     [Flags]
-    public enum ChatSteamIdInstanceFlags
+    public enum ChatSteamIDInstanceFlags
     {
         ChatAccountInstanceMask = 4095,
         FlagClan = 524288,
@@ -386,7 +386,7 @@ public partial class Steam : GodotObject
         RelationMax = 8,
     }
 
-    public enum GameIdType
+    public enum GameIDType
     {
         App = 0,
         GameMod = 1,
@@ -416,7 +416,7 @@ public partial class Steam : GodotObject
     }
 
     [Flags]
-    public enum HtmlKeyModifiers
+    public enum HTMLKeyModifiers
     {
         ModifierNone = 0,
         ModifierAltDown = 1,
@@ -424,14 +424,14 @@ public partial class Steam : GodotObject
         ModifierShiftDown = 4,
     }
 
-    public enum HtmlMouseButton
+    public enum HTMLMouseButton
     {
         Left = 0,
         Right = 1,
         Middle = 2,
     }
 
-    public enum HtmlMouseCursor
+    public enum HTMLMouseCursor
     {
         User = 0,
         None = 1,
@@ -479,7 +479,7 @@ public partial class Steam : GodotObject
         Last = 43,
     }
 
-    public enum HttpMethod
+    public enum HTTPMethod
     {
         Invalid = 0,
         Get = 1,
@@ -491,7 +491,7 @@ public partial class Steam : GodotObject
         Patch = 7,
     }
 
-    public enum HttpStatusCode
+    public enum HTTPStatusCode
     {
         Invalid = 0,
         Code100Continue = 100,
@@ -1279,7 +1279,7 @@ public partial class Steam : GodotObject
         SolidAbxy = 32,
     }
 
-    public enum InputLedFlag
+    public enum InputLEDFlag
     {
         SetColor = 0,
         RestoreUserDefault = 1,
@@ -1331,7 +1331,7 @@ public partial class Steam : GodotObject
         MaximumPossibleValue = 255,
     }
 
-    public enum IpType
+    public enum IPType
     {
         Ipv4 = 0,
         Ipv6 = 1,
@@ -1668,7 +1668,7 @@ public partial class Steam : GodotObject
         Force32bit = 2147483647,
     }
 
-    public enum NetworkingFakeIpType
+    public enum NetworkingFakeIPType
     {
         Invalid = 0,
         NotFake = 1,
@@ -1736,7 +1736,7 @@ public partial class Steam : GodotObject
         Modal = 1,
     }
 
-    public enum P2pSend
+    public enum P2PSend
     {
         Unreliable = 0,
         UnreliableNoDelay = 1,
@@ -1744,7 +1744,7 @@ public partial class Steam : GodotObject
         ReliableWithBuffering = 3,
     }
 
-    public enum P2pSessionError
+    public enum P2PSessionError
     {
         None = 0,
         NotRunningApp = 1,
@@ -2131,7 +2131,7 @@ public partial class Steam : GodotObject
         TryLater = 131,
     }
 
-    public enum ScePadTriggerEffectMode
+    public enum SCEPadTriggerEffectMode
     {
         Off = 0,
         Feedback = 1,
@@ -2164,7 +2164,7 @@ public partial class Steam : GodotObject
         NetSocketStateBroken = 25,
     }
 
-    public enum SteamApiInitResult
+    public enum SteamAPIInitResult
     {
         Ok = 0,
         FailedGeneric = 1,
@@ -2238,7 +2238,7 @@ public partial class Steam : GodotObject
         Max = 5,
     }
 
-    public enum UgcContentDescriptorId
+    public enum UGCContentDescriptorID
     {
         NudityOrSexualContent = 1,
         FrequentViolenceOrGore = 2,
@@ -2247,7 +2247,7 @@ public partial class Steam : GodotObject
         AnyMatureContent = 5,
     }
 
-    public enum UgcMatchingUgcType
+    public enum UGCMatchingUGCType
     {
         UgcMatchingUgcTypeItems = 0,
         UgcMatchingUgcTypeItemsMtx = 1,
@@ -2265,7 +2265,7 @@ public partial class Steam : GodotObject
         UgcMatchingUgcTypeAll = -1,
     }
 
-    public enum UgcQuery
+    public enum UGCQuery
     {
         RankedByVote = 0,
         RankedByPublicationDate = 1,
@@ -2291,7 +2291,7 @@ public partial class Steam : GodotObject
         RankedByNumParentCollections = 21,
     }
 
-    public enum UgcReadAction
+    public enum UGCReadAction
     {
         ContinueReadingUntilFinished = 0,
         ContinueReading = 1,
@@ -2305,7 +2305,7 @@ public partial class Steam : GodotObject
         NoAuth = 2,
     }
 
-    public enum UserUgcList
+    public enum UserUGCList
     {
         Published = 0,
         VotedOn = 1,
@@ -2318,7 +2318,7 @@ public partial class Steam : GodotObject
         Followed = 8,
     }
 
-    public enum UserUgcListSortOrder
+    public enum UserUGCListSortOrder
     {
         CreationOrderDesc = 0,
         CreationOrderAsc = 1,
@@ -2343,7 +2343,7 @@ public partial class Steam : GodotObject
         ReceiverDidNotAnswer = 9,
     }
 
-    public enum VrScreenshotType
+    public enum VRScreenshotType
     {
         None = 0,
         Mono = 1,
@@ -2440,193 +2440,751 @@ public partial class Steam : GodotObject
         Count = 28,
     }
 
-    public new static class GDExtensionSignalName
+    public new class GDExtensionSignalName : GodotObject.SignalName
     {
+        /// <summary>
+        /// Cached name for the 'file_details_result' member.
+        /// </summary>
         public new static readonly StringName FileDetailsResult = "file_details_result";
+        /// <summary>
+        /// Cached name for the 'dlc_installed' member.
+        /// </summary>
         public new static readonly StringName DlcInstalled = "dlc_installed";
+        /// <summary>
+        /// Cached name for the 'new_launch_url_parameters' member.
+        /// </summary>
         public new static readonly StringName NewLaunchUrlParameters = "new_launch_url_parameters";
+        /// <summary>
+        /// Cached name for the 'timed_trial_status' member.
+        /// </summary>
         public new static readonly StringName TimedTrialStatus = "timed_trial_status";
+        /// <summary>
+        /// Cached name for the 'avatar_image_loaded' member.
+        /// </summary>
         public new static readonly StringName AvatarImageLoaded = "avatar_image_loaded";
+        /// <summary>
+        /// Cached name for the 'avatar_loaded' member.
+        /// </summary>
         public new static readonly StringName AvatarLoaded = "avatar_loaded";
+        /// <summary>
+        /// Cached name for the 'change_server_requested' member.
+        /// </summary>
         public new static readonly StringName ChangeServerRequested = "change_server_requested";
+        /// <summary>
+        /// Cached name for the 'clan_activity_downloaded' member.
+        /// </summary>
         public new static readonly StringName ClanActivityDownloaded = "clan_activity_downloaded";
+        /// <summary>
+        /// Cached name for the 'connected_chat_join' member.
+        /// </summary>
         public new static readonly StringName ConnectedChatJoin = "connected_chat_join";
+        /// <summary>
+        /// Cached name for the 'connected_chat_leave' member.
+        /// </summary>
         public new static readonly StringName ConnectedChatLeave = "connected_chat_leave";
+        /// <summary>
+        /// Cached name for the 'connected_clan_chat_message' member.
+        /// </summary>
         public new static readonly StringName ConnectedClanChatMessage = "connected_clan_chat_message";
+        /// <summary>
+        /// Cached name for the 'connected_friend_chat_message' member.
+        /// </summary>
         public new static readonly StringName ConnectedFriendChatMessage = "connected_friend_chat_message";
+        /// <summary>
+        /// Cached name for the 'enumerate_following_list' member.
+        /// </summary>
         public new static readonly StringName EnumerateFollowingList = "enumerate_following_list";
+        /// <summary>
+        /// Cached name for the 'equipped_profile_items' member.
+        /// </summary>
         public new static readonly StringName EquippedProfileItems = "equipped_profile_items";
+        /// <summary>
+        /// Cached name for the 'equipped_profile_items_changed' member.
+        /// </summary>
         public new static readonly StringName EquippedProfileItemsChanged = "equipped_profile_items_changed";
+        /// <summary>
+        /// Cached name for the 'friend_rich_presence_update' member.
+        /// </summary>
         public new static readonly StringName FriendRichPresenceUpdate = "friend_rich_presence_update";
+        /// <summary>
+        /// Cached name for the 'get_follower_count' member.
+        /// </summary>
         public new static readonly StringName GetFollowerCount = "get_follower_count";
+        /// <summary>
+        /// Cached name for the 'is_following' member.
+        /// </summary>
         public new static readonly StringName IsFollowing = "is_following";
+        /// <summary>
+        /// Cached name for the 'join_clan_chat_complete' member.
+        /// </summary>
         public new static readonly StringName JoinClanChatComplete = "join_clan_chat_complete";
+        /// <summary>
+        /// Cached name for the 'join_game_requested' member.
+        /// </summary>
         public new static readonly StringName JoinGameRequested = "join_game_requested";
+        /// <summary>
+        /// Cached name for the 'join_requested' member.
+        /// </summary>
         public new static readonly StringName JoinRequested = "join_requested";
+        /// <summary>
+        /// Cached name for the 'overlay_browser_protocol' member.
+        /// </summary>
         public new static readonly StringName OverlayBrowserProtocol = "overlay_browser_protocol";
+        /// <summary>
+        /// Cached name for the 'overlay_toggled' member.
+        /// </summary>
         public new static readonly StringName OverlayToggled = "overlay_toggled";
+        /// <summary>
+        /// Cached name for the 'persona_state_change' member.
+        /// </summary>
         public new static readonly StringName PersonaStateChange = "persona_state_change";
+        /// <summary>
+        /// Cached name for the 'request_clan_officer_list' member.
+        /// </summary>
         public new static readonly StringName RequestClanOfficerList = "request_clan_officer_list";
+        /// <summary>
+        /// Cached name for the 'unread_chat_messages_changed' member.
+        /// </summary>
         public new static readonly StringName UnreadChatMessagesChanged = "unread_chat_messages_changed";
+        /// <summary>
+        /// Cached name for the 'search_for_game_progress' member.
+        /// </summary>
         public new static readonly StringName SearchForGameProgress = "search_for_game_progress";
+        /// <summary>
+        /// Cached name for the 'search_for_game_result' member.
+        /// </summary>
         public new static readonly StringName SearchForGameResult = "search_for_game_result";
+        /// <summary>
+        /// Cached name for the 'request_players_for_game_progress' member.
+        /// </summary>
         public new static readonly StringName RequestPlayersForGameProgress = "request_players_for_game_progress";
+        /// <summary>
+        /// Cached name for the 'request_players_for_game_result' member.
+        /// </summary>
         public new static readonly StringName RequestPlayersForGameResult = "request_players_for_game_result";
+        /// <summary>
+        /// Cached name for the 'request_players_for_game_final_result' member.
+        /// </summary>
         public new static readonly StringName RequestPlayersForGameFinalResult = "request_players_for_game_final_result";
+        /// <summary>
+        /// Cached name for the 'submit_player_result' member.
+        /// </summary>
         public new static readonly StringName SubmitPlayerResult = "submit_player_result";
+        /// <summary>
+        /// Cached name for the 'end_game_result' member.
+        /// </summary>
         public new static readonly StringName EndGameResult = "end_game_result";
+        /// <summary>
+        /// Cached name for the 'html_browser_ready' member.
+        /// </summary>
         public new static readonly StringName HtmlBrowserReady = "html_browser_ready";
+        /// <summary>
+        /// Cached name for the 'html_can_go_backandforward' member.
+        /// </summary>
         public new static readonly StringName HtmlCanGoBackandforward = "html_can_go_backandforward";
+        /// <summary>
+        /// Cached name for the 'html_changed_title' member.
+        /// </summary>
         public new static readonly StringName HtmlChangedTitle = "html_changed_title";
+        /// <summary>
+        /// Cached name for the 'html_close_browser' member.
+        /// </summary>
         public new static readonly StringName HtmlCloseBrowser = "html_close_browser";
+        /// <summary>
+        /// Cached name for the 'html_file_open_dialog' member.
+        /// </summary>
         public new static readonly StringName HtmlFileOpenDialog = "html_file_open_dialog";
+        /// <summary>
+        /// Cached name for the 'html_finished_request' member.
+        /// </summary>
         public new static readonly StringName HtmlFinishedRequest = "html_finished_request";
+        /// <summary>
+        /// Cached name for the 'html_hide_tooltip' member.
+        /// </summary>
         public new static readonly StringName HtmlHideTooltip = "html_hide_tooltip";
+        /// <summary>
+        /// Cached name for the 'html_horizontal_scroll' member.
+        /// </summary>
         public new static readonly StringName HtmlHorizontalScroll = "html_horizontal_scroll";
+        /// <summary>
+        /// Cached name for the 'html_js_alert' member.
+        /// </summary>
         public new static readonly StringName HtmlJsAlert = "html_js_alert";
+        /// <summary>
+        /// Cached name for the 'html_js_confirm' member.
+        /// </summary>
         public new static readonly StringName HtmlJsConfirm = "html_js_confirm";
+        /// <summary>
+        /// Cached name for the 'html_link_at_position' member.
+        /// </summary>
         public new static readonly StringName HtmlLinkAtPosition = "html_link_at_position";
+        /// <summary>
+        /// Cached name for the 'html_needs_paint' member.
+        /// </summary>
         public new static readonly StringName HtmlNeedsPaint = "html_needs_paint";
+        /// <summary>
+        /// Cached name for the 'html_new_window' member.
+        /// </summary>
         public new static readonly StringName HtmlNewWindow = "html_new_window";
+        /// <summary>
+        /// Cached name for the 'html_open_link_in_new_tab' member.
+        /// </summary>
         public new static readonly StringName HtmlOpenLinkInNewTab = "html_open_link_in_new_tab";
+        /// <summary>
+        /// Cached name for the 'html_search_results' member.
+        /// </summary>
         public new static readonly StringName HtmlSearchResults = "html_search_results";
+        /// <summary>
+        /// Cached name for the 'html_set_cursor' member.
+        /// </summary>
         public new static readonly StringName HtmlSetCursor = "html_set_cursor";
+        /// <summary>
+        /// Cached name for the 'html_show_tooltip' member.
+        /// </summary>
         public new static readonly StringName HtmlShowTooltip = "html_show_tooltip";
+        /// <summary>
+        /// Cached name for the 'html_start_request' member.
+        /// </summary>
         public new static readonly StringName HtmlStartRequest = "html_start_request";
+        /// <summary>
+        /// Cached name for the 'html_status_text' member.
+        /// </summary>
         public new static readonly StringName HtmlStatusText = "html_status_text";
+        /// <summary>
+        /// Cached name for the 'html_update_tooltip' member.
+        /// </summary>
         public new static readonly StringName HtmlUpdateTooltip = "html_update_tooltip";
+        /// <summary>
+        /// Cached name for the 'html_url_changed' member.
+        /// </summary>
         public new static readonly StringName HtmlUrlChanged = "html_url_changed";
+        /// <summary>
+        /// Cached name for the 'html_vertical_scroll' member.
+        /// </summary>
         public new static readonly StringName HtmlVerticalScroll = "html_vertical_scroll";
+        /// <summary>
+        /// Cached name for the 'http_request_completed' member.
+        /// </summary>
         public new static readonly StringName HttpRequestCompleted = "http_request_completed";
+        /// <summary>
+        /// Cached name for the 'http_request_data_received' member.
+        /// </summary>
         public new static readonly StringName HttpRequestDataReceived = "http_request_data_received";
+        /// <summary>
+        /// Cached name for the 'http_request_headers_received' member.
+        /// </summary>
         public new static readonly StringName HttpRequestHeadersReceived = "http_request_headers_received";
+        /// <summary>
+        /// Cached name for the 'input_action_event' member.
+        /// </summary>
         public new static readonly StringName InputActionEvent = "input_action_event";
+        /// <summary>
+        /// Cached name for the 'input_device_connected' member.
+        /// </summary>
         public new static readonly StringName InputDeviceConnected = "input_device_connected";
+        /// <summary>
+        /// Cached name for the 'input_device_disconnected' member.
+        /// </summary>
         public new static readonly StringName InputDeviceDisconnected = "input_device_disconnected";
+        /// <summary>
+        /// Cached name for the 'input_configuration_loaded' member.
+        /// </summary>
         public new static readonly StringName InputConfigurationLoaded = "input_configuration_loaded";
+        /// <summary>
+        /// Cached name for the 'input_gamepad_slot_change' member.
+        /// </summary>
         public new static readonly StringName InputGamepadSlotChange = "input_gamepad_slot_change";
+        /// <summary>
+        /// Cached name for the 'inventory_definition_update' member.
+        /// </summary>
         public new static readonly StringName InventoryDefinitionUpdate = "inventory_definition_update";
+        /// <summary>
+        /// Cached name for the 'inventory_eligible_promo_item' member.
+        /// </summary>
         public new static readonly StringName InventoryEligiblePromoItem = "inventory_eligible_promo_item";
+        /// <summary>
+        /// Cached name for the 'inventory_full_update' member.
+        /// </summary>
         public new static readonly StringName InventoryFullUpdate = "inventory_full_update";
+        /// <summary>
+        /// Cached name for the 'inventory_result_ready' member.
+        /// </summary>
         public new static readonly StringName InventoryResultReady = "inventory_result_ready";
+        /// <summary>
+        /// Cached name for the 'inventory_start_purchase_result' member.
+        /// </summary>
         public new static readonly StringName InventoryStartPurchaseResult = "inventory_start_purchase_result";
+        /// <summary>
+        /// Cached name for the 'inventory_request_prices_result' member.
+        /// </summary>
         public new static readonly StringName InventoryRequestPricesResult = "inventory_request_prices_result";
+        /// <summary>
+        /// Cached name for the 'favorites_list_accounts_updated' member.
+        /// </summary>
         public new static readonly StringName FavoritesListAccountsUpdated = "favorites_list_accounts_updated";
+        /// <summary>
+        /// Cached name for the 'favorites_list_changed' member.
+        /// </summary>
         public new static readonly StringName FavoritesListChanged = "favorites_list_changed";
+        /// <summary>
+        /// Cached name for the 'lobby_message' member.
+        /// </summary>
         public new static readonly StringName LobbyMessage = "lobby_message";
+        /// <summary>
+        /// Cached name for the 'lobby_chat_update' member.
+        /// </summary>
         public new static readonly StringName LobbyChatUpdate = "lobby_chat_update";
+        /// <summary>
+        /// Cached name for the 'lobby_created' member.
+        /// </summary>
         public new static readonly StringName LobbyCreated = "lobby_created";
+        /// <summary>
+        /// Cached name for the 'lobby_data_update' member.
+        /// </summary>
         public new static readonly StringName LobbyDataUpdate = "lobby_data_update";
+        /// <summary>
+        /// Cached name for the 'lobby_joined' member.
+        /// </summary>
         public new static readonly StringName LobbyJoined = "lobby_joined";
+        /// <summary>
+        /// Cached name for the 'lobby_game_created' member.
+        /// </summary>
         public new static readonly StringName LobbyGameCreated = "lobby_game_created";
+        /// <summary>
+        /// Cached name for the 'lobby_invite' member.
+        /// </summary>
         public new static readonly StringName LobbyInvite = "lobby_invite";
+        /// <summary>
+        /// Cached name for the 'lobby_match_list' member.
+        /// </summary>
         public new static readonly StringName LobbyMatchList = "lobby_match_list";
+        /// <summary>
+        /// Cached name for the 'lobby_kicked' member.
+        /// </summary>
         public new static readonly StringName LobbyKicked = "lobby_kicked";
+        /// <summary>
+        /// Cached name for the 'add_friend_to_list' member.
+        /// </summary>
         public new static readonly StringName AddFriendToList = "add_friend_to_list";
+        /// <summary>
+        /// Cached name for the 'friends_failed_to_respond' member.
+        /// </summary>
         public new static readonly StringName FriendsFailedToRespond = "friends_failed_to_respond";
+        /// <summary>
+        /// Cached name for the 'friends_refresh_complete' member.
+        /// </summary>
         public new static readonly StringName FriendsRefreshComplete = "friends_refresh_complete";
+        /// <summary>
+        /// Cached name for the 'ping_server_failed_to_respond' member.
+        /// </summary>
         public new static readonly StringName PingServerFailedToRespond = "ping_server_failed_to_respond";
+        /// <summary>
+        /// Cached name for the 'ping_server_responded' member.
+        /// </summary>
         public new static readonly StringName PingServerResponded = "ping_server_responded";
+        /// <summary>
+        /// Cached name for the 'player_details_failed_to_respond' member.
+        /// </summary>
         public new static readonly StringName PlayerDetailsFailedToRespond = "player_details_failed_to_respond";
+        /// <summary>
+        /// Cached name for the 'player_details_player_added' member.
+        /// </summary>
         public new static readonly StringName PlayerDetailsPlayerAdded = "player_details_player_added";
+        /// <summary>
+        /// Cached name for the 'player_details_refresh_complete' member.
+        /// </summary>
         public new static readonly StringName PlayerDetailsRefreshComplete = "player_details_refresh_complete";
+        /// <summary>
+        /// Cached name for the 'request_server_list_refresh_complete' member.
+        /// </summary>
         public new static readonly StringName RequestServerListRefreshComplete = "request_server_list_refresh_complete";
+        /// <summary>
+        /// Cached name for the 'request_server_list_server_failed_to_respond' member.
+        /// </summary>
         public new static readonly StringName RequestServerListServerFailedToRespond = "request_server_list_server_failed_to_respond";
+        /// <summary>
+        /// Cached name for the 'request_server_list_server_responded' member.
+        /// </summary>
         public new static readonly StringName RequestServerListServerResponded = "request_server_list_server_responded";
+        /// <summary>
+        /// Cached name for the 'server_rules_failed_to_respond' member.
+        /// </summary>
         public new static readonly StringName ServerRulesFailedToRespond = "server_rules_failed_to_respond";
+        /// <summary>
+        /// Cached name for the 'server_rules_refresh_complete' member.
+        /// </summary>
         public new static readonly StringName ServerRulesRefreshComplete = "server_rules_refresh_complete";
+        /// <summary>
+        /// Cached name for the 'server_rules_responded' member.
+        /// </summary>
         public new static readonly StringName ServerRulesResponded = "server_rules_responded";
+        /// <summary>
+        /// Cached name for the 'music_playback_status_has_changed' member.
+        /// </summary>
         public new static readonly StringName MusicPlaybackStatusHasChanged = "music_playback_status_has_changed";
+        /// <summary>
+        /// Cached name for the 'music_volume_has_changed' member.
+        /// </summary>
         public new static readonly StringName MusicVolumeHasChanged = "music_volume_has_changed";
+        /// <summary>
+        /// Cached name for the 'p2p_session_request' member.
+        /// </summary>
         public new static readonly StringName P2pSessionRequest = "p2p_session_request";
+        /// <summary>
+        /// Cached name for the 'p2p_session_connect_fail' member.
+        /// </summary>
         public new static readonly StringName P2pSessionConnectFail = "p2p_session_connect_fail";
+        /// <summary>
+        /// Cached name for the 'network_messages_session_request' member.
+        /// </summary>
         public new static readonly StringName NetworkMessagesSessionRequest = "network_messages_session_request";
+        /// <summary>
+        /// Cached name for the 'network_messages_session_failed' member.
+        /// </summary>
         public new static readonly StringName NetworkMessagesSessionFailed = "network_messages_session_failed";
+        /// <summary>
+        /// Cached name for the 'network_connection_status_changed' member.
+        /// </summary>
         public new static readonly StringName NetworkConnectionStatusChanged = "network_connection_status_changed";
+        /// <summary>
+        /// Cached name for the 'network_authentication_status' member.
+        /// </summary>
         public new static readonly StringName NetworkAuthenticationStatus = "network_authentication_status";
+        /// <summary>
+        /// Cached name for the 'fake_ip_result' member.
+        /// </summary>
         public new static readonly StringName FakeIpResult = "fake_ip_result";
+        /// <summary>
+        /// Cached name for the 'relay_network_status' member.
+        /// </summary>
         public new static readonly StringName RelayNetworkStatus = "relay_network_status";
+        /// <summary>
+        /// Cached name for the 'parental_setting_changed' member.
+        /// </summary>
         public new static readonly StringName ParentalSettingChanged = "parental_setting_changed";
+        /// <summary>
+        /// Cached name for the 'join_party' member.
+        /// </summary>
         public new static readonly StringName JoinParty = "join_party";
+        /// <summary>
+        /// Cached name for the 'create_beacon' member.
+        /// </summary>
         public new static readonly StringName CreateBeacon = "create_beacon";
+        /// <summary>
+        /// Cached name for the 'reservation_notification' member.
+        /// </summary>
         public new static readonly StringName ReservationNotification = "reservation_notification";
+        /// <summary>
+        /// Cached name for the 'change_num_open_slots' member.
+        /// </summary>
         public new static readonly StringName ChangeNumOpenSlots = "change_num_open_slots";
+        /// <summary>
+        /// Cached name for the 'available_beacon_locations_updated' member.
+        /// </summary>
         public new static readonly StringName AvailableBeaconLocationsUpdated = "available_beacon_locations_updated";
+        /// <summary>
+        /// Cached name for the 'active_beacons_updated' member.
+        /// </summary>
         public new static readonly StringName ActiveBeaconsUpdated = "active_beacons_updated";
+        /// <summary>
+        /// Cached name for the 'remote_play_guest_invite' member.
+        /// </summary>
         public new static readonly StringName RemotePlayGuestInvite = "remote_play_guest_invite";
+        /// <summary>
+        /// Cached name for the 'remote_play_session_avatar_loaded' member.
+        /// </summary>
         public new static readonly StringName RemotePlaySessionAvatarLoaded = "remote_play_session_avatar_loaded";
+        /// <summary>
+        /// Cached name for the 'remote_play_session_connected' member.
+        /// </summary>
         public new static readonly StringName RemotePlaySessionConnected = "remote_play_session_connected";
+        /// <summary>
+        /// Cached name for the 'remote_play_session_disconnected' member.
+        /// </summary>
         public new static readonly StringName RemotePlaySessionDisconnected = "remote_play_session_disconnected";
+        /// <summary>
+        /// Cached name for the 'file_read_async_complete' member.
+        /// </summary>
         public new static readonly StringName FileReadAsyncComplete = "file_read_async_complete";
+        /// <summary>
+        /// Cached name for the 'file_share_result' member.
+        /// </summary>
         public new static readonly StringName FileShareResult = "file_share_result";
+        /// <summary>
+        /// Cached name for the 'file_write_async_complete' member.
+        /// </summary>
         public new static readonly StringName FileWriteAsyncComplete = "file_write_async_complete";
+        /// <summary>
+        /// Cached name for the 'download_ugc_result' member.
+        /// </summary>
         public new static readonly StringName DownloadUgcResult = "download_ugc_result";
+        /// <summary>
+        /// Cached name for the 'published_file_subscribed' member.
+        /// </summary>
         public new static readonly StringName PublishedFileSubscribed = "published_file_subscribed";
+        /// <summary>
+        /// Cached name for the 'published_file_unsubscribed' member.
+        /// </summary>
         public new static readonly StringName PublishedFileUnsubscribed = "published_file_unsubscribed";
+        /// <summary>
+        /// Cached name for the 'unsubscribe_item' member.
+        /// </summary>
         public new static readonly StringName UnsubscribeItem = "unsubscribe_item";
+        /// <summary>
+        /// Cached name for the 'subscribe_item' member.
+        /// </summary>
         public new static readonly StringName SubscribeItem = "subscribe_item";
+        /// <summary>
+        /// Cached name for the 'local_file_changed' member.
+        /// </summary>
         public new static readonly StringName LocalFileChanged = "local_file_changed";
+        /// <summary>
+        /// Cached name for the 'screenshot_ready' member.
+        /// </summary>
         public new static readonly StringName ScreenshotReady = "screenshot_ready";
+        /// <summary>
+        /// Cached name for the 'screenshot_requested' member.
+        /// </summary>
         public new static readonly StringName ScreenshotRequested = "screenshot_requested";
+        /// <summary>
+        /// Cached name for the 'timeline_event_recording_exists' member.
+        /// </summary>
         public new static readonly StringName TimelineEventRecordingExists = "timeline_event_recording_exists";
+        /// <summary>
+        /// Cached name for the 'timeline_game_phase_recording_exists' member.
+        /// </summary>
         public new static readonly StringName TimelineGamePhaseRecordingExists = "timeline_game_phase_recording_exists";
+        /// <summary>
+        /// Cached name for the 'add_app_dependency_result' member.
+        /// </summary>
         public new static readonly StringName AddAppDependencyResult = "add_app_dependency_result";
+        /// <summary>
+        /// Cached name for the 'add_ugc_dependency_result' member.
+        /// </summary>
         public new static readonly StringName AddUgcDependencyResult = "add_ugc_dependency_result";
+        /// <summary>
+        /// Cached name for the 'get_app_dependencies_result' member.
+        /// </summary>
         public new static readonly StringName GetAppDependenciesResult = "get_app_dependencies_result";
+        /// <summary>
+        /// Cached name for the 'get_item_vote_result' member.
+        /// </summary>
         public new static readonly StringName GetItemVoteResult = "get_item_vote_result";
+        /// <summary>
+        /// Cached name for the 'item_created' member.
+        /// </summary>
         public new static readonly StringName ItemCreated = "item_created";
+        /// <summary>
+        /// Cached name for the 'item_deleted' member.
+        /// </summary>
         public new static readonly StringName ItemDeleted = "item_deleted";
+        /// <summary>
+        /// Cached name for the 'item_downloaded' member.
+        /// </summary>
         public new static readonly StringName ItemDownloaded = "item_downloaded";
+        /// <summary>
+        /// Cached name for the 'item_installed' member.
+        /// </summary>
         public new static readonly StringName ItemInstalled = "item_installed";
+        /// <summary>
+        /// Cached name for the 'item_updated' member.
+        /// </summary>
         public new static readonly StringName ItemUpdated = "item_updated";
+        /// <summary>
+        /// Cached name for the 'remove_app_dependency_result' member.
+        /// </summary>
         public new static readonly StringName RemoveAppDependencyResult = "remove_app_dependency_result";
+        /// <summary>
+        /// Cached name for the 'remove_ugc_dependency_result' member.
+        /// </summary>
         public new static readonly StringName RemoveUgcDependencyResult = "remove_ugc_dependency_result";
+        /// <summary>
+        /// Cached name for the 'set_user_item_vote' member.
+        /// </summary>
         public new static readonly StringName SetUserItemVote = "set_user_item_vote";
+        /// <summary>
+        /// Cached name for the 'start_playtime_tracking' member.
+        /// </summary>
         public new static readonly StringName StartPlaytimeTracking = "start_playtime_tracking";
+        /// <summary>
+        /// Cached name for the 'stop_playtime_tracking' member.
+        /// </summary>
         public new static readonly StringName StopPlaytimeTracking = "stop_playtime_tracking";
+        /// <summary>
+        /// Cached name for the 'ugc_query_completed' member.
+        /// </summary>
         public new static readonly StringName UgcQueryCompleted = "ugc_query_completed";
+        /// <summary>
+        /// Cached name for the 'user_favorite_items_list_changed' member.
+        /// </summary>
         public new static readonly StringName UserFavoriteItemsListChanged = "user_favorite_items_list_changed";
+        /// <summary>
+        /// Cached name for the 'user_subscribed_items_list_changed' member.
+        /// </summary>
         public new static readonly StringName UserSubscribedItemsListChanged = "user_subscribed_items_list_changed";
+        /// <summary>
+        /// Cached name for the 'workshop_eula_status' member.
+        /// </summary>
         public new static readonly StringName WorkshopEulaStatus = "workshop_eula_status";
+        /// <summary>
+        /// Cached name for the 'client_game_server_deny' member.
+        /// </summary>
         public new static readonly StringName ClientGameServerDeny = "client_game_server_deny";
+        /// <summary>
+        /// Cached name for the 'duration_control' member.
+        /// </summary>
         public new static readonly StringName DurationControl = "duration_control";
+        /// <summary>
+        /// Cached name for the 'encrypted_app_ticket_response' member.
+        /// </summary>
         public new static readonly StringName EncryptedAppTicketResponse = "encrypted_app_ticket_response";
+        /// <summary>
+        /// Cached name for the 'game_web_callback' member.
+        /// </summary>
         public new static readonly StringName GameWebCallback = "game_web_callback";
+        /// <summary>
+        /// Cached name for the 'get_auth_session_ticket_response' member.
+        /// </summary>
         public new static readonly StringName GetAuthSessionTicketResponse = "get_auth_session_ticket_response";
+        /// <summary>
+        /// Cached name for the 'get_ticket_for_web_api' member.
+        /// </summary>
         public new static readonly StringName GetTicketForWebApi = "get_ticket_for_web_api";
+        /// <summary>
+        /// Cached name for the 'ipc_failure' member.
+        /// </summary>
         public new static readonly StringName IpcFailure = "ipc_failure";
+        /// <summary>
+        /// Cached name for the 'licenses_updated' member.
+        /// </summary>
         public new static readonly StringName LicensesUpdated = "licenses_updated";
+        /// <summary>
+        /// Cached name for the 'market_eligibility_response' member.
+        /// </summary>
         public new static readonly StringName MarketEligibilityResponse = "market_eligibility_response";
+        /// <summary>
+        /// Cached name for the 'microtransaction_auth_response' member.
+        /// </summary>
         public new static readonly StringName MicrotransactionAuthResponse = "microtransaction_auth_response";
+        /// <summary>
+        /// Cached name for the 'steam_server_connect_failed' member.
+        /// </summary>
         public new static readonly StringName SteamServerConnectFailed = "steam_server_connect_failed";
+        /// <summary>
+        /// Cached name for the 'steam_server_connected' member.
+        /// </summary>
         public new static readonly StringName SteamServerConnected = "steam_server_connected";
+        /// <summary>
+        /// Cached name for the 'steam_server_disconnected' member.
+        /// </summary>
         public new static readonly StringName SteamServerDisconnected = "steam_server_disconnected";
+        /// <summary>
+        /// Cached name for the 'store_auth_url_response' member.
+        /// </summary>
         public new static readonly StringName StoreAuthUrlResponse = "store_auth_url_response";
+        /// <summary>
+        /// Cached name for the 'validate_auth_ticket_response' member.
+        /// </summary>
         public new static readonly StringName ValidateAuthTicketResponse = "validate_auth_ticket_response";
+        /// <summary>
+        /// Cached name for the 'global_achievement_percentages_ready' member.
+        /// </summary>
         public new static readonly StringName GlobalAchievementPercentagesReady = "global_achievement_percentages_ready";
+        /// <summary>
+        /// Cached name for the 'global_stats_received' member.
+        /// </summary>
         public new static readonly StringName GlobalStatsReceived = "global_stats_received";
+        /// <summary>
+        /// Cached name for the 'leaderboard_find_result' member.
+        /// </summary>
         public new static readonly StringName LeaderboardFindResult = "leaderboard_find_result";
+        /// <summary>
+        /// Cached name for the 'leaderboard_scores_downloaded' member.
+        /// </summary>
         public new static readonly StringName LeaderboardScoresDownloaded = "leaderboard_scores_downloaded";
+        /// <summary>
+        /// Cached name for the 'leaderboard_score_uploaded' member.
+        /// </summary>
         public new static readonly StringName LeaderboardScoreUploaded = "leaderboard_score_uploaded";
+        /// <summary>
+        /// Cached name for the 'leaderboard_ugc_set' member.
+        /// </summary>
         public new static readonly StringName LeaderboardUgcSet = "leaderboard_ugc_set";
+        /// <summary>
+        /// Cached name for the 'number_of_current_players' member.
+        /// </summary>
         public new static readonly StringName NumberOfCurrentPlayers = "number_of_current_players";
+        /// <summary>
+        /// Cached name for the 'user_achievement_icon_fetched' member.
+        /// </summary>
         public new static readonly StringName UserAchievementIconFetched = "user_achievement_icon_fetched";
+        /// <summary>
+        /// Cached name for the 'user_achievement_stored' member.
+        /// </summary>
         public new static readonly StringName UserAchievementStored = "user_achievement_stored";
+        /// <summary>
+        /// Cached name for the 'user_stats_received' member.
+        /// </summary>
         public new static readonly StringName UserStatsReceived = "user_stats_received";
+        /// <summary>
+        /// Cached name for the 'user_stats_stored' member.
+        /// </summary>
         public new static readonly StringName UserStatsStored = "user_stats_stored";
+        /// <summary>
+        /// Cached name for the 'user_stats_unloaded' member.
+        /// </summary>
         public new static readonly StringName UserStatsUnloaded = "user_stats_unloaded";
+        /// <summary>
+        /// Cached name for the 'check_file_signature' member.
+        /// </summary>
         public new static readonly StringName CheckFileSignature = "check_file_signature";
+        /// <summary>
+        /// Cached name for the 'gamepad_text_input_dismissed' member.
+        /// </summary>
         public new static readonly StringName GamepadTextInputDismissed = "gamepad_text_input_dismissed";
+        /// <summary>
+        /// Cached name for the 'ip_country' member.
+        /// </summary>
         public new static readonly StringName IpCountry = "ip_country";
+        /// <summary>
+        /// Cached name for the 'low_power' member.
+        /// </summary>
         public new static readonly StringName LowPower = "low_power";
+        /// <summary>
+        /// Cached name for the 'steam_api_call_completed' member.
+        /// </summary>
         public new static readonly StringName SteamApiCallCompleted = "steam_api_call_completed";
+        /// <summary>
+        /// Cached name for the 'steam_shutdown' member.
+        /// </summary>
         public new static readonly StringName SteamShutdown = "steam_shutdown";
+        /// <summary>
+        /// Cached name for the 'app_resuming_from_suspend' member.
+        /// </summary>
         public new static readonly StringName AppResumingFromSuspend = "app_resuming_from_suspend";
+        /// <summary>
+        /// Cached name for the 'floating_gamepad_text_input_dismissed' member.
+        /// </summary>
         public new static readonly StringName FloatingGamepadTextInputDismissed = "floating_gamepad_text_input_dismissed";
+        /// <summary>
+        /// Cached name for the 'filter_text_dictionary_changed' member.
+        /// </summary>
         public new static readonly StringName FilterTextDictionaryChanged = "filter_text_dictionary_changed";
+        /// <summary>
+        /// Cached name for the 'broadcast_upload_start' member.
+        /// </summary>
         public new static readonly StringName BroadcastUploadStart = "broadcast_upload_start";
+        /// <summary>
+        /// Cached name for the 'broadcast_upload_stop' member.
+        /// </summary>
         public new static readonly StringName BroadcastUploadStop = "broadcast_upload_stop";
+        /// <summary>
+        /// Cached name for the 'get_opf_settings_result' member.
+        /// </summary>
         public new static readonly StringName GetOpfSettingsResult = "get_opf_settings_result";
+        /// <summary>
+        /// Cached name for the 'get_video_result' member.
+        /// </summary>
         public new static readonly StringName GetVideoResult = "get_video_result";
     }
 
@@ -7094,17 +7652,47 @@ public partial class Steam : GodotObject
         }
     }
 
-    public new static class GDExtensionPropertyName
+    public new class GDExtensionPropertyName : GodotObject.PropertyName
     {
+        /// <summary>
+        /// Cached name for the 'current_browser_handle' member.
+        /// </summary>
         public new static readonly StringName CurrentBrowserHandle = "current_browser_handle";
+        /// <summary>
+        /// Cached name for the 'current_clan_id' member.
+        /// </summary>
         public new static readonly StringName CurrentClanId = "current_clan_id";
+        /// <summary>
+        /// Cached name for the 'inventory_handle' member.
+        /// </summary>
         public new static readonly StringName InventoryHandle = "inventory_handle";
+        /// <summary>
+        /// Cached name for the 'inventory_update_handle' member.
+        /// </summary>
         public new static readonly StringName InventoryUpdateHandle = "inventory_update_handle";
+        /// <summary>
+        /// Cached name for the 'current_steam_id' member.
+        /// </summary>
         public new static readonly StringName CurrentSteamId = "current_steam_id";
+        /// <summary>
+        /// Cached name for the 'leaderboard_details_max' member.
+        /// </summary>
         public new static readonly StringName LeaderboardDetailsMax = "leaderboard_details_max";
+        /// <summary>
+        /// Cached name for the 'leaderboard_entries_array' member.
+        /// </summary>
         public new static readonly StringName LeaderboardEntriesArray = "leaderboard_entries_array";
+        /// <summary>
+        /// Cached name for the 'leaderboard_handle' member.
+        /// </summary>
         public new static readonly StringName LeaderboardHandle = "leaderboard_handle";
+        /// <summary>
+        /// Cached name for the 'leaderboard_ugc_handle' member.
+        /// </summary>
         public new static readonly StringName LeaderboardUgcHandle = "leaderboard_ugc_handle";
+        /// <summary>
+        /// Cached name for the 'current_app_id' member.
+        /// </summary>
         public new static readonly StringName CurrentAppId = "current_app_id";
     }
 
@@ -7168,723 +7756,2871 @@ public partial class Steam : GodotObject
         set => Set(GDExtensionPropertyName.CurrentAppId, value);
     }
 
-    public new static class GDExtensionMethodName
+    public new class GDExtensionMethodName : GodotObject.MethodName
     {
+        /// <summary>
+        /// Cached name for the 'get_godotsteam_version' member.
+        /// </summary>
         public new static readonly StringName GetGodotsteamVersion = "get_godotsteam_version";
+        /// <summary>
+        /// Cached name for the 'getSteamID32' member.
+        /// </summary>
         public new static readonly StringName GetSteamId32 = "getSteamID32";
+        /// <summary>
+        /// Cached name for the 'isAnonAccount' member.
+        /// </summary>
         public new static readonly StringName IsAnonAccount = "isAnonAccount";
+        /// <summary>
+        /// Cached name for the 'isAnonUserAccount' member.
+        /// </summary>
         public new static readonly StringName IsAnonUserAccount = "isAnonUserAccount";
+        /// <summary>
+        /// Cached name for the 'isChatAccount' member.
+        /// </summary>
         public new static readonly StringName IsChatAccount = "isChatAccount";
+        /// <summary>
+        /// Cached name for the 'isClanAccount' member.
+        /// </summary>
         public new static readonly StringName IsClanAccount = "isClanAccount";
+        /// <summary>
+        /// Cached name for the 'isConsoleUserAccount' member.
+        /// </summary>
         public new static readonly StringName IsConsoleUserAccount = "isConsoleUserAccount";
+        /// <summary>
+        /// Cached name for the 'isIndividualAccount' member.
+        /// </summary>
         public new static readonly StringName IsIndividualAccount = "isIndividualAccount";
+        /// <summary>
+        /// Cached name for the 'isLobby' member.
+        /// </summary>
         public new static readonly StringName IsLobby = "isLobby";
+        /// <summary>
+        /// Cached name for the 'isSteamRunning' member.
+        /// </summary>
         public new static readonly StringName IsSteamRunning = "isSteamRunning";
+        /// <summary>
+        /// Cached name for the 'run_callbacks' member.
+        /// </summary>
         public new static readonly StringName RunCallbacks = "run_callbacks";
+        /// <summary>
+        /// Cached name for the 'restartAppIfNecessary' member.
+        /// </summary>
         public new static readonly StringName RestartAppIfNecessary = "restartAppIfNecessary";
+        /// <summary>
+        /// Cached name for the 'steamInit' member.
+        /// </summary>
         public new static readonly StringName SteamInit = "steamInit";
+        /// <summary>
+        /// Cached name for the 'steamInitEx' member.
+        /// </summary>
         public new static readonly StringName SteamInitEx = "steamInitEx";
+        /// <summary>
+        /// Cached name for the 'releaseCurrentThreadMemory' member.
+        /// </summary>
         public new static readonly StringName ReleaseCurrentThreadMemory = "releaseCurrentThreadMemory";
+        /// <summary>
+        /// Cached name for the 'steamShutdown' member.
+        /// </summary>
         public new static readonly StringName SteamShutdown = "steamShutdown";
+        /// <summary>
+        /// Cached name for the 'get_server_list_request' member.
+        /// </summary>
         public new static readonly StringName GetServerListRequest = "get_server_list_request";
+        /// <summary>
+        /// Cached name for the 'get_steam_init_result' member.
+        /// </summary>
         public new static readonly StringName GetSteamInitResult = "get_steam_init_result";
+        /// <summary>
+        /// Cached name for the 'set_server_list_request' member.
+        /// </summary>
         public new static readonly StringName SetServerListRequest = "set_server_list_request";
+        /// <summary>
+        /// Cached name for the 'getAppBuildId' member.
+        /// </summary>
         public new static readonly StringName GetAppBuildId = "getAppBuildId";
+        /// <summary>
+        /// Cached name for the 'getAppInstallDir' member.
+        /// </summary>
         public new static readonly StringName GetAppInstallDir = "getAppInstallDir";
+        /// <summary>
+        /// Cached name for the 'getAppOwner' member.
+        /// </summary>
         public new static readonly StringName GetAppOwner = "getAppOwner";
+        /// <summary>
+        /// Cached name for the 'getAvailableGameLanguages' member.
+        /// </summary>
         public new static readonly StringName GetAvailableGameLanguages = "getAvailableGameLanguages";
+        /// <summary>
+        /// Cached name for the 'getBetaInfo' member.
+        /// </summary>
         public new static readonly StringName GetBetaInfo = "getBetaInfo";
+        /// <summary>
+        /// Cached name for the 'getCurrentBetaName' member.
+        /// </summary>
         public new static readonly StringName GetCurrentBetaName = "getCurrentBetaName";
+        /// <summary>
+        /// Cached name for the 'getCurrentGameLanguage' member.
+        /// </summary>
         public new static readonly StringName GetCurrentGameLanguage = "getCurrentGameLanguage";
+        /// <summary>
+        /// Cached name for the 'getDLCCount' member.
+        /// </summary>
         public new static readonly StringName GetDlcCount = "getDLCCount";
+        /// <summary>
+        /// Cached name for the 'getDLCData' member.
+        /// </summary>
         public new static readonly StringName GetDlcData = "getDLCData";
+        /// <summary>
+        /// Cached name for the 'getDLCDataByIndex' member.
+        /// </summary>
         public new static readonly StringName GetDlcDataByIndex = "getDLCDataByIndex";
+        /// <summary>
+        /// Cached name for the 'getDLCDownloadProgress' member.
+        /// </summary>
         public new static readonly StringName GetDlcDownloadProgress = "getDLCDownloadProgress";
+        /// <summary>
+        /// Cached name for the 'getEarliestPurchaseUnixTime' member.
+        /// </summary>
         public new static readonly StringName GetEarliestPurchaseUnixTime = "getEarliestPurchaseUnixTime";
+        /// <summary>
+        /// Cached name for the 'getFileDetails' member.
+        /// </summary>
         public new static readonly StringName GetFileDetails = "getFileDetails";
+        /// <summary>
+        /// Cached name for the 'getInstalledDepots' member.
+        /// </summary>
         public new static readonly StringName GetInstalledDepots = "getInstalledDepots";
+        /// <summary>
+        /// Cached name for the 'getLaunchCommandLine' member.
+        /// </summary>
         public new static readonly StringName GetLaunchCommandLine = "getLaunchCommandLine";
+        /// <summary>
+        /// Cached name for the 'getLaunchQueryParam' member.
+        /// </summary>
         public new static readonly StringName GetLaunchQueryParam = "getLaunchQueryParam";
+        /// <summary>
+        /// Cached name for the 'getNumBetas' member.
+        /// </summary>
         public new static readonly StringName GetNumBetas = "getNumBetas";
+        /// <summary>
+        /// Cached name for the 'installDLC' member.
+        /// </summary>
         public new static readonly StringName InstallDlc = "installDLC";
+        /// <summary>
+        /// Cached name for the 'isAppInstalled' member.
+        /// </summary>
         public new static readonly StringName IsAppInstalled = "isAppInstalled";
+        /// <summary>
+        /// Cached name for the 'isCybercafe' member.
+        /// </summary>
         public new static readonly StringName IsCybercafe = "isCybercafe";
+        /// <summary>
+        /// Cached name for the 'isDLCInstalled' member.
+        /// </summary>
         public new static readonly StringName IsDlcInstalled = "isDLCInstalled";
+        /// <summary>
+        /// Cached name for the 'isLowViolence' member.
+        /// </summary>
         public new static readonly StringName IsLowViolence = "isLowViolence";
+        /// <summary>
+        /// Cached name for the 'isSubscribed' member.
+        /// </summary>
         public new static readonly StringName IsSubscribed = "isSubscribed";
+        /// <summary>
+        /// Cached name for the 'isSubscribedApp' member.
+        /// </summary>
         public new static readonly StringName IsSubscribedApp = "isSubscribedApp";
+        /// <summary>
+        /// Cached name for the 'isSubscribedFromFamilySharing' member.
+        /// </summary>
         public new static readonly StringName IsSubscribedFromFamilySharing = "isSubscribedFromFamilySharing";
+        /// <summary>
+        /// Cached name for the 'isSubscribedFromFreeWeekend' member.
+        /// </summary>
         public new static readonly StringName IsSubscribedFromFreeWeekend = "isSubscribedFromFreeWeekend";
+        /// <summary>
+        /// Cached name for the 'isTimedTrial' member.
+        /// </summary>
         public new static readonly StringName IsTimedTrial = "isTimedTrial";
+        /// <summary>
+        /// Cached name for the 'isVACBanned' member.
+        /// </summary>
         public new static readonly StringName IsVacBanned = "isVACBanned";
+        /// <summary>
+        /// Cached name for the 'markContentCorrupt' member.
+        /// </summary>
         public new static readonly StringName MarkContentCorrupt = "markContentCorrupt";
+        /// <summary>
+        /// Cached name for the 'setActiveBeta' member.
+        /// </summary>
         public new static readonly StringName SetActiveBeta = "setActiveBeta";
+        /// <summary>
+        /// Cached name for the 'setDLCContext' member.
+        /// </summary>
         public new static readonly StringName SetDlcContext = "setDLCContext";
+        /// <summary>
+        /// Cached name for the 'setGamePerformanceSettings' member.
+        /// </summary>
         public new static readonly StringName SetGamePerformanceSettings = "setGamePerformanceSettings";
+        /// <summary>
+        /// Cached name for the 'setGameRenderResolution' member.
+        /// </summary>
         public new static readonly StringName SetGameRenderResolution = "setGameRenderResolution";
+        /// <summary>
+        /// Cached name for the 'uninstallDLC' member.
+        /// </summary>
         public new static readonly StringName UninstallDlc = "uninstallDLC";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlay' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlay = "activateGameOverlay";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayInviteDialog' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayInviteDialog = "activateGameOverlayInviteDialog";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayInviteDialogConnectString' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayInviteDialogConnectString = "activateGameOverlayInviteDialogConnectString";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayRemotePlayTogetherInviteDialog' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayRemotePlayTogetherInviteDialog = "activateGameOverlayRemotePlayTogetherInviteDialog";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayToStore' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayToStore = "activateGameOverlayToStore";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayToUser' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayToUser = "activateGameOverlayToUser";
+        /// <summary>
+        /// Cached name for the 'activateGameOverlayToWebPage' member.
+        /// </summary>
         public new static readonly StringName ActivateGameOverlayToWebPage = "activateGameOverlayToWebPage";
+        /// <summary>
+        /// Cached name for the 'clearRichPresence' member.
+        /// </summary>
         public new static readonly StringName ClearRichPresence = "clearRichPresence";
+        /// <summary>
+        /// Cached name for the 'closeClanChatWindowInSteam' member.
+        /// </summary>
         public new static readonly StringName CloseClanChatWindowInSteam = "closeClanChatWindowInSteam";
+        /// <summary>
+        /// Cached name for the 'downloadClanActivityCounts' member.
+        /// </summary>
         public new static readonly StringName DownloadClanActivityCounts = "downloadClanActivityCounts";
+        /// <summary>
+        /// Cached name for the 'enumerateFollowingList' member.
+        /// </summary>
         public new static readonly StringName EnumerateFollowingList = "enumerateFollowingList";
+        /// <summary>
+        /// Cached name for the 'getChatMemberByIndex' member.
+        /// </summary>
         public new static readonly StringName GetChatMemberByIndex = "getChatMemberByIndex";
+        /// <summary>
+        /// Cached name for the 'getClanActivityCounts' member.
+        /// </summary>
         public new static readonly StringName GetClanActivityCounts = "getClanActivityCounts";
+        /// <summary>
+        /// Cached name for the 'getClanByIndex' member.
+        /// </summary>
         public new static readonly StringName GetClanByIndex = "getClanByIndex";
+        /// <summary>
+        /// Cached name for the 'getClanChatMemberCount' member.
+        /// </summary>
         public new static readonly StringName GetClanChatMemberCount = "getClanChatMemberCount";
+        /// <summary>
+        /// Cached name for the 'getClanCount' member.
+        /// </summary>
         public new static readonly StringName GetClanCount = "getClanCount";
+        /// <summary>
+        /// Cached name for the 'getClanName' member.
+        /// </summary>
         public new static readonly StringName GetClanName = "getClanName";
+        /// <summary>
+        /// Cached name for the 'getClanOfficerByIndex' member.
+        /// </summary>
         public new static readonly StringName GetClanOfficerByIndex = "getClanOfficerByIndex";
+        /// <summary>
+        /// Cached name for the 'getClanOfficerCount' member.
+        /// </summary>
         public new static readonly StringName GetClanOfficerCount = "getClanOfficerCount";
+        /// <summary>
+        /// Cached name for the 'getClanOwner' member.
+        /// </summary>
         public new static readonly StringName GetClanOwner = "getClanOwner";
+        /// <summary>
+        /// Cached name for the 'getClanTag' member.
+        /// </summary>
         public new static readonly StringName GetClanTag = "getClanTag";
+        /// <summary>
+        /// Cached name for the 'getCoplayFriend' member.
+        /// </summary>
         public new static readonly StringName GetCoplayFriend = "getCoplayFriend";
+        /// <summary>
+        /// Cached name for the 'getCoplayFriendCount' member.
+        /// </summary>
         public new static readonly StringName GetCoplayFriendCount = "getCoplayFriendCount";
+        /// <summary>
+        /// Cached name for the 'getFollowerCount' member.
+        /// </summary>
         public new static readonly StringName GetFollowerCount = "getFollowerCount";
+        /// <summary>
+        /// Cached name for the 'getFriendByIndex' member.
+        /// </summary>
         public new static readonly StringName GetFriendByIndex = "getFriendByIndex";
+        /// <summary>
+        /// Cached name for the 'getFriendCoplayGame' member.
+        /// </summary>
         public new static readonly StringName GetFriendCoplayGame = "getFriendCoplayGame";
+        /// <summary>
+        /// Cached name for the 'getFriendCoplayTime' member.
+        /// </summary>
         public new static readonly StringName GetFriendCoplayTime = "getFriendCoplayTime";
+        /// <summary>
+        /// Cached name for the 'getFriendCount' member.
+        /// </summary>
         public new static readonly StringName GetFriendCount = "getFriendCount";
+        /// <summary>
+        /// Cached name for the 'getFriendCountFromSource' member.
+        /// </summary>
         public new static readonly StringName GetFriendCountFromSource = "getFriendCountFromSource";
+        /// <summary>
+        /// Cached name for the 'getFriendFromSourceByIndex' member.
+        /// </summary>
         public new static readonly StringName GetFriendFromSourceByIndex = "getFriendFromSourceByIndex";
+        /// <summary>
+        /// Cached name for the 'getFriendGamePlayed' member.
+        /// </summary>
         public new static readonly StringName GetFriendGamePlayed = "getFriendGamePlayed";
+        /// <summary>
+        /// Cached name for the 'getFriendPersonaName' member.
+        /// </summary>
         public new static readonly StringName GetFriendPersonaName = "getFriendPersonaName";
+        /// <summary>
+        /// Cached name for the 'getFriendPersonaNameHistory' member.
+        /// </summary>
         public new static readonly StringName GetFriendPersonaNameHistory = "getFriendPersonaNameHistory";
+        /// <summary>
+        /// Cached name for the 'getFriendPersonaState' member.
+        /// </summary>
         public new static readonly StringName GetFriendPersonaState = "getFriendPersonaState";
+        /// <summary>
+        /// Cached name for the 'getFriendRelationship' member.
+        /// </summary>
         public new static readonly StringName GetFriendRelationship = "getFriendRelationship";
+        /// <summary>
+        /// Cached name for the 'getFriendRichPresence' member.
+        /// </summary>
         public new static readonly StringName GetFriendRichPresence = "getFriendRichPresence";
+        /// <summary>
+        /// Cached name for the 'getFriendRichPresenceKeyCount' member.
+        /// </summary>
         public new static readonly StringName GetFriendRichPresenceKeyCount = "getFriendRichPresenceKeyCount";
+        /// <summary>
+        /// Cached name for the 'getFriendRichPresenceKeyByIndex' member.
+        /// </summary>
         public new static readonly StringName GetFriendRichPresenceKeyByIndex = "getFriendRichPresenceKeyByIndex";
+        /// <summary>
+        /// Cached name for the 'getFriendsGroupCount' member.
+        /// </summary>
         public new static readonly StringName GetFriendsGroupCount = "getFriendsGroupCount";
+        /// <summary>
+        /// Cached name for the 'getFriendsGroupIDByIndex' member.
+        /// </summary>
         public new static readonly StringName GetFriendsGroupIdByIndex = "getFriendsGroupIDByIndex";
+        /// <summary>
+        /// Cached name for the 'getFriendsGroupMembersCount' member.
+        /// </summary>
         public new static readonly StringName GetFriendsGroupMembersCount = "getFriendsGroupMembersCount";
+        /// <summary>
+        /// Cached name for the 'getFriendsGroupMembersList' member.
+        /// </summary>
         public new static readonly StringName GetFriendsGroupMembersList = "getFriendsGroupMembersList";
+        /// <summary>
+        /// Cached name for the 'getFriendsGroupName' member.
+        /// </summary>
         public new static readonly StringName GetFriendsGroupName = "getFriendsGroupName";
+        /// <summary>
+        /// Cached name for the 'getFriendSteamLevel' member.
+        /// </summary>
         public new static readonly StringName GetFriendSteamLevel = "getFriendSteamLevel";
+        /// <summary>
+        /// Cached name for the 'getLargeFriendAvatar' member.
+        /// </summary>
         public new static readonly StringName GetLargeFriendAvatar = "getLargeFriendAvatar";
+        /// <summary>
+        /// Cached name for the 'getMediumFriendAvatar' member.
+        /// </summary>
         public new static readonly StringName GetMediumFriendAvatar = "getMediumFriendAvatar";
+        /// <summary>
+        /// Cached name for the 'getPersonaName' member.
+        /// </summary>
         public new static readonly StringName GetPersonaName = "getPersonaName";
+        /// <summary>
+        /// Cached name for the 'getPersonaState' member.
+        /// </summary>
         public new static readonly StringName GetPersonaState = "getPersonaState";
+        /// <summary>
+        /// Cached name for the 'getPlayerAvatar' member.
+        /// </summary>
         public new static readonly StringName GetPlayerAvatar = "getPlayerAvatar";
+        /// <summary>
+        /// Cached name for the 'getPlayerNickname' member.
+        /// </summary>
         public new static readonly StringName GetPlayerNickname = "getPlayerNickname";
+        /// <summary>
+        /// Cached name for the 'getProfileItemPropertyString' member.
+        /// </summary>
         public new static readonly StringName GetProfileItemPropertyString = "getProfileItemPropertyString";
+        /// <summary>
+        /// Cached name for the 'getProfileItemPropertyInt' member.
+        /// </summary>
         public new static readonly StringName GetProfileItemPropertyInt = "getProfileItemPropertyInt";
+        /// <summary>
+        /// Cached name for the 'getRecentPlayers' member.
+        /// </summary>
         public new static readonly StringName GetRecentPlayers = "getRecentPlayers";
+        /// <summary>
+        /// Cached name for the 'getSmallFriendAvatar' member.
+        /// </summary>
         public new static readonly StringName GetSmallFriendAvatar = "getSmallFriendAvatar";
+        /// <summary>
+        /// Cached name for the 'getUserFriendsGroups' member.
+        /// </summary>
         public new static readonly StringName GetUserFriendsGroups = "getUserFriendsGroups";
+        /// <summary>
+        /// Cached name for the 'getUserSteamFriends' member.
+        /// </summary>
         public new static readonly StringName GetUserSteamFriends = "getUserSteamFriends";
+        /// <summary>
+        /// Cached name for the 'getUserSteamGroups' member.
+        /// </summary>
         public new static readonly StringName GetUserSteamGroups = "getUserSteamGroups";
+        /// <summary>
+        /// Cached name for the 'hasEquippedProfileItem' member.
+        /// </summary>
         public new static readonly StringName HasEquippedProfileItem = "hasEquippedProfileItem";
+        /// <summary>
+        /// Cached name for the 'hasFriend' member.
+        /// </summary>
         public new static readonly StringName HasFriend = "hasFriend";
+        /// <summary>
+        /// Cached name for the 'inviteUserToGame' member.
+        /// </summary>
         public new static readonly StringName InviteUserToGame = "inviteUserToGame";
+        /// <summary>
+        /// Cached name for the 'isClanChatAdmin' member.
+        /// </summary>
         public new static readonly StringName IsClanChatAdmin = "isClanChatAdmin";
+        /// <summary>
+        /// Cached name for the 'isClanPublic' member.
+        /// </summary>
         public new static readonly StringName IsClanPublic = "isClanPublic";
+        /// <summary>
+        /// Cached name for the 'isClanOfficialGameGroup' member.
+        /// </summary>
         public new static readonly StringName IsClanOfficialGameGroup = "isClanOfficialGameGroup";
+        /// <summary>
+        /// Cached name for the 'isClanChatWindowOpenInSteam' member.
+        /// </summary>
         public new static readonly StringName IsClanChatWindowOpenInSteam = "isClanChatWindowOpenInSteam";
+        /// <summary>
+        /// Cached name for the 'isFollowing' member.
+        /// </summary>
         public new static readonly StringName IsFollowing = "isFollowing";
+        /// <summary>
+        /// Cached name for the 'isUserInSource' member.
+        /// </summary>
         public new static readonly StringName IsUserInSource = "isUserInSource";
+        /// <summary>
+        /// Cached name for the 'joinClanChatRoom' member.
+        /// </summary>
         public new static readonly StringName JoinClanChatRoom = "joinClanChatRoom";
+        /// <summary>
+        /// Cached name for the 'leaveClanChatRoom' member.
+        /// </summary>
         public new static readonly StringName LeaveClanChatRoom = "leaveClanChatRoom";
+        /// <summary>
+        /// Cached name for the 'openClanChatWindowInSteam' member.
+        /// </summary>
         public new static readonly StringName OpenClanChatWindowInSteam = "openClanChatWindowInSteam";
+        /// <summary>
+        /// Cached name for the 'registerProtocolInOverlayBrowser' member.
+        /// </summary>
         public new static readonly StringName RegisterProtocolInOverlayBrowser = "registerProtocolInOverlayBrowser";
+        /// <summary>
+        /// Cached name for the 'replyToFriendMessage' member.
+        /// </summary>
         public new static readonly StringName ReplyToFriendMessage = "replyToFriendMessage";
+        /// <summary>
+        /// Cached name for the 'requestClanOfficerList' member.
+        /// </summary>
         public new static readonly StringName RequestClanOfficerList = "requestClanOfficerList";
+        /// <summary>
+        /// Cached name for the 'requestEquippedProfileItems' member.
+        /// </summary>
         public new static readonly StringName RequestEquippedProfileItems = "requestEquippedProfileItems";
+        /// <summary>
+        /// Cached name for the 'requestFriendRichPresence' member.
+        /// </summary>
         public new static readonly StringName RequestFriendRichPresence = "requestFriendRichPresence";
+        /// <summary>
+        /// Cached name for the 'requestUserInformation' member.
+        /// </summary>
         public new static readonly StringName RequestUserInformation = "requestUserInformation";
+        /// <summary>
+        /// Cached name for the 'sendClanChatMessage' member.
+        /// </summary>
         public new static readonly StringName SendClanChatMessage = "sendClanChatMessage";
+        /// <summary>
+        /// Cached name for the 'setInGameVoiceSpeaking' member.
+        /// </summary>
         public new static readonly StringName SetInGameVoiceSpeaking = "setInGameVoiceSpeaking";
+        /// <summary>
+        /// Cached name for the 'setListenForFriendsMessages' member.
+        /// </summary>
         public new static readonly StringName SetListenForFriendsMessages = "setListenForFriendsMessages";
+        /// <summary>
+        /// Cached name for the 'setPlayedWith' member.
+        /// </summary>
         public new static readonly StringName SetPlayedWith = "setPlayedWith";
+        /// <summary>
+        /// Cached name for the 'setRichPresence' member.
+        /// </summary>
         public new static readonly StringName SetRichPresence = "setRichPresence";
+        /// <summary>
+        /// Cached name for the 'addHeader' member.
+        /// </summary>
         public new static readonly StringName AddHeader = "addHeader";
+        /// <summary>
+        /// Cached name for the 'allowStartRequest' member.
+        /// </summary>
         public new static readonly StringName AllowStartRequest = "allowStartRequest";
+        /// <summary>
+        /// Cached name for the 'copyToClipboard' member.
+        /// </summary>
         public new static readonly StringName CopyToClipboard = "copyToClipboard";
+        /// <summary>
+        /// Cached name for the 'createBrowser' member.
+        /// </summary>
         public new static readonly StringName CreateBrowser = "createBrowser";
+        /// <summary>
+        /// Cached name for the 'executeJavascript' member.
+        /// </summary>
         public new static readonly StringName ExecuteJavascript = "executeJavascript";
+        /// <summary>
+        /// Cached name for the 'find' member.
+        /// </summary>
         public new static readonly StringName Find = "find";
+        /// <summary>
+        /// Cached name for the 'getLinkAtPosition' member.
+        /// </summary>
         public new static readonly StringName GetLinkAtPosition = "getLinkAtPosition";
+        /// <summary>
+        /// Cached name for the 'goBack' member.
+        /// </summary>
         public new static readonly StringName GoBack = "goBack";
+        /// <summary>
+        /// Cached name for the 'goForward' member.
+        /// </summary>
         public new static readonly StringName GoForward = "goForward";
+        /// <summary>
+        /// Cached name for the 'htmlInit' member.
+        /// </summary>
         public new static readonly StringName HtmlInit = "htmlInit";
+        /// <summary>
+        /// Cached name for the 'jsDialogResponse' member.
+        /// </summary>
         public new static readonly StringName JsDialogResponse = "jsDialogResponse";
+        /// <summary>
+        /// Cached name for the 'keyChar' member.
+        /// </summary>
         public new static readonly StringName KeyChar = "keyChar";
+        /// <summary>
+        /// Cached name for the 'keyDown' member.
+        /// </summary>
         public new static readonly StringName KeyDown = "keyDown";
+        /// <summary>
+        /// Cached name for the 'keyUp' member.
+        /// </summary>
         public new static readonly StringName KeyUp = "keyUp";
+        /// <summary>
+        /// Cached name for the 'loadURL' member.
+        /// </summary>
         public new static readonly StringName LoadUrl = "loadURL";
+        /// <summary>
+        /// Cached name for the 'mouseDoubleClick' member.
+        /// </summary>
         public new static readonly StringName MouseDoubleClick = "mouseDoubleClick";
+        /// <summary>
+        /// Cached name for the 'mouseDown' member.
+        /// </summary>
         public new static readonly StringName MouseDown = "mouseDown";
+        /// <summary>
+        /// Cached name for the 'mouseMove' member.
+        /// </summary>
         public new static readonly StringName MouseMove = "mouseMove";
+        /// <summary>
+        /// Cached name for the 'mouseUp' member.
+        /// </summary>
         public new static readonly StringName MouseUp = "mouseUp";
+        /// <summary>
+        /// Cached name for the 'mouseWheel' member.
+        /// </summary>
         public new static readonly StringName MouseWheel = "mouseWheel";
+        /// <summary>
+        /// Cached name for the 'openDeveloperTools' member.
+        /// </summary>
         public new static readonly StringName OpenDeveloperTools = "openDeveloperTools";
+        /// <summary>
+        /// Cached name for the 'pasteFromClipboard' member.
+        /// </summary>
         public new static readonly StringName PasteFromClipboard = "pasteFromClipboard";
+        /// <summary>
+        /// Cached name for the 'reload' member.
+        /// </summary>
         public new static readonly StringName Reload = "reload";
+        /// <summary>
+        /// Cached name for the 'removeBrowser' member.
+        /// </summary>
         public new static readonly StringName RemoveBrowser = "removeBrowser";
+        /// <summary>
+        /// Cached name for the 'setBackgroundMode' member.
+        /// </summary>
         public new static readonly StringName SetBackgroundMode = "setBackgroundMode";
+        /// <summary>
+        /// Cached name for the 'setCookie' member.
+        /// </summary>
         public new static readonly StringName SetCookie = "setCookie";
+        /// <summary>
+        /// Cached name for the 'setDPIScalingFactor' member.
+        /// </summary>
         public new static readonly StringName SetDpiScalingFactor = "setDPIScalingFactor";
+        /// <summary>
+        /// Cached name for the 'setHorizontalScroll' member.
+        /// </summary>
         public new static readonly StringName SetHorizontalScroll = "setHorizontalScroll";
+        /// <summary>
+        /// Cached name for the 'setKeyFocus' member.
+        /// </summary>
         public new static readonly StringName SetKeyFocus = "setKeyFocus";
+        /// <summary>
+        /// Cached name for the 'setPageScaleFactor' member.
+        /// </summary>
         public new static readonly StringName SetPageScaleFactor = "setPageScaleFactor";
+        /// <summary>
+        /// Cached name for the 'setSize' member.
+        /// </summary>
         public new static readonly StringName SetSize = "setSize";
+        /// <summary>
+        /// Cached name for the 'setVerticalScroll' member.
+        /// </summary>
         public new static readonly StringName SetVerticalScroll = "setVerticalScroll";
+        /// <summary>
+        /// Cached name for the 'htmlShutdown' member.
+        /// </summary>
         public new static readonly StringName HtmlShutdown = "htmlShutdown";
+        /// <summary>
+        /// Cached name for the 'stopFind' member.
+        /// </summary>
         public new static readonly StringName StopFind = "stopFind";
+        /// <summary>
+        /// Cached name for the 'stopLoad' member.
+        /// </summary>
         public new static readonly StringName StopLoad = "stopLoad";
+        /// <summary>
+        /// Cached name for the 'viewSource' member.
+        /// </summary>
         public new static readonly StringName ViewSource = "viewSource";
+        /// <summary>
+        /// Cached name for the 'createCookieContainer' member.
+        /// </summary>
         public new static readonly StringName CreateCookieContainer = "createCookieContainer";
+        /// <summary>
+        /// Cached name for the 'createHTTPRequest' member.
+        /// </summary>
         public new static readonly StringName CreateHttpRequest = "createHTTPRequest";
+        /// <summary>
+        /// Cached name for the 'deferHTTPRequest' member.
+        /// </summary>
         public new static readonly StringName DeferHttpRequest = "deferHTTPRequest";
+        /// <summary>
+        /// Cached name for the 'getHTTPDownloadProgressPct' member.
+        /// </summary>
         public new static readonly StringName GetHttpDownloadProgressPct = "getHTTPDownloadProgressPct";
+        /// <summary>
+        /// Cached name for the 'getHTTPRequestWasTimedOut' member.
+        /// </summary>
         public new static readonly StringName GetHttpRequestWasTimedOut = "getHTTPRequestWasTimedOut";
+        /// <summary>
+        /// Cached name for the 'getHTTPResponseBodyData' member.
+        /// </summary>
         public new static readonly StringName GetHttpResponseBodyData = "getHTTPResponseBodyData";
+        /// <summary>
+        /// Cached name for the 'getHTTPResponseBodySize' member.
+        /// </summary>
         public new static readonly StringName GetHttpResponseBodySize = "getHTTPResponseBodySize";
+        /// <summary>
+        /// Cached name for the 'getHTTPResponseHeaderSize' member.
+        /// </summary>
         public new static readonly StringName GetHttpResponseHeaderSize = "getHTTPResponseHeaderSize";
+        /// <summary>
+        /// Cached name for the 'getHTTPResponseHeaderValue' member.
+        /// </summary>
         public new static readonly StringName GetHttpResponseHeaderValue = "getHTTPResponseHeaderValue";
+        /// <summary>
+        /// Cached name for the 'getHTTPStreamingResponseBodyData' member.
+        /// </summary>
         public new static readonly StringName GetHttpStreamingResponseBodyData = "getHTTPStreamingResponseBodyData";
+        /// <summary>
+        /// Cached name for the 'prioritizeHTTPRequest' member.
+        /// </summary>
         public new static readonly StringName PrioritizeHttpRequest = "prioritizeHTTPRequest";
+        /// <summary>
+        /// Cached name for the 'releaseCookieContainer' member.
+        /// </summary>
         public new static readonly StringName ReleaseCookieContainer = "releaseCookieContainer";
+        /// <summary>
+        /// Cached name for the 'releaseHTTPRequest' member.
+        /// </summary>
         public new static readonly StringName ReleaseHttpRequest = "releaseHTTPRequest";
+        /// <summary>
+        /// Cached name for the 'sendHTTPRequest' member.
+        /// </summary>
         public new static readonly StringName SendHttpRequest = "sendHTTPRequest";
+        /// <summary>
+        /// Cached name for the 'sendHTTPRequestAndStreamResponse' member.
+        /// </summary>
         public new static readonly StringName SendHttpRequestAndStreamResponse = "sendHTTPRequestAndStreamResponse";
+        /// <summary>
+        /// Cached name for the 'setHTTPCookie' member.
+        /// </summary>
         public new static readonly StringName SetHttpCookie = "setHTTPCookie";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestAbsoluteTimeoutMS' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestAbsoluteTimeoutMs = "setHTTPRequestAbsoluteTimeoutMS";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestContextValue' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestContextValue = "setHTTPRequestContextValue";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestCookieContainer' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestCookieContainer = "setHTTPRequestCookieContainer";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestGetOrPostParameter' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestGetOrPostParameter = "setHTTPRequestGetOrPostParameter";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestHeaderValue' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestHeaderValue = "setHTTPRequestHeaderValue";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestNetworkActivityTimeout' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestNetworkActivityTimeout = "setHTTPRequestNetworkActivityTimeout";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestRawPostBody' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestRawPostBody = "setHTTPRequestRawPostBody";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestRequiresVerifiedCertificate' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestRequiresVerifiedCertificate = "setHTTPRequestRequiresVerifiedCertificate";
+        /// <summary>
+        /// Cached name for the 'setHTTPRequestUserAgentInfo' member.
+        /// </summary>
         public new static readonly StringName SetHttpRequestUserAgentInfo = "setHTTPRequestUserAgentInfo";
+        /// <summary>
+        /// Cached name for the 'activateActionSet' member.
+        /// </summary>
         public new static readonly StringName ActivateActionSet = "activateActionSet";
+        /// <summary>
+        /// Cached name for the 'activateActionSetLayer' member.
+        /// </summary>
         public new static readonly StringName ActivateActionSetLayer = "activateActionSetLayer";
+        /// <summary>
+        /// Cached name for the 'deactivateActionSetLayer' member.
+        /// </summary>
         public new static readonly StringName DeactivateActionSetLayer = "deactivateActionSetLayer";
+        /// <summary>
+        /// Cached name for the 'deactivateAllActionSetLayers' member.
+        /// </summary>
         public new static readonly StringName DeactivateAllActionSetLayers = "deactivateAllActionSetLayers";
+        /// <summary>
+        /// Cached name for the 'getActionSetHandle' member.
+        /// </summary>
         public new static readonly StringName GetActionSetHandle = "getActionSetHandle";
+        /// <summary>
+        /// Cached name for the 'getActionOriginFromXboxOrigin' member.
+        /// </summary>
         public new static readonly StringName GetActionOriginFromXboxOrigin = "getActionOriginFromXboxOrigin";
+        /// <summary>
+        /// Cached name for the 'getActiveActionSetLayers' member.
+        /// </summary>
         public new static readonly StringName GetActiveActionSetLayers = "getActiveActionSetLayers";
+        /// <summary>
+        /// Cached name for the 'getAnalogActionData' member.
+        /// </summary>
         public new static readonly StringName GetAnalogActionData = "getAnalogActionData";
+        /// <summary>
+        /// Cached name for the 'getAnalogActionHandle' member.
+        /// </summary>
         public new static readonly StringName GetAnalogActionHandle = "getAnalogActionHandle";
+        /// <summary>
+        /// Cached name for the 'getAnalogActionOrigins' member.
+        /// </summary>
         public new static readonly StringName GetAnalogActionOrigins = "getAnalogActionOrigins";
+        /// <summary>
+        /// Cached name for the 'getConnectedControllers' member.
+        /// </summary>
         public new static readonly StringName GetConnectedControllers = "getConnectedControllers";
+        /// <summary>
+        /// Cached name for the 'getControllerForGamepadIndex' member.
+        /// </summary>
         public new static readonly StringName GetControllerForGamepadIndex = "getControllerForGamepadIndex";
+        /// <summary>
+        /// Cached name for the 'getCurrentActionSet' member.
+        /// </summary>
         public new static readonly StringName GetCurrentActionSet = "getCurrentActionSet";
+        /// <summary>
+        /// Cached name for the 'getDeviceBindingRevision' member.
+        /// </summary>
         public new static readonly StringName GetDeviceBindingRevision = "getDeviceBindingRevision";
+        /// <summary>
+        /// Cached name for the 'getDigitalActionData' member.
+        /// </summary>
         public new static readonly StringName GetDigitalActionData = "getDigitalActionData";
+        /// <summary>
+        /// Cached name for the 'getDigitalActionHandle' member.
+        /// </summary>
         public new static readonly StringName GetDigitalActionHandle = "getDigitalActionHandle";
+        /// <summary>
+        /// Cached name for the 'getDigitalActionOrigins' member.
+        /// </summary>
         public new static readonly StringName GetDigitalActionOrigins = "getDigitalActionOrigins";
+        /// <summary>
+        /// Cached name for the 'getGamepadIndexForController' member.
+        /// </summary>
         public new static readonly StringName GetGamepadIndexForController = "getGamepadIndexForController";
+        /// <summary>
+        /// Cached name for the 'getGlyphForActionOrigin' member.
+        /// </summary>
         public new static readonly StringName GetGlyphForActionOrigin = "getGlyphForActionOrigin";
+        /// <summary>
+        /// Cached name for the 'getInputTypeForHandle' member.
+        /// </summary>
         public new static readonly StringName GetInputTypeForHandle = "getInputTypeForHandle";
+        /// <summary>
+        /// Cached name for the 'getMotionData' member.
+        /// </summary>
         public new static readonly StringName GetMotionData = "getMotionData";
+        /// <summary>
+        /// Cached name for the 'getRemotePlaySessionID' member.
+        /// </summary>
         public new static readonly StringName GetRemotePlaySessionId = "getRemotePlaySessionID";
+        /// <summary>
+        /// Cached name for the 'getStringForActionOrigin' member.
+        /// </summary>
         public new static readonly StringName GetStringForActionOrigin = "getStringForActionOrigin";
+        /// <summary>
+        /// Cached name for the 'inputInit' member.
+        /// </summary>
         public new static readonly StringName InputInit = "inputInit";
+        /// <summary>
+        /// Cached name for the 'inputShutdown' member.
+        /// </summary>
         public new static readonly StringName InputShutdown = "inputShutdown";
+        /// <summary>
+        /// Cached name for the 'runFrame' member.
+        /// </summary>
         public new static readonly StringName RunFrame = "runFrame";
+        /// <summary>
+        /// Cached name for the 'setLEDColor' member.
+        /// </summary>
         public new static readonly StringName SetLedColor = "setLEDColor";
+        /// <summary>
+        /// Cached name for the 'showBindingPanel' member.
+        /// </summary>
         public new static readonly StringName ShowBindingPanel = "showBindingPanel";
+        /// <summary>
+        /// Cached name for the 'stopAnalogActionMomentum' member.
+        /// </summary>
         public new static readonly StringName StopAnalogActionMomentum = "stopAnalogActionMomentum";
+        /// <summary>
+        /// Cached name for the 'translateActionOrigin' member.
+        /// </summary>
         public new static readonly StringName TranslateActionOrigin = "translateActionOrigin";
+        /// <summary>
+        /// Cached name for the 'triggerHapticPulse' member.
+        /// </summary>
         public new static readonly StringName TriggerHapticPulse = "triggerHapticPulse";
+        /// <summary>
+        /// Cached name for the 'triggerRepeatedHapticPulse' member.
+        /// </summary>
         public new static readonly StringName TriggerRepeatedHapticPulse = "triggerRepeatedHapticPulse";
+        /// <summary>
+        /// Cached name for the 'triggerVibration' member.
+        /// </summary>
         public new static readonly StringName TriggerVibration = "triggerVibration";
+        /// <summary>
+        /// Cached name for the 'setInputActionManifestFilePath' member.
+        /// </summary>
         public new static readonly StringName SetInputActionManifestFilePath = "setInputActionManifestFilePath";
+        /// <summary>
+        /// Cached name for the 'waitForData' member.
+        /// </summary>
         public new static readonly StringName WaitForData = "waitForData";
+        /// <summary>
+        /// Cached name for the 'newDataAvailable' member.
+        /// </summary>
         public new static readonly StringName NewDataAvailable = "newDataAvailable";
+        /// <summary>
+        /// Cached name for the 'enableDeviceCallbacks' member.
+        /// </summary>
         public new static readonly StringName EnableDeviceCallbacks = "enableDeviceCallbacks";
+        /// <summary>
+        /// Cached name for the 'enableActionEventCallbacks' member.
+        /// </summary>
         public new static readonly StringName EnableActionEventCallbacks = "enableActionEventCallbacks";
+        /// <summary>
+        /// Cached name for the 'getGlyphPNGForActionOrigin' member.
+        /// </summary>
         public new static readonly StringName GetGlyphPngForActionOrigin = "getGlyphPNGForActionOrigin";
+        /// <summary>
+        /// Cached name for the 'getGlyphSVGForActionOrigin' member.
+        /// </summary>
         public new static readonly StringName GetGlyphSvgForActionOrigin = "getGlyphSVGForActionOrigin";
+        /// <summary>
+        /// Cached name for the 'triggerVibrationExtended' member.
+        /// </summary>
         public new static readonly StringName TriggerVibrationExtended = "triggerVibrationExtended";
+        /// <summary>
+        /// Cached name for the 'triggerSimpleHapticEvent' member.
+        /// </summary>
         public new static readonly StringName TriggerSimpleHapticEvent = "triggerSimpleHapticEvent";
+        /// <summary>
+        /// Cached name for the 'getStringForXboxOrigin' member.
+        /// </summary>
         public new static readonly StringName GetStringForXboxOrigin = "getStringForXboxOrigin";
+        /// <summary>
+        /// Cached name for the 'getGlyphForXboxOrigin' member.
+        /// </summary>
         public new static readonly StringName GetGlyphForXboxOrigin = "getGlyphForXboxOrigin";
+        /// <summary>
+        /// Cached name for the 'getSessionInputConfigurationSettings' member.
+        /// </summary>
         public new static readonly StringName GetSessionInputConfigurationSettings = "getSessionInputConfigurationSettings";
+        /// <summary>
+        /// Cached name for the 'getStringForDigitalActionName' member.
+        /// </summary>
         public new static readonly StringName GetStringForDigitalActionName = "getStringForDigitalActionName";
+        /// <summary>
+        /// Cached name for the 'getStringForAnalogActionName' member.
+        /// </summary>
         public new static readonly StringName GetStringForAnalogActionName = "getStringForAnalogActionName";
+        /// <summary>
+        /// Cached name for the 'addPromoItem' member.
+        /// </summary>
         public new static readonly StringName AddPromoItem = "addPromoItem";
+        /// <summary>
+        /// Cached name for the 'addPromoItems' member.
+        /// </summary>
         public new static readonly StringName AddPromoItems = "addPromoItems";
+        /// <summary>
+        /// Cached name for the 'checkResultSteamID' member.
+        /// </summary>
         public new static readonly StringName CheckResultSteamId = "checkResultSteamID";
+        /// <summary>
+        /// Cached name for the 'consumeItem' member.
+        /// </summary>
         public new static readonly StringName ConsumeItem = "consumeItem";
+        /// <summary>
+        /// Cached name for the 'deserializeResult' member.
+        /// </summary>
         public new static readonly StringName DeserializeResult = "deserializeResult";
+        /// <summary>
+        /// Cached name for the 'destroyResult' member.
+        /// </summary>
         public new static readonly StringName DestroyResult = "destroyResult";
+        /// <summary>
+        /// Cached name for the 'exchangeItems' member.
+        /// </summary>
         public new static readonly StringName ExchangeItems = "exchangeItems";
+        /// <summary>
+        /// Cached name for the 'generateItems' member.
+        /// </summary>
         public new static readonly StringName GenerateItems = "generateItems";
+        /// <summary>
+        /// Cached name for the 'getAllItems' member.
+        /// </summary>
         public new static readonly StringName GetAllItems = "getAllItems";
+        /// <summary>
+        /// Cached name for the 'getItemDefinitionProperty' member.
+        /// </summary>
         public new static readonly StringName GetItemDefinitionProperty = "getItemDefinitionProperty";
+        /// <summary>
+        /// Cached name for the 'getItemsByID' member.
+        /// </summary>
         public new static readonly StringName GetItemsById = "getItemsByID";
+        /// <summary>
+        /// Cached name for the 'getItemPrice' member.
+        /// </summary>
         public new static readonly StringName GetItemPrice = "getItemPrice";
+        /// <summary>
+        /// Cached name for the 'getItemsWithPrices' member.
+        /// </summary>
         public new static readonly StringName GetItemsWithPrices = "getItemsWithPrices";
+        /// <summary>
+        /// Cached name for the 'getResultItemProperty' member.
+        /// </summary>
         public new static readonly StringName GetResultItemProperty = "getResultItemProperty";
+        /// <summary>
+        /// Cached name for the 'getResultItems' member.
+        /// </summary>
         public new static readonly StringName GetResultItems = "getResultItems";
+        /// <summary>
+        /// Cached name for the 'getResultStatus' member.
+        /// </summary>
         public new static readonly StringName GetResultStatus = "getResultStatus";
+        /// <summary>
+        /// Cached name for the 'getResultTimestamp' member.
+        /// </summary>
         public new static readonly StringName GetResultTimestamp = "getResultTimestamp";
+        /// <summary>
+        /// Cached name for the 'grantPromoItems' member.
+        /// </summary>
         public new static readonly StringName GrantPromoItems = "grantPromoItems";
+        /// <summary>
+        /// Cached name for the 'loadItemDefinitions' member.
+        /// </summary>
         public new static readonly StringName LoadItemDefinitions = "loadItemDefinitions";
+        /// <summary>
+        /// Cached name for the 'requestEligiblePromoItemDefinitionsIDs' member.
+        /// </summary>
         public new static readonly StringName RequestEligiblePromoItemDefinitionsIDs = "requestEligiblePromoItemDefinitionsIDs";
+        /// <summary>
+        /// Cached name for the 'requestPrices' member.
+        /// </summary>
         public new static readonly StringName RequestPrices = "requestPrices";
+        /// <summary>
+        /// Cached name for the 'serializeResult' member.
+        /// </summary>
         public new static readonly StringName SerializeResult = "serializeResult";
+        /// <summary>
+        /// Cached name for the 'startPurchase' member.
+        /// </summary>
         public new static readonly StringName StartPurchase = "startPurchase";
+        /// <summary>
+        /// Cached name for the 'transferItemQuantity' member.
+        /// </summary>
         public new static readonly StringName TransferItemQuantity = "transferItemQuantity";
+        /// <summary>
+        /// Cached name for the 'triggerItemDrop' member.
+        /// </summary>
         public new static readonly StringName TriggerItemDrop = "triggerItemDrop";
+        /// <summary>
+        /// Cached name for the 'startUpdateProperties' member.
+        /// </summary>
         public new static readonly StringName StartUpdateProperties = "startUpdateProperties";
+        /// <summary>
+        /// Cached name for the 'submitUpdateProperties' member.
+        /// </summary>
         public new static readonly StringName SubmitUpdateProperties = "submitUpdateProperties";
+        /// <summary>
+        /// Cached name for the 'removeProperty' member.
+        /// </summary>
         public new static readonly StringName RemoveProperty = "removeProperty";
+        /// <summary>
+        /// Cached name for the 'setPropertyString' member.
+        /// </summary>
         public new static readonly StringName SetPropertyString = "setPropertyString";
+        /// <summary>
+        /// Cached name for the 'setPropertyBool' member.
+        /// </summary>
         public new static readonly StringName SetPropertyBool = "setPropertyBool";
+        /// <summary>
+        /// Cached name for the 'setPropertyInt' member.
+        /// </summary>
         public new static readonly StringName SetPropertyInt = "setPropertyInt";
+        /// <summary>
+        /// Cached name for the 'setPropertyFloat' member.
+        /// </summary>
         public new static readonly StringName SetPropertyFloat = "setPropertyFloat";
+        /// <summary>
+        /// Cached name for the 'getFavoriteGames' member.
+        /// </summary>
         public new static readonly StringName GetFavoriteGames = "getFavoriteGames";
+        /// <summary>
+        /// Cached name for the 'addFavoriteGame' member.
+        /// </summary>
         public new static readonly StringName AddFavoriteGame = "addFavoriteGame";
+        /// <summary>
+        /// Cached name for the 'removeFavoriteGame' member.
+        /// </summary>
         public new static readonly StringName RemoveFavoriteGame = "removeFavoriteGame";
+        /// <summary>
+        /// Cached name for the 'requestLobbyList' member.
+        /// </summary>
         public new static readonly StringName RequestLobbyList = "requestLobbyList";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListStringFilter' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListStringFilter = "addRequestLobbyListStringFilter";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListNumericalFilter' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListNumericalFilter = "addRequestLobbyListNumericalFilter";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListNearValueFilter' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListNearValueFilter = "addRequestLobbyListNearValueFilter";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListFilterSlotsAvailable' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListFilterSlotsAvailable = "addRequestLobbyListFilterSlotsAvailable";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListDistanceFilter' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListDistanceFilter = "addRequestLobbyListDistanceFilter";
+        /// <summary>
+        /// Cached name for the 'addRequestLobbyListResultCountFilter' member.
+        /// </summary>
         public new static readonly StringName AddRequestLobbyListResultCountFilter = "addRequestLobbyListResultCountFilter";
+        /// <summary>
+        /// Cached name for the 'createLobby' member.
+        /// </summary>
         public new static readonly StringName CreateLobby = "createLobby";
+        /// <summary>
+        /// Cached name for the 'joinLobby' member.
+        /// </summary>
         public new static readonly StringName JoinLobby = "joinLobby";
+        /// <summary>
+        /// Cached name for the 'leaveLobby' member.
+        /// </summary>
         public new static readonly StringName LeaveLobby = "leaveLobby";
+        /// <summary>
+        /// Cached name for the 'inviteUserToLobby' member.
+        /// </summary>
         public new static readonly StringName InviteUserToLobby = "inviteUserToLobby";
+        /// <summary>
+        /// Cached name for the 'getNumLobbyMembers' member.
+        /// </summary>
         public new static readonly StringName GetNumLobbyMembers = "getNumLobbyMembers";
+        /// <summary>
+        /// Cached name for the 'getLobbyMemberByIndex' member.
+        /// </summary>
         public new static readonly StringName GetLobbyMemberByIndex = "getLobbyMemberByIndex";
+        /// <summary>
+        /// Cached name for the 'getLobbyData' member.
+        /// </summary>
         public new static readonly StringName GetLobbyData = "getLobbyData";
+        /// <summary>
+        /// Cached name for the 'setLobbyData' member.
+        /// </summary>
         public new static readonly StringName SetLobbyData = "setLobbyData";
+        /// <summary>
+        /// Cached name for the 'getAllLobbyData' member.
+        /// </summary>
         public new static readonly StringName GetAllLobbyData = "getAllLobbyData";
+        /// <summary>
+        /// Cached name for the 'deleteLobbyData' member.
+        /// </summary>
         public new static readonly StringName DeleteLobbyData = "deleteLobbyData";
+        /// <summary>
+        /// Cached name for the 'getLobbyMemberData' member.
+        /// </summary>
         public new static readonly StringName GetLobbyMemberData = "getLobbyMemberData";
+        /// <summary>
+        /// Cached name for the 'setLobbyMemberData' member.
+        /// </summary>
         public new static readonly StringName SetLobbyMemberData = "setLobbyMemberData";
+        /// <summary>
+        /// Cached name for the 'sendLobbyChatMsg' member.
+        /// </summary>
         public new static readonly StringName SendLobbyChatMsg = "sendLobbyChatMsg";
+        /// <summary>
+        /// Cached name for the 'requestLobbyData' member.
+        /// </summary>
         public new static readonly StringName RequestLobbyData = "requestLobbyData";
+        /// <summary>
+        /// Cached name for the 'setLobbyGameServer' member.
+        /// </summary>
         public new static readonly StringName SetLobbyGameServer = "setLobbyGameServer";
+        /// <summary>
+        /// Cached name for the 'getLobbyGameServer' member.
+        /// </summary>
         public new static readonly StringName GetLobbyGameServer = "getLobbyGameServer";
+        /// <summary>
+        /// Cached name for the 'setLobbyMemberLimit' member.
+        /// </summary>
         public new static readonly StringName SetLobbyMemberLimit = "setLobbyMemberLimit";
+        /// <summary>
+        /// Cached name for the 'getLobbyMemberLimit' member.
+        /// </summary>
         public new static readonly StringName GetLobbyMemberLimit = "getLobbyMemberLimit";
+        /// <summary>
+        /// Cached name for the 'setLobbyType' member.
+        /// </summary>
         public new static readonly StringName SetLobbyType = "setLobbyType";
+        /// <summary>
+        /// Cached name for the 'setLobbyJoinable' member.
+        /// </summary>
         public new static readonly StringName SetLobbyJoinable = "setLobbyJoinable";
+        /// <summary>
+        /// Cached name for the 'getLobbyOwner' member.
+        /// </summary>
         public new static readonly StringName GetLobbyOwner = "getLobbyOwner";
+        /// <summary>
+        /// Cached name for the 'setLobbyOwner' member.
+        /// </summary>
         public new static readonly StringName SetLobbyOwner = "setLobbyOwner";
+        /// <summary>
+        /// Cached name for the 'cancelQuery' member.
+        /// </summary>
         public new static readonly StringName CancelQuery = "cancelQuery";
+        /// <summary>
+        /// Cached name for the 'cancelServerQuery' member.
+        /// </summary>
         public new static readonly StringName CancelServerQuery = "cancelServerQuery";
+        /// <summary>
+        /// Cached name for the 'getServerCount' member.
+        /// </summary>
         public new static readonly StringName GetServerCount = "getServerCount";
+        /// <summary>
+        /// Cached name for the 'getServerDetails' member.
+        /// </summary>
         public new static readonly StringName GetServerDetails = "getServerDetails";
+        /// <summary>
+        /// Cached name for the 'isRefreshing' member.
+        /// </summary>
         public new static readonly StringName IsRefreshing = "isRefreshing";
+        /// <summary>
+        /// Cached name for the 'pingServer' member.
+        /// </summary>
         public new static readonly StringName PingServer = "pingServer";
+        /// <summary>
+        /// Cached name for the 'playerDetails' member.
+        /// </summary>
         public new static readonly StringName PlayerDetails = "playerDetails";
+        /// <summary>
+        /// Cached name for the 'refreshQuery' member.
+        /// </summary>
         public new static readonly StringName RefreshQuery = "refreshQuery";
+        /// <summary>
+        /// Cached name for the 'refreshServer' member.
+        /// </summary>
         public new static readonly StringName RefreshServer = "refreshServer";
+        /// <summary>
+        /// Cached name for the 'releaseRequest' member.
+        /// </summary>
         public new static readonly StringName ReleaseRequest = "releaseRequest";
+        /// <summary>
+        /// Cached name for the 'requestFavoritesServerList' member.
+        /// </summary>
         public new static readonly StringName RequestFavoritesServerList = "requestFavoritesServerList";
+        /// <summary>
+        /// Cached name for the 'requestFriendsServerList' member.
+        /// </summary>
         public new static readonly StringName RequestFriendsServerList = "requestFriendsServerList";
+        /// <summary>
+        /// Cached name for the 'requestHistoryServerList' member.
+        /// </summary>
         public new static readonly StringName RequestHistoryServerList = "requestHistoryServerList";
+        /// <summary>
+        /// Cached name for the 'requestInternetServerList' member.
+        /// </summary>
         public new static readonly StringName RequestInternetServerList = "requestInternetServerList";
+        /// <summary>
+        /// Cached name for the 'requestLANServerList' member.
+        /// </summary>
         public new static readonly StringName RequestLanServerList = "requestLANServerList";
+        /// <summary>
+        /// Cached name for the 'requestSpectatorServerList' member.
+        /// </summary>
         public new static readonly StringName RequestSpectatorServerList = "requestSpectatorServerList";
+        /// <summary>
+        /// Cached name for the 'serverFriends' member.
+        /// </summary>
         public new static readonly StringName ServerFriends = "serverFriends";
+        /// <summary>
+        /// Cached name for the 'serverRules' member.
+        /// </summary>
         public new static readonly StringName ServerRules = "serverRules";
+        /// <summary>
+        /// Cached name for the 'musicIsEnabled' member.
+        /// </summary>
         public new static readonly StringName MusicIsEnabled = "musicIsEnabled";
+        /// <summary>
+        /// Cached name for the 'musicIsPlaying' member.
+        /// </summary>
         public new static readonly StringName MusicIsPlaying = "musicIsPlaying";
+        /// <summary>
+        /// Cached name for the 'getPlaybackStatus' member.
+        /// </summary>
         public new static readonly StringName GetPlaybackStatus = "getPlaybackStatus";
+        /// <summary>
+        /// Cached name for the 'musicGetVolume' member.
+        /// </summary>
         public new static readonly StringName MusicGetVolume = "musicGetVolume";
+        /// <summary>
+        /// Cached name for the 'musicPause' member.
+        /// </summary>
         public new static readonly StringName MusicPause = "musicPause";
+        /// <summary>
+        /// Cached name for the 'musicPlay' member.
+        /// </summary>
         public new static readonly StringName MusicPlay = "musicPlay";
+        /// <summary>
+        /// Cached name for the 'musicPlayNext' member.
+        /// </summary>
         public new static readonly StringName MusicPlayNext = "musicPlayNext";
+        /// <summary>
+        /// Cached name for the 'musicPlayPrev' member.
+        /// </summary>
         public new static readonly StringName MusicPlayPrev = "musicPlayPrev";
+        /// <summary>
+        /// Cached name for the 'musicSetVolume' member.
+        /// </summary>
         public new static readonly StringName MusicSetVolume = "musicSetVolume";
+        /// <summary>
+        /// Cached name for the 'acceptP2PSessionWithUser' member.
+        /// </summary>
         public new static readonly StringName AcceptP2pSessionWithUser = "acceptP2PSessionWithUser";
+        /// <summary>
+        /// Cached name for the 'allowP2PPacketRelay' member.
+        /// </summary>
         public new static readonly StringName AllowP2pPacketRelay = "allowP2PPacketRelay";
+        /// <summary>
+        /// Cached name for the 'closeP2PChannelWithUser' member.
+        /// </summary>
         public new static readonly StringName CloseP2pChannelWithUser = "closeP2PChannelWithUser";
+        /// <summary>
+        /// Cached name for the 'closeP2PSessionWithUser' member.
+        /// </summary>
         public new static readonly StringName CloseP2pSessionWithUser = "closeP2PSessionWithUser";
+        /// <summary>
+        /// Cached name for the 'getP2PSessionState' member.
+        /// </summary>
         public new static readonly StringName GetP2pSessionState = "getP2PSessionState";
+        /// <summary>
+        /// Cached name for the 'getAvailableP2PPacketSize' member.
+        /// </summary>
         public new static readonly StringName GetAvailableP2pPacketSize = "getAvailableP2PPacketSize";
+        /// <summary>
+        /// Cached name for the 'readP2PPacket' member.
+        /// </summary>
         public new static readonly StringName ReadP2pPacket = "readP2PPacket";
+        /// <summary>
+        /// Cached name for the 'sendP2PPacket' member.
+        /// </summary>
         public new static readonly StringName SendP2pPacket = "sendP2PPacket";
+        /// <summary>
+        /// Cached name for the 'acceptSessionWithUser' member.
+        /// </summary>
         public new static readonly StringName AcceptSessionWithUser = "acceptSessionWithUser";
+        /// <summary>
+        /// Cached name for the 'closeChannelWithUser' member.
+        /// </summary>
         public new static readonly StringName CloseChannelWithUser = "closeChannelWithUser";
+        /// <summary>
+        /// Cached name for the 'closeSessionWithUser' member.
+        /// </summary>
         public new static readonly StringName CloseSessionWithUser = "closeSessionWithUser";
+        /// <summary>
+        /// Cached name for the 'getSessionConnectionInfo' member.
+        /// </summary>
         public new static readonly StringName GetSessionConnectionInfo = "getSessionConnectionInfo";
+        /// <summary>
+        /// Cached name for the 'receiveMessagesOnChannel' member.
+        /// </summary>
         public new static readonly StringName ReceiveMessagesOnChannel = "receiveMessagesOnChannel";
+        /// <summary>
+        /// Cached name for the 'sendMessageToUser' member.
+        /// </summary>
         public new static readonly StringName SendMessageToUser = "sendMessageToUser";
+        /// <summary>
+        /// Cached name for the 'acceptConnection' member.
+        /// </summary>
         public new static readonly StringName AcceptConnection = "acceptConnection";
+        /// <summary>
+        /// Cached name for the 'beginAsyncRequestFakeIP' member.
+        /// </summary>
         public new static readonly StringName BeginAsyncRequestFakeIp = "beginAsyncRequestFakeIP";
+        /// <summary>
+        /// Cached name for the 'closeConnection' member.
+        /// </summary>
         public new static readonly StringName CloseConnection = "closeConnection";
+        /// <summary>
+        /// Cached name for the 'closeListenSocket' member.
+        /// </summary>
         public new static readonly StringName CloseListenSocket = "closeListenSocket";
+        /// <summary>
+        /// Cached name for the 'configureConnectionLanes' member.
+        /// </summary>
         public new static readonly StringName ConfigureConnectionLanes = "configureConnectionLanes";
+        /// <summary>
+        /// Cached name for the 'connectP2P' member.
+        /// </summary>
         public new static readonly StringName ConnectP2p = "connectP2P";
+        /// <summary>
+        /// Cached name for the 'connectByIPAddress' member.
+        /// </summary>
         public new static readonly StringName ConnectByIpAddress = "connectByIPAddress";
+        /// <summary>
+        /// Cached name for the 'connectToHostedDedicatedServer' member.
+        /// </summary>
         public new static readonly StringName ConnectToHostedDedicatedServer = "connectToHostedDedicatedServer";
+        /// <summary>
+        /// Cached name for the 'createFakeUDPPort' member.
+        /// </summary>
         public new static readonly StringName CreateFakeUdpPort = "createFakeUDPPort";
+        /// <summary>
+        /// Cached name for the 'createListenSocketIP' member.
+        /// </summary>
         public new static readonly StringName CreateListenSocketIp = "createListenSocketIP";
+        /// <summary>
+        /// Cached name for the 'createListenSocketP2P' member.
+        /// </summary>
         public new static readonly StringName CreateListenSocketP2p = "createListenSocketP2P";
+        /// <summary>
+        /// Cached name for the 'createListenSocketP2PFakeIP' member.
+        /// </summary>
         public new static readonly StringName CreateListenSocketP2pFakeIp = "createListenSocketP2PFakeIP";
+        /// <summary>
+        /// Cached name for the 'createPollGroup' member.
+        /// </summary>
         public new static readonly StringName CreatePollGroup = "createPollGroup";
+        /// <summary>
+        /// Cached name for the 'createSocketPair' member.
+        /// </summary>
         public new static readonly StringName CreateSocketPair = "createSocketPair";
+        /// <summary>
+        /// Cached name for the 'destroyPollGroup' member.
+        /// </summary>
         public new static readonly StringName DestroyPollGroup = "destroyPollGroup";
+        /// <summary>
+        /// Cached name for the 'flushMessagesOnConnection' member.
+        /// </summary>
         public new static readonly StringName FlushMessagesOnConnection = "flushMessagesOnConnection";
+        /// <summary>
+        /// Cached name for the 'getAuthenticationStatus' member.
+        /// </summary>
         public new static readonly StringName GetAuthenticationStatus = "getAuthenticationStatus";
+        /// <summary>
+        /// Cached name for the 'getCertificateRequest' member.
+        /// </summary>
         public new static readonly StringName GetCertificateRequest = "getCertificateRequest";
+        /// <summary>
+        /// Cached name for the 'getConnectionInfo' member.
+        /// </summary>
         public new static readonly StringName GetConnectionInfo = "getConnectionInfo";
+        /// <summary>
+        /// Cached name for the 'getConnectionName' member.
+        /// </summary>
         public new static readonly StringName GetConnectionName = "getConnectionName";
+        /// <summary>
+        /// Cached name for the 'getConnectionRealTimeStatus' member.
+        /// </summary>
         public new static readonly StringName GetConnectionRealTimeStatus = "getConnectionRealTimeStatus";
+        /// <summary>
+        /// Cached name for the 'getConnectionUserData' member.
+        /// </summary>
         public new static readonly StringName GetConnectionUserData = "getConnectionUserData";
+        /// <summary>
+        /// Cached name for the 'getDetailedConnectionStatus' member.
+        /// </summary>
         public new static readonly StringName GetDetailedConnectionStatus = "getDetailedConnectionStatus";
+        /// <summary>
+        /// Cached name for the 'getFakeIP' member.
+        /// </summary>
         public new static readonly StringName GetFakeIp = "getFakeIP";
+        /// <summary>
+        /// Cached name for the 'getHostedDedicatedServerPOPId' member.
+        /// </summary>
         public new static readonly StringName GetHostedDedicatedServerPopId = "getHostedDedicatedServerPOPId";
+        /// <summary>
+        /// Cached name for the 'getHostedDedicatedServerPort' member.
+        /// </summary>
         public new static readonly StringName GetHostedDedicatedServerPort = "getHostedDedicatedServerPort";
+        /// <summary>
+        /// Cached name for the 'getListenSocketAddress' member.
+        /// </summary>
         public new static readonly StringName GetListenSocketAddress = "getListenSocketAddress";
+        /// <summary>
+        /// Cached name for the 'getRemoteFakeIPForConnection' member.
+        /// </summary>
         public new static readonly StringName GetRemoteFakeIpForConnection = "getRemoteFakeIPForConnection";
+        /// <summary>
+        /// Cached name for the 'initAuthentication' member.
+        /// </summary>
         public new static readonly StringName InitAuthentication = "initAuthentication";
+        /// <summary>
+        /// Cached name for the 'receiveMessagesOnConnection' member.
+        /// </summary>
         public new static readonly StringName ReceiveMessagesOnConnection = "receiveMessagesOnConnection";
+        /// <summary>
+        /// Cached name for the 'receiveMessagesOnPollGroup' member.
+        /// </summary>
         public new static readonly StringName ReceiveMessagesOnPollGroup = "receiveMessagesOnPollGroup";
+        /// <summary>
+        /// Cached name for the 'resetIdentity' member.
+        /// </summary>
         public new static readonly StringName ResetIdentity = "resetIdentity";
+        /// <summary>
+        /// Cached name for the 'runNetworkingCallbacks' member.
+        /// </summary>
         public new static readonly StringName RunNetworkingCallbacks = "runNetworkingCallbacks";
+        /// <summary>
+        /// Cached name for the 'sendMessages' member.
+        /// </summary>
         public new static readonly StringName SendMessages = "sendMessages";
+        /// <summary>
+        /// Cached name for the 'sendMessageToConnection' member.
+        /// </summary>
         public new static readonly StringName SendMessageToConnection = "sendMessageToConnection";
+        /// <summary>
+        /// Cached name for the 'setCertificate' member.
+        /// </summary>
         public new static readonly StringName SetCertificate = "setCertificate";
+        /// <summary>
+        /// Cached name for the 'setConnectionPollGroup' member.
+        /// </summary>
         public new static readonly StringName SetConnectionPollGroup = "setConnectionPollGroup";
+        /// <summary>
+        /// Cached name for the 'setConnectionName' member.
+        /// </summary>
         public new static readonly StringName SetConnectionName = "setConnectionName";
+        /// <summary>
+        /// Cached name for the 'setConnectionUserData' member.
+        /// </summary>
         public new static readonly StringName SetConnectionUserData = "setConnectionUserData";
+        /// <summary>
+        /// Cached name for the 'checkPingDataUpToDate' member.
+        /// </summary>
         public new static readonly StringName CheckPingDataUpToDate = "checkPingDataUpToDate";
+        /// <summary>
+        /// Cached name for the 'convertPingLocationToString' member.
+        /// </summary>
         public new static readonly StringName ConvertPingLocationToString = "convertPingLocationToString";
+        /// <summary>
+        /// Cached name for the 'estimatePingTimeBetweenTwoLocations' member.
+        /// </summary>
         public new static readonly StringName EstimatePingTimeBetweenTwoLocations = "estimatePingTimeBetweenTwoLocations";
+        /// <summary>
+        /// Cached name for the 'estimatePingTimeFromLocalHost' member.
+        /// </summary>
         public new static readonly StringName EstimatePingTimeFromLocalHost = "estimatePingTimeFromLocalHost";
+        /// <summary>
+        /// Cached name for the 'getConfigValue' member.
+        /// </summary>
         public new static readonly StringName GetConfigValue = "getConfigValue";
+        /// <summary>
+        /// Cached name for the 'getConfigValueInfo' member.
+        /// </summary>
         public new static readonly StringName GetConfigValueInfo = "getConfigValueInfo";
+        /// <summary>
+        /// Cached name for the 'getDirectPingToPOP' member.
+        /// </summary>
         public new static readonly StringName GetDirectPingToPop = "getDirectPingToPOP";
+        /// <summary>
+        /// Cached name for the 'getIPv4FakeIPType' member.
+        /// </summary>
         public new static readonly StringName GetIPv4FakeIpType = "getIPv4FakeIPType";
+        /// <summary>
+        /// Cached name for the 'getLocalPingLocation' member.
+        /// </summary>
         public new static readonly StringName GetLocalPingLocation = "getLocalPingLocation";
+        /// <summary>
+        /// Cached name for the 'getLocalTimestamp' member.
+        /// </summary>
         public new static readonly StringName GetLocalTimestamp = "getLocalTimestamp";
+        /// <summary>
+        /// Cached name for the 'getPingToDataCenter' member.
+        /// </summary>
         public new static readonly StringName GetPingToDataCenter = "getPingToDataCenter";
+        /// <summary>
+        /// Cached name for the 'getPOPCount' member.
+        /// </summary>
         public new static readonly StringName GetPopCount = "getPOPCount";
+        /// <summary>
+        /// Cached name for the 'getPOPList' member.
+        /// </summary>
         public new static readonly StringName GetPopList = "getPOPList";
+        /// <summary>
+        /// Cached name for the 'getRealIdentityForFakeIP' member.
+        /// </summary>
         public new static readonly StringName GetRealIdentityForFakeIp = "getRealIdentityForFakeIP";
+        /// <summary>
+        /// Cached name for the 'getRelayNetworkStatus' member.
+        /// </summary>
         public new static readonly StringName GetRelayNetworkStatus = "getRelayNetworkStatus";
+        /// <summary>
+        /// Cached name for the 'initRelayNetworkAccess' member.
+        /// </summary>
         public new static readonly StringName InitRelayNetworkAccess = "initRelayNetworkAccess";
+        /// <summary>
+        /// Cached name for the 'isFakeIPv4' member.
+        /// </summary>
         public new static readonly StringName IsFakeIPv4 = "isFakeIPv4";
+        /// <summary>
+        /// Cached name for the 'iterateGenericEditableConfigValues' member.
+        /// </summary>
         public new static readonly StringName IterateGenericEditableConfigValues = "iterateGenericEditableConfigValues";
+        /// <summary>
+        /// Cached name for the 'parsePingLocationString' member.
+        /// </summary>
         public new static readonly StringName ParsePingLocationString = "parsePingLocationString";
+        /// <summary>
+        /// Cached name for the 'setConnectionConfigValueFloat' member.
+        /// </summary>
         public new static readonly StringName SetConnectionConfigValueFloat = "setConnectionConfigValueFloat";
+        /// <summary>
+        /// Cached name for the 'setConnectionConfigValueInt32' member.
+        /// </summary>
         public new static readonly StringName SetConnectionConfigValueInt32 = "setConnectionConfigValueInt32";
+        /// <summary>
+        /// Cached name for the 'setConnectionConfigValueString' member.
+        /// </summary>
         public new static readonly StringName SetConnectionConfigValueString = "setConnectionConfigValueString";
+        /// <summary>
+        /// Cached name for the 'setGlobalConfigValueFloat' member.
+        /// </summary>
         public new static readonly StringName SetGlobalConfigValueFloat = "setGlobalConfigValueFloat";
+        /// <summary>
+        /// Cached name for the 'setGlobalConfigValueInt32' member.
+        /// </summary>
         public new static readonly StringName SetGlobalConfigValueInt32 = "setGlobalConfigValueInt32";
+        /// <summary>
+        /// Cached name for the 'setGlobalConfigValueString' member.
+        /// </summary>
         public new static readonly StringName SetGlobalConfigValueString = "setGlobalConfigValueString";
+        /// <summary>
+        /// Cached name for the 'isParentalLockEnabled' member.
+        /// </summary>
         public new static readonly StringName IsParentalLockEnabled = "isParentalLockEnabled";
+        /// <summary>
+        /// Cached name for the 'isParentalLockLocked' member.
+        /// </summary>
         public new static readonly StringName IsParentalLockLocked = "isParentalLockLocked";
+        /// <summary>
+        /// Cached name for the 'isAppBlocked' member.
+        /// </summary>
         public new static readonly StringName IsAppBlocked = "isAppBlocked";
+        /// <summary>
+        /// Cached name for the 'isAppInBlockList' member.
+        /// </summary>
         public new static readonly StringName IsAppInBlockList = "isAppInBlockList";
+        /// <summary>
+        /// Cached name for the 'isFeatureBlocked' member.
+        /// </summary>
         public new static readonly StringName IsFeatureBlocked = "isFeatureBlocked";
+        /// <summary>
+        /// Cached name for the 'isFeatureInBlockList' member.
+        /// </summary>
         public new static readonly StringName IsFeatureInBlockList = "isFeatureInBlockList";
+        /// <summary>
+        /// Cached name for the 'cancelReservation' member.
+        /// </summary>
         public new static readonly StringName CancelReservation = "cancelReservation";
+        /// <summary>
+        /// Cached name for the 'changeNumOpenSlots' member.
+        /// </summary>
         public new static readonly StringName ChangeNumOpenSlots = "changeNumOpenSlots";
+        /// <summary>
+        /// Cached name for the 'createBeacon' member.
+        /// </summary>
         public new static readonly StringName CreateBeacon = "createBeacon";
+        /// <summary>
+        /// Cached name for the 'destroyBeacon' member.
+        /// </summary>
         public new static readonly StringName DestroyBeacon = "destroyBeacon";
+        /// <summary>
+        /// Cached name for the 'getAvailableBeaconLocations' member.
+        /// </summary>
         public new static readonly StringName GetAvailableBeaconLocations = "getAvailableBeaconLocations";
+        /// <summary>
+        /// Cached name for the 'getBeaconByIndex' member.
+        /// </summary>
         public new static readonly StringName GetBeaconByIndex = "getBeaconByIndex";
+        /// <summary>
+        /// Cached name for the 'getBeaconDetails' member.
+        /// </summary>
         public new static readonly StringName GetBeaconDetails = "getBeaconDetails";
+        /// <summary>
+        /// Cached name for the 'getBeaconLocationData' member.
+        /// </summary>
         public new static readonly StringName GetBeaconLocationData = "getBeaconLocationData";
+        /// <summary>
+        /// Cached name for the 'getNumActiveBeacons' member.
+        /// </summary>
         public new static readonly StringName GetNumActiveBeacons = "getNumActiveBeacons";
+        /// <summary>
+        /// Cached name for the 'getNumAvailableBeaconLocations' member.
+        /// </summary>
         public new static readonly StringName GetNumAvailableBeaconLocations = "getNumAvailableBeaconLocations";
+        /// <summary>
+        /// Cached name for the 'joinParty' member.
+        /// </summary>
         public new static readonly StringName JoinParty = "joinParty";
+        /// <summary>
+        /// Cached name for the 'onReservationCompleted' member.
+        /// </summary>
         public new static readonly StringName OnReservationCompleted = "onReservationCompleted";
+        /// <summary>
+        /// Cached name for the 'enableRemotePlayTogetherDirectInput' member.
+        /// </summary>
         public new static readonly StringName EnableRemotePlayTogetherDirectInput = "enableRemotePlayTogetherDirectInput";
+        /// <summary>
+        /// Cached name for the 'disableRemotePlayTogetherDirectInput' member.
+        /// </summary>
         public new static readonly StringName DisableRemotePlayTogetherDirectInput = "disableRemotePlayTogetherDirectInput";
+        /// <summary>
+        /// Cached name for the 'getInput' member.
+        /// </summary>
         public new static readonly StringName GetInput = "getInput";
+        /// <summary>
+        /// Cached name for the 'getLargeSessionAvatar' member.
+        /// </summary>
         public new static readonly StringName GetLargeSessionAvatar = "getLargeSessionAvatar";
+        /// <summary>
+        /// Cached name for the 'getMediumSessionAvatar' member.
+        /// </summary>
         public new static readonly StringName GetMediumSessionAvatar = "getMediumSessionAvatar";
+        /// <summary>
+        /// Cached name for the 'getSessionCount' member.
+        /// </summary>
         public new static readonly StringName GetSessionCount = "getSessionCount";
+        /// <summary>
+        /// Cached name for the 'getSessionGuestID' member.
+        /// </summary>
         public new static readonly StringName GetSessionGuestId = "getSessionGuestID";
+        /// <summary>
+        /// Cached name for the 'getSessionID' member.
+        /// </summary>
         public new static readonly StringName GetSessionId = "getSessionID";
+        /// <summary>
+        /// Cached name for the 'getSessionSteamID' member.
+        /// </summary>
         public new static readonly StringName GetSessionSteamId = "getSessionSteamID";
+        /// <summary>
+        /// Cached name for the 'getSmallSessionAvatar' member.
+        /// </summary>
         public new static readonly StringName GetSmallSessionAvatar = "getSmallSessionAvatar";
+        /// <summary>
+        /// Cached name for the 'getSessionClientName' member.
+        /// </summary>
         public new static readonly StringName GetSessionClientName = "getSessionClientName";
+        /// <summary>
+        /// Cached name for the 'getSessionClientFormFactor' member.
+        /// </summary>
         public new static readonly StringName GetSessionClientFormFactor = "getSessionClientFormFactor";
+        /// <summary>
+        /// Cached name for the 'getSessionClientResolution' member.
+        /// </summary>
         public new static readonly StringName GetSessionClientResolution = "getSessionClientResolution";
+        /// <summary>
+        /// Cached name for the 'sendRemotePlayTogetherInvite' member.
+        /// </summary>
         public new static readonly StringName SendRemotePlayTogetherInvite = "sendRemotePlayTogetherInvite";
+        /// <summary>
+        /// Cached name for the 'sessionRemotePlayTogether' member.
+        /// </summary>
         public new static readonly StringName SessionRemotePlayTogether = "sessionRemotePlayTogether";
+        /// <summary>
+        /// Cached name for the 'setMouseCursor' member.
+        /// </summary>
         public new static readonly StringName SetMouseCursor = "setMouseCursor";
+        /// <summary>
+        /// Cached name for the 'setMousePosition' member.
+        /// </summary>
         public new static readonly StringName SetMousePosition = "setMousePosition";
+        /// <summary>
+        /// Cached name for the 'setMouseVisibility' member.
+        /// </summary>
         public new static readonly StringName SetMouseVisibility = "setMouseVisibility";
+        /// <summary>
+        /// Cached name for the 'showRemotePlayTogetherUI' member.
+        /// </summary>
         public new static readonly StringName ShowRemotePlayTogetherUi = "showRemotePlayTogetherUI";
+        /// <summary>
+        /// Cached name for the 'beginFileWriteBatch' member.
+        /// </summary>
         public new static readonly StringName BeginFileWriteBatch = "beginFileWriteBatch";
+        /// <summary>
+        /// Cached name for the 'endFileWriteBatch' member.
+        /// </summary>
         public new static readonly StringName EndFileWriteBatch = "endFileWriteBatch";
+        /// <summary>
+        /// Cached name for the 'fileDelete' member.
+        /// </summary>
         public new static readonly StringName FileDelete = "fileDelete";
+        /// <summary>
+        /// Cached name for the 'fileExists' member.
+        /// </summary>
         public new static readonly StringName FileExists = "fileExists";
+        /// <summary>
+        /// Cached name for the 'fileForget' member.
+        /// </summary>
         public new static readonly StringName FileForget = "fileForget";
+        /// <summary>
+        /// Cached name for the 'filePersisted' member.
+        /// </summary>
         public new static readonly StringName FilePersisted = "filePersisted";
+        /// <summary>
+        /// Cached name for the 'fileRead' member.
+        /// </summary>
         public new static readonly StringName FileRead = "fileRead";
+        /// <summary>
+        /// Cached name for the 'fileReadAsync' member.
+        /// </summary>
         public new static readonly StringName FileReadAsync = "fileReadAsync";
+        /// <summary>
+        /// Cached name for the 'fileShare' member.
+        /// </summary>
         public new static readonly StringName FileShare = "fileShare";
+        /// <summary>
+        /// Cached name for the 'fileWrite' member.
+        /// </summary>
         public new static readonly StringName FileWrite = "fileWrite";
+        /// <summary>
+        /// Cached name for the 'fileWriteAsync' member.
+        /// </summary>
         public new static readonly StringName FileWriteAsync = "fileWriteAsync";
+        /// <summary>
+        /// Cached name for the 'fileWriteStreamCancel' member.
+        /// </summary>
         public new static readonly StringName FileWriteStreamCancel = "fileWriteStreamCancel";
+        /// <summary>
+        /// Cached name for the 'fileWriteStreamClose' member.
+        /// </summary>
         public new static readonly StringName FileWriteStreamClose = "fileWriteStreamClose";
+        /// <summary>
+        /// Cached name for the 'fileWriteStreamOpen' member.
+        /// </summary>
         public new static readonly StringName FileWriteStreamOpen = "fileWriteStreamOpen";
+        /// <summary>
+        /// Cached name for the 'fileWriteStreamWriteChunk' member.
+        /// </summary>
         public new static readonly StringName FileWriteStreamWriteChunk = "fileWriteStreamWriteChunk";
+        /// <summary>
+        /// Cached name for the 'getCachedUGCCount' member.
+        /// </summary>
         public new static readonly StringName GetCachedUgcCount = "getCachedUGCCount";
+        /// <summary>
+        /// Cached name for the 'getCachedUGCHandle' member.
+        /// </summary>
         public new static readonly StringName GetCachedUgcHandle = "getCachedUGCHandle";
+        /// <summary>
+        /// Cached name for the 'getFileCount' member.
+        /// </summary>
         public new static readonly StringName GetFileCount = "getFileCount";
+        /// <summary>
+        /// Cached name for the 'getFileNameAndSize' member.
+        /// </summary>
         public new static readonly StringName GetFileNameAndSize = "getFileNameAndSize";
+        /// <summary>
+        /// Cached name for the 'getFileSize' member.
+        /// </summary>
         public new static readonly StringName GetFileSize = "getFileSize";
+        /// <summary>
+        /// Cached name for the 'getFileTimestamp' member.
+        /// </summary>
         public new static readonly StringName GetFileTimestamp = "getFileTimestamp";
+        /// <summary>
+        /// Cached name for the 'getLocalFileChange' member.
+        /// </summary>
         public new static readonly StringName GetLocalFileChange = "getLocalFileChange";
+        /// <summary>
+        /// Cached name for the 'getLocalFileChangeCount' member.
+        /// </summary>
         public new static readonly StringName GetLocalFileChangeCount = "getLocalFileChangeCount";
+        /// <summary>
+        /// Cached name for the 'getQuota' member.
+        /// </summary>
         public new static readonly StringName GetQuota = "getQuota";
+        /// <summary>
+        /// Cached name for the 'getSyncPlatforms' member.
+        /// </summary>
         public new static readonly StringName GetSyncPlatforms = "getSyncPlatforms";
+        /// <summary>
+        /// Cached name for the 'getUGCDetails' member.
+        /// </summary>
         public new static readonly StringName GetUgcDetails = "getUGCDetails";
+        /// <summary>
+        /// Cached name for the 'getUGCDownloadProgress' member.
+        /// </summary>
         public new static readonly StringName GetUgcDownloadProgress = "getUGCDownloadProgress";
+        /// <summary>
+        /// Cached name for the 'isCloudEnabledForAccount' member.
+        /// </summary>
         public new static readonly StringName IsCloudEnabledForAccount = "isCloudEnabledForAccount";
+        /// <summary>
+        /// Cached name for the 'isCloudEnabledForApp' member.
+        /// </summary>
         public new static readonly StringName IsCloudEnabledForApp = "isCloudEnabledForApp";
+        /// <summary>
+        /// Cached name for the 'setCloudEnabledForApp' member.
+        /// </summary>
         public new static readonly StringName SetCloudEnabledForApp = "setCloudEnabledForApp";
+        /// <summary>
+        /// Cached name for the 'setSyncPlatforms' member.
+        /// </summary>
         public new static readonly StringName SetSyncPlatforms = "setSyncPlatforms";
+        /// <summary>
+        /// Cached name for the 'ugcDownload' member.
+        /// </summary>
         public new static readonly StringName UgcDownload = "ugcDownload";
+        /// <summary>
+        /// Cached name for the 'ugcDownloadToLocation' member.
+        /// </summary>
         public new static readonly StringName UgcDownloadToLocation = "ugcDownloadToLocation";
+        /// <summary>
+        /// Cached name for the 'ugcRead' member.
+        /// </summary>
         public new static readonly StringName UgcRead = "ugcRead";
+        /// <summary>
+        /// Cached name for the 'addScreenshotToLibrary' member.
+        /// </summary>
         public new static readonly StringName AddScreenshotToLibrary = "addScreenshotToLibrary";
+        /// <summary>
+        /// Cached name for the 'addVRScreenshotToLibrary' member.
+        /// </summary>
         public new static readonly StringName AddVrScreenshotToLibrary = "addVRScreenshotToLibrary";
+        /// <summary>
+        /// Cached name for the 'hookScreenshots' member.
+        /// </summary>
         public new static readonly StringName HookScreenshots = "hookScreenshots";
+        /// <summary>
+        /// Cached name for the 'isScreenshotsHooked' member.
+        /// </summary>
         public new static readonly StringName IsScreenshotsHooked = "isScreenshotsHooked";
+        /// <summary>
+        /// Cached name for the 'setLocation' member.
+        /// </summary>
         public new static readonly StringName SetLocation = "setLocation";
+        /// <summary>
+        /// Cached name for the 'tagPublishedFile' member.
+        /// </summary>
         public new static readonly StringName TagPublishedFile = "tagPublishedFile";
+        /// <summary>
+        /// Cached name for the 'tagUser' member.
+        /// </summary>
         public new static readonly StringName TagUser = "tagUser";
+        /// <summary>
+        /// Cached name for the 'triggerScreenshot' member.
+        /// </summary>
         public new static readonly StringName TriggerScreenshot = "triggerScreenshot";
+        /// <summary>
+        /// Cached name for the 'writeScreenshot' member.
+        /// </summary>
         public new static readonly StringName WriteScreenshot = "writeScreenshot";
+        /// <summary>
+        /// Cached name for the 'addGamePhaseTag' member.
+        /// </summary>
         public new static readonly StringName AddGamePhaseTag = "addGamePhaseTag";
+        /// <summary>
+        /// Cached name for the 'addInstantaneousTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName AddInstantaneousTimelineEvent = "addInstantaneousTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'addRangeTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName AddRangeTimelineEvent = "addRangeTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'clearTimelineTooltip' member.
+        /// </summary>
         public new static readonly StringName ClearTimelineTooltip = "clearTimelineTooltip";
+        /// <summary>
+        /// Cached name for the 'doesEventRecordingExist' member.
+        /// </summary>
         public new static readonly StringName DoesEventRecordingExist = "doesEventRecordingExist";
+        /// <summary>
+        /// Cached name for the 'doesGamePhaseRecordingExist' member.
+        /// </summary>
         public new static readonly StringName DoesGamePhaseRecordingExist = "doesGamePhaseRecordingExist";
+        /// <summary>
+        /// Cached name for the 'endGamePhase' member.
+        /// </summary>
         public new static readonly StringName EndGamePhase = "endGamePhase";
+        /// <summary>
+        /// Cached name for the 'endRangeTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName EndRangeTimelineEvent = "endRangeTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'openOverlayToGamePhase' member.
+        /// </summary>
         public new static readonly StringName OpenOverlayToGamePhase = "openOverlayToGamePhase";
+        /// <summary>
+        /// Cached name for the 'openOverlayToTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName OpenOverlayToTimelineEvent = "openOverlayToTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'removeTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName RemoveTimelineEvent = "removeTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'setGamePhaseAttribute' member.
+        /// </summary>
         public new static readonly StringName SetGamePhaseAttribute = "setGamePhaseAttribute";
+        /// <summary>
+        /// Cached name for the 'setGamePhaseID' member.
+        /// </summary>
         public new static readonly StringName SetGamePhaseId = "setGamePhaseID";
+        /// <summary>
+        /// Cached name for the 'setTimelineGameMode' member.
+        /// </summary>
         public new static readonly StringName SetTimelineGameMode = "setTimelineGameMode";
+        /// <summary>
+        /// Cached name for the 'setTimelineTooltip' member.
+        /// </summary>
         public new static readonly StringName SetTimelineTooltip = "setTimelineTooltip";
+        /// <summary>
+        /// Cached name for the 'startGamePhase' member.
+        /// </summary>
         public new static readonly StringName StartGamePhase = "startGamePhase";
+        /// <summary>
+        /// Cached name for the 'startRangeTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName StartRangeTimelineEvent = "startRangeTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'updateRangeTimelineEvent' member.
+        /// </summary>
         public new static readonly StringName UpdateRangeTimelineEvent = "updateRangeTimelineEvent";
+        /// <summary>
+        /// Cached name for the 'addAppDependency' member.
+        /// </summary>
         public new static readonly StringName AddAppDependency = "addAppDependency";
+        /// <summary>
+        /// Cached name for the 'addContentDescriptor' member.
+        /// </summary>
         public new static readonly StringName AddContentDescriptor = "addContentDescriptor";
+        /// <summary>
+        /// Cached name for the 'addDependency' member.
+        /// </summary>
         public new static readonly StringName AddDependency = "addDependency";
+        /// <summary>
+        /// Cached name for the 'addExcludedTag' member.
+        /// </summary>
         public new static readonly StringName AddExcludedTag = "addExcludedTag";
+        /// <summary>
+        /// Cached name for the 'addItemKeyValueTag' member.
+        /// </summary>
         public new static readonly StringName AddItemKeyValueTag = "addItemKeyValueTag";
+        /// <summary>
+        /// Cached name for the 'addItemPreviewFile' member.
+        /// </summary>
         public new static readonly StringName AddItemPreviewFile = "addItemPreviewFile";
+        /// <summary>
+        /// Cached name for the 'addItemPreviewVideo' member.
+        /// </summary>
         public new static readonly StringName AddItemPreviewVideo = "addItemPreviewVideo";
+        /// <summary>
+        /// Cached name for the 'addItemToFavorites' member.
+        /// </summary>
         public new static readonly StringName AddItemToFavorites = "addItemToFavorites";
+        /// <summary>
+        /// Cached name for the 'addRequiredKeyValueTag' member.
+        /// </summary>
         public new static readonly StringName AddRequiredKeyValueTag = "addRequiredKeyValueTag";
+        /// <summary>
+        /// Cached name for the 'addRequiredTag' member.
+        /// </summary>
         public new static readonly StringName AddRequiredTag = "addRequiredTag";
+        /// <summary>
+        /// Cached name for the 'addRequiredTagGroup' member.
+        /// </summary>
         public new static readonly StringName AddRequiredTagGroup = "addRequiredTagGroup";
+        /// <summary>
+        /// Cached name for the 'initWorkshopForGameServer' member.
+        /// </summary>
         public new static readonly StringName InitWorkshopForGameServer = "initWorkshopForGameServer";
+        /// <summary>
+        /// Cached name for the 'markDownloadedItemAsUnused' member.
+        /// </summary>
         public new static readonly StringName MarkDownloadedItemAsUnused = "markDownloadedItemAsUnused";
+        /// <summary>
+        /// Cached name for the 'createItem' member.
+        /// </summary>
         public new static readonly StringName CreateItem = "createItem";
+        /// <summary>
+        /// Cached name for the 'createQueryAllUGCRequestPage' member.
+        /// </summary>
         public new static readonly StringName CreateQueryAllUgcRequestPage = "createQueryAllUGCRequestPage";
+        /// <summary>
+        /// Cached name for the 'createQueryAllUGCRequestCursor' member.
+        /// </summary>
         public new static readonly StringName CreateQueryAllUgcRequestCursor = "createQueryAllUGCRequestCursor";
+        /// <summary>
+        /// Cached name for the 'createQueryUGCDetailsRequest' member.
+        /// </summary>
         public new static readonly StringName CreateQueryUgcDetailsRequest = "createQueryUGCDetailsRequest";
+        /// <summary>
+        /// Cached name for the 'createQueryUserUGCRequest' member.
+        /// </summary>
         public new static readonly StringName CreateQueryUserUgcRequest = "createQueryUserUGCRequest";
+        /// <summary>
+        /// Cached name for the 'deleteItem' member.
+        /// </summary>
         public new static readonly StringName DeleteItem = "deleteItem";
+        /// <summary>
+        /// Cached name for the 'downloadItem' member.
+        /// </summary>
         public new static readonly StringName DownloadItem = "downloadItem";
+        /// <summary>
+        /// Cached name for the 'getAppDependencies' member.
+        /// </summary>
         public new static readonly StringName GetAppDependencies = "getAppDependencies";
+        /// <summary>
+        /// Cached name for the 'getDownloadedItems' member.
+        /// </summary>
         public new static readonly StringName GetDownloadedItems = "getDownloadedItems";
+        /// <summary>
+        /// Cached name for the 'getItemDownloadInfo' member.
+        /// </summary>
         public new static readonly StringName GetItemDownloadInfo = "getItemDownloadInfo";
+        /// <summary>
+        /// Cached name for the 'getItemInstallInfo' member.
+        /// </summary>
         public new static readonly StringName GetItemInstallInfo = "getItemInstallInfo";
+        /// <summary>
+        /// Cached name for the 'getItemState' member.
+        /// </summary>
         public new static readonly StringName GetItemState = "getItemState";
+        /// <summary>
+        /// Cached name for the 'getItemUpdateProgress' member.
+        /// </summary>
         public new static readonly StringName GetItemUpdateProgress = "getItemUpdateProgress";
+        /// <summary>
+        /// Cached name for the 'getNumDownloadedItems' member.
+        /// </summary>
         public new static readonly StringName GetNumDownloadedItems = "getNumDownloadedItems";
+        /// <summary>
+        /// Cached name for the 'getNumSubscribedItems' member.
+        /// </summary>
         public new static readonly StringName GetNumSubscribedItems = "getNumSubscribedItems";
+        /// <summary>
+        /// Cached name for the 'getNumSupportedGameVersions' member.
+        /// </summary>
         public new static readonly StringName GetNumSupportedGameVersions = "getNumSupportedGameVersions";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCAdditionalPreview' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcAdditionalPreview = "getQueryUGCAdditionalPreview";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCChildren' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcChildren = "getQueryUGCChildren";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCContentDescriptors' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcContentDescriptors = "getQueryUGCContentDescriptors";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCKeyValueTag' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcKeyValueTag = "getQueryUGCKeyValueTag";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCMetadata' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcMetadata = "getQueryUGCMetadata";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCNumAdditionalPreviews' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcNumAdditionalPreviews = "getQueryUGCNumAdditionalPreviews";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCNumKeyValueTags' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcNumKeyValueTags = "getQueryUGCNumKeyValueTags";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCNumTags' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcNumTags = "getQueryUGCNumTags";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCPreviewURL' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcPreviewUrl = "getQueryUGCPreviewURL";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCResult' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcResult = "getQueryUGCResult";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCStatistic' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcStatistic = "getQueryUGCStatistic";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCTag' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcTag = "getQueryUGCTag";
+        /// <summary>
+        /// Cached name for the 'getQueryUGCTagDisplayName' member.
+        /// </summary>
         public new static readonly StringName GetQueryUgcTagDisplayName = "getQueryUGCTagDisplayName";
+        /// <summary>
+        /// Cached name for the 'getSubscribedItems' member.
+        /// </summary>
         public new static readonly StringName GetSubscribedItems = "getSubscribedItems";
+        /// <summary>
+        /// Cached name for the 'getSupportedGameVersionData' member.
+        /// </summary>
         public new static readonly StringName GetSupportedGameVersionData = "getSupportedGameVersionData";
+        /// <summary>
+        /// Cached name for the 'getUserContentDescriptorPreferences' member.
+        /// </summary>
         public new static readonly StringName GetUserContentDescriptorPreferences = "getUserContentDescriptorPreferences";
+        /// <summary>
+        /// Cached name for the 'getUserItemVote' member.
+        /// </summary>
         public new static readonly StringName GetUserItemVote = "getUserItemVote";
+        /// <summary>
+        /// Cached name for the 'releaseQueryUGCRequest' member.
+        /// </summary>
         public new static readonly StringName ReleaseQueryUgcRequest = "releaseQueryUGCRequest";
+        /// <summary>
+        /// Cached name for the 'removeAllItemKeyValueTags' member.
+        /// </summary>
         public new static readonly StringName RemoveAllItemKeyValueTags = "removeAllItemKeyValueTags";
+        /// <summary>
+        /// Cached name for the 'removeAppDependency' member.
+        /// </summary>
         public new static readonly StringName RemoveAppDependency = "removeAppDependency";
+        /// <summary>
+        /// Cached name for the 'removeContentDescriptor' member.
+        /// </summary>
         public new static readonly StringName RemoveContentDescriptor = "removeContentDescriptor";
+        /// <summary>
+        /// Cached name for the 'removeDependency' member.
+        /// </summary>
         public new static readonly StringName RemoveDependency = "removeDependency";
+        /// <summary>
+        /// Cached name for the 'removeItemFromFavorites' member.
+        /// </summary>
         public new static readonly StringName RemoveItemFromFavorites = "removeItemFromFavorites";
+        /// <summary>
+        /// Cached name for the 'removeItemKeyValueTags' member.
+        /// </summary>
         public new static readonly StringName RemoveItemKeyValueTags = "removeItemKeyValueTags";
+        /// <summary>
+        /// Cached name for the 'removeItemPreview' member.
+        /// </summary>
         public new static readonly StringName RemoveItemPreview = "removeItemPreview";
+        /// <summary>
+        /// Cached name for the 'sendQueryUGCRequest' member.
+        /// </summary>
         public new static readonly StringName SendQueryUgcRequest = "sendQueryUGCRequest";
+        /// <summary>
+        /// Cached name for the 'setAdminQuery' member.
+        /// </summary>
         public new static readonly StringName SetAdminQuery = "setAdminQuery";
+        /// <summary>
+        /// Cached name for the 'setAllowCachedResponse' member.
+        /// </summary>
         public new static readonly StringName SetAllowCachedResponse = "setAllowCachedResponse";
+        /// <summary>
+        /// Cached name for the 'setAllowLegacyUpload' member.
+        /// </summary>
         public new static readonly StringName SetAllowLegacyUpload = "setAllowLegacyUpload";
+        /// <summary>
+        /// Cached name for the 'setCloudFileNameFilter' member.
+        /// </summary>
         public new static readonly StringName SetCloudFileNameFilter = "setCloudFileNameFilter";
+        /// <summary>
+        /// Cached name for the 'setItemContent' member.
+        /// </summary>
         public new static readonly StringName SetItemContent = "setItemContent";
+        /// <summary>
+        /// Cached name for the 'setItemDescription' member.
+        /// </summary>
         public new static readonly StringName SetItemDescription = "setItemDescription";
+        /// <summary>
+        /// Cached name for the 'setItemMetadata' member.
+        /// </summary>
         public new static readonly StringName SetItemMetadata = "setItemMetadata";
+        /// <summary>
+        /// Cached name for the 'setItemPreview' member.
+        /// </summary>
         public new static readonly StringName SetItemPreview = "setItemPreview";
+        /// <summary>
+        /// Cached name for the 'setItemTags' member.
+        /// </summary>
         public new static readonly StringName SetItemTags = "setItemTags";
+        /// <summary>
+        /// Cached name for the 'setItemTitle' member.
+        /// </summary>
         public new static readonly StringName SetItemTitle = "setItemTitle";
+        /// <summary>
+        /// Cached name for the 'setItemUpdateLanguage' member.
+        /// </summary>
         public new static readonly StringName SetItemUpdateLanguage = "setItemUpdateLanguage";
+        /// <summary>
+        /// Cached name for the 'setItemVisibility' member.
+        /// </summary>
         public new static readonly StringName SetItemVisibility = "setItemVisibility";
+        /// <summary>
+        /// Cached name for the 'setItemsDisabledLocally' member.
+        /// </summary>
         public new static readonly StringName SetItemsDisabledLocally = "setItemsDisabledLocally";
+        /// <summary>
+        /// Cached name for the 'setLanguage' member.
+        /// </summary>
         public new static readonly StringName SetLanguage = "setLanguage";
+        /// <summary>
+        /// Cached name for the 'setMatchAnyTag' member.
+        /// </summary>
         public new static readonly StringName SetMatchAnyTag = "setMatchAnyTag";
+        /// <summary>
+        /// Cached name for the 'setRankedByTrendDays' member.
+        /// </summary>
         public new static readonly StringName SetRankedByTrendDays = "setRankedByTrendDays";
+        /// <summary>
+        /// Cached name for the 'setRequiredGameVersions' member.
+        /// </summary>
         public new static readonly StringName SetRequiredGameVersions = "setRequiredGameVersions";
+        /// <summary>
+        /// Cached name for the 'setReturnAdditionalPreviews' member.
+        /// </summary>
         public new static readonly StringName SetReturnAdditionalPreviews = "setReturnAdditionalPreviews";
+        /// <summary>
+        /// Cached name for the 'setReturnChildren' member.
+        /// </summary>
         public new static readonly StringName SetReturnChildren = "setReturnChildren";
+        /// <summary>
+        /// Cached name for the 'setReturnKeyValueTags' member.
+        /// </summary>
         public new static readonly StringName SetReturnKeyValueTags = "setReturnKeyValueTags";
+        /// <summary>
+        /// Cached name for the 'setReturnLongDescription' member.
+        /// </summary>
         public new static readonly StringName SetReturnLongDescription = "setReturnLongDescription";
+        /// <summary>
+        /// Cached name for the 'setReturnMetadata' member.
+        /// </summary>
         public new static readonly StringName SetReturnMetadata = "setReturnMetadata";
+        /// <summary>
+        /// Cached name for the 'setReturnOnlyIDs' member.
+        /// </summary>
         public new static readonly StringName SetReturnOnlyIDs = "setReturnOnlyIDs";
+        /// <summary>
+        /// Cached name for the 'setReturnPlaytimeStats' member.
+        /// </summary>
         public new static readonly StringName SetReturnPlaytimeStats = "setReturnPlaytimeStats";
+        /// <summary>
+        /// Cached name for the 'setReturnTotalOnly' member.
+        /// </summary>
         public new static readonly StringName SetReturnTotalOnly = "setReturnTotalOnly";
+        /// <summary>
+        /// Cached name for the 'setSearchText' member.
+        /// </summary>
         public new static readonly StringName SetSearchText = "setSearchText";
+        /// <summary>
+        /// Cached name for the 'setSubscriptionsLoadOrder' member.
+        /// </summary>
         public new static readonly StringName SetSubscriptionsLoadOrder = "setSubscriptionsLoadOrder";
+        /// <summary>
+        /// Cached name for the 'setUserItemVote' member.
+        /// </summary>
         public new static readonly StringName SetUserItemVote = "setUserItemVote";
+        /// <summary>
+        /// Cached name for the 'startItemUpdate' member.
+        /// </summary>
         public new static readonly StringName StartItemUpdate = "startItemUpdate";
+        /// <summary>
+        /// Cached name for the 'startPlaytimeTracking' member.
+        /// </summary>
         public new static readonly StringName StartPlaytimeTracking = "startPlaytimeTracking";
+        /// <summary>
+        /// Cached name for the 'stopPlaytimeTracking' member.
+        /// </summary>
         public new static readonly StringName StopPlaytimeTracking = "stopPlaytimeTracking";
+        /// <summary>
+        /// Cached name for the 'stopPlaytimeTrackingForAllItems' member.
+        /// </summary>
         public new static readonly StringName StopPlaytimeTrackingForAllItems = "stopPlaytimeTrackingForAllItems";
+        /// <summary>
+        /// Cached name for the 'submitItemUpdate' member.
+        /// </summary>
         public new static readonly StringName SubmitItemUpdate = "submitItemUpdate";
+        /// <summary>
+        /// Cached name for the 'subscribeItem' member.
+        /// </summary>
         public new static readonly StringName SubscribeItem = "subscribeItem";
+        /// <summary>
+        /// Cached name for the 'suspendDownloads' member.
+        /// </summary>
         public new static readonly StringName SuspendDownloads = "suspendDownloads";
+        /// <summary>
+        /// Cached name for the 'unsubscribeItem' member.
+        /// </summary>
         public new static readonly StringName UnsubscribeItem = "unsubscribeItem";
+        /// <summary>
+        /// Cached name for the 'updateItemPreviewFile' member.
+        /// </summary>
         public new static readonly StringName UpdateItemPreviewFile = "updateItemPreviewFile";
+        /// <summary>
+        /// Cached name for the 'updateItemPreviewVideo' member.
+        /// </summary>
         public new static readonly StringName UpdateItemPreviewVideo = "updateItemPreviewVideo";
+        /// <summary>
+        /// Cached name for the 'showWorkshopEULA' member.
+        /// </summary>
         public new static readonly StringName ShowWorkshopEula = "showWorkshopEULA";
+        /// <summary>
+        /// Cached name for the 'getWorkshopEULAStatus' member.
+        /// </summary>
         public new static readonly StringName GetWorkshopEulaStatus = "getWorkshopEULAStatus";
+        /// <summary>
+        /// Cached name for the 'setTimeCreatedDateRange' member.
+        /// </summary>
         public new static readonly StringName SetTimeCreatedDateRange = "setTimeCreatedDateRange";
+        /// <summary>
+        /// Cached name for the 'setTimeUpdatedDateRange' member.
+        /// </summary>
         public new static readonly StringName SetTimeUpdatedDateRange = "setTimeUpdatedDateRange";
+        /// <summary>
+        /// Cached name for the 'advertiseGame' member.
+        /// </summary>
         public new static readonly StringName AdvertiseGame = "advertiseGame";
+        /// <summary>
+        /// Cached name for the 'beginAuthSession' member.
+        /// </summary>
         public new static readonly StringName BeginAuthSession = "beginAuthSession";
+        /// <summary>
+        /// Cached name for the 'cancelAuthTicket' member.
+        /// </summary>
         public new static readonly StringName CancelAuthTicket = "cancelAuthTicket";
+        /// <summary>
+        /// Cached name for the 'decompressVoice' member.
+        /// </summary>
         public new static readonly StringName DecompressVoice = "decompressVoice";
+        /// <summary>
+        /// Cached name for the 'endAuthSession' member.
+        /// </summary>
         public new static readonly StringName EndAuthSession = "endAuthSession";
+        /// <summary>
+        /// Cached name for the 'getAuthSessionTicket' member.
+        /// </summary>
         public new static readonly StringName GetAuthSessionTicket = "getAuthSessionTicket";
+        /// <summary>
+        /// Cached name for the 'getAuthTicketForWebApi' member.
+        /// </summary>
         public new static readonly StringName GetAuthTicketForWebApi = "getAuthTicketForWebApi";
+        /// <summary>
+        /// Cached name for the 'getAvailableVoice' member.
+        /// </summary>
         public new static readonly StringName GetAvailableVoice = "getAvailableVoice";
+        /// <summary>
+        /// Cached name for the 'getDurationControl' member.
+        /// </summary>
         public new static readonly StringName GetDurationControl = "getDurationControl";
+        /// <summary>
+        /// Cached name for the 'getEncryptedAppTicket' member.
+        /// </summary>
         public new static readonly StringName GetEncryptedAppTicket = "getEncryptedAppTicket";
+        /// <summary>
+        /// Cached name for the 'getGameBadgeLevel' member.
+        /// </summary>
         public new static readonly StringName GetGameBadgeLevel = "getGameBadgeLevel";
+        /// <summary>
+        /// Cached name for the 'getPlayerSteamLevel' member.
+        /// </summary>
         public new static readonly StringName GetPlayerSteamLevel = "getPlayerSteamLevel";
+        /// <summary>
+        /// Cached name for the 'getSteamID' member.
+        /// </summary>
         public new static readonly StringName GetSteamId = "getSteamID";
+        /// <summary>
+        /// Cached name for the 'getVoice' member.
+        /// </summary>
         public new static readonly StringName GetVoice = "getVoice";
+        /// <summary>
+        /// Cached name for the 'getVoiceOptimalSampleRate' member.
+        /// </summary>
         public new static readonly StringName GetVoiceOptimalSampleRate = "getVoiceOptimalSampleRate";
+        /// <summary>
+        /// Cached name for the 'initiateGameConnection' member.
+        /// </summary>
         public new static readonly StringName InitiateGameConnection = "initiateGameConnection";
+        /// <summary>
+        /// Cached name for the 'isBehindNAT' member.
+        /// </summary>
         public new static readonly StringName IsBehindNat = "isBehindNAT";
+        /// <summary>
+        /// Cached name for the 'isPhoneIdentifying' member.
+        /// </summary>
         public new static readonly StringName IsPhoneIdentifying = "isPhoneIdentifying";
+        /// <summary>
+        /// Cached name for the 'isPhoneRequiringVerification' member.
+        /// </summary>
         public new static readonly StringName IsPhoneRequiringVerification = "isPhoneRequiringVerification";
+        /// <summary>
+        /// Cached name for the 'isPhoneVerified' member.
+        /// </summary>
         public new static readonly StringName IsPhoneVerified = "isPhoneVerified";
+        /// <summary>
+        /// Cached name for the 'isTwoFactorEnabled' member.
+        /// </summary>
         public new static readonly StringName IsTwoFactorEnabled = "isTwoFactorEnabled";
+        /// <summary>
+        /// Cached name for the 'loggedOn' member.
+        /// </summary>
         public new static readonly StringName LoggedOn = "loggedOn";
+        /// <summary>
+        /// Cached name for the 'requestEncryptedAppTicket' member.
+        /// </summary>
         public new static readonly StringName RequestEncryptedAppTicket = "requestEncryptedAppTicket";
+        /// <summary>
+        /// Cached name for the 'requestStoreAuthURL' member.
+        /// </summary>
         public new static readonly StringName RequestStoreAuthUrl = "requestStoreAuthURL";
+        /// <summary>
+        /// Cached name for the 'startVoiceRecording' member.
+        /// </summary>
         public new static readonly StringName StartVoiceRecording = "startVoiceRecording";
+        /// <summary>
+        /// Cached name for the 'setDurationControlOnlineState' member.
+        /// </summary>
         public new static readonly StringName SetDurationControlOnlineState = "setDurationControlOnlineState";
+        /// <summary>
+        /// Cached name for the 'stopVoiceRecording' member.
+        /// </summary>
         public new static readonly StringName StopVoiceRecording = "stopVoiceRecording";
+        /// <summary>
+        /// Cached name for the 'terminateGameConnection' member.
+        /// </summary>
         public new static readonly StringName TerminateGameConnection = "terminateGameConnection";
+        /// <summary>
+        /// Cached name for the 'userHasLicenseForApp' member.
+        /// </summary>
         public new static readonly StringName UserHasLicenseForApp = "userHasLicenseForApp";
+        /// <summary>
+        /// Cached name for the 'attachLeaderboardUGC' member.
+        /// </summary>
         public new static readonly StringName AttachLeaderboardUgc = "attachLeaderboardUGC";
+        /// <summary>
+        /// Cached name for the 'clearAchievement' member.
+        /// </summary>
         public new static readonly StringName ClearAchievement = "clearAchievement";
+        /// <summary>
+        /// Cached name for the 'downloadLeaderboardEntries' member.
+        /// </summary>
         public new static readonly StringName DownloadLeaderboardEntries = "downloadLeaderboardEntries";
+        /// <summary>
+        /// Cached name for the 'downloadLeaderboardEntriesForUsers' member.
+        /// </summary>
         public new static readonly StringName DownloadLeaderboardEntriesForUsers = "downloadLeaderboardEntriesForUsers";
+        /// <summary>
+        /// Cached name for the 'findLeaderboard' member.
+        /// </summary>
         public new static readonly StringName FindLeaderboard = "findLeaderboard";
+        /// <summary>
+        /// Cached name for the 'findOrCreateLeaderboard' member.
+        /// </summary>
         public new static readonly StringName FindOrCreateLeaderboard = "findOrCreateLeaderboard";
+        /// <summary>
+        /// Cached name for the 'getAchievement' member.
+        /// </summary>
         public new static readonly StringName GetAchievement = "getAchievement";
+        /// <summary>
+        /// Cached name for the 'getAchievementAchievedPercent' member.
+        /// </summary>
         public new static readonly StringName GetAchievementAchievedPercent = "getAchievementAchievedPercent";
+        /// <summary>
+        /// Cached name for the 'getAchievementAndUnlockTime' member.
+        /// </summary>
         public new static readonly StringName GetAchievementAndUnlockTime = "getAchievementAndUnlockTime";
+        /// <summary>
+        /// Cached name for the 'getAchievementDisplayAttribute' member.
+        /// </summary>
         public new static readonly StringName GetAchievementDisplayAttribute = "getAchievementDisplayAttribute";
+        /// <summary>
+        /// Cached name for the 'getAchievementIcon' member.
+        /// </summary>
         public new static readonly StringName GetAchievementIcon = "getAchievementIcon";
+        /// <summary>
+        /// Cached name for the 'getAchievementName' member.
+        /// </summary>
         public new static readonly StringName GetAchievementName = "getAchievementName";
+        /// <summary>
+        /// Cached name for the 'getAchievementProgressLimitsInt' member.
+        /// </summary>
         public new static readonly StringName GetAchievementProgressLimitsInt = "getAchievementProgressLimitsInt";
+        /// <summary>
+        /// Cached name for the 'getAchievementProgressLimitsFloat' member.
+        /// </summary>
         public new static readonly StringName GetAchievementProgressLimitsFloat = "getAchievementProgressLimitsFloat";
+        /// <summary>
+        /// Cached name for the 'getGlobalStatInt' member.
+        /// </summary>
         public new static readonly StringName GetGlobalStatInt = "getGlobalStatInt";
+        /// <summary>
+        /// Cached name for the 'getGlobalStatFloat' member.
+        /// </summary>
         public new static readonly StringName GetGlobalStatFloat = "getGlobalStatFloat";
+        /// <summary>
+        /// Cached name for the 'getGlobalStatIntHistory' member.
+        /// </summary>
         public new static readonly StringName GetGlobalStatIntHistory = "getGlobalStatIntHistory";
+        /// <summary>
+        /// Cached name for the 'getGlobalStatFloatHistory' member.
+        /// </summary>
         public new static readonly StringName GetGlobalStatFloatHistory = "getGlobalStatFloatHistory";
+        /// <summary>
+        /// Cached name for the 'getLeaderboardDisplayType' member.
+        /// </summary>
         public new static readonly StringName GetLeaderboardDisplayType = "getLeaderboardDisplayType";
+        /// <summary>
+        /// Cached name for the 'getLeaderboardEntryCount' member.
+        /// </summary>
         public new static readonly StringName GetLeaderboardEntryCount = "getLeaderboardEntryCount";
+        /// <summary>
+        /// Cached name for the 'getLeaderboardName' member.
+        /// </summary>
         public new static readonly StringName GetLeaderboardName = "getLeaderboardName";
+        /// <summary>
+        /// Cached name for the 'getLeaderboardSortMethod' member.
+        /// </summary>
         public new static readonly StringName GetLeaderboardSortMethod = "getLeaderboardSortMethod";
+        /// <summary>
+        /// Cached name for the 'getMostAchievedAchievementInfo' member.
+        /// </summary>
         public new static readonly StringName GetMostAchievedAchievementInfo = "getMostAchievedAchievementInfo";
+        /// <summary>
+        /// Cached name for the 'getNextMostAchievedAchievementInfo' member.
+        /// </summary>
         public new static readonly StringName GetNextMostAchievedAchievementInfo = "getNextMostAchievedAchievementInfo";
+        /// <summary>
+        /// Cached name for the 'getNumAchievements' member.
+        /// </summary>
         public new static readonly StringName GetNumAchievements = "getNumAchievements";
+        /// <summary>
+        /// Cached name for the 'getNumberOfCurrentPlayers' member.
+        /// </summary>
         public new static readonly StringName GetNumberOfCurrentPlayers = "getNumberOfCurrentPlayers";
+        /// <summary>
+        /// Cached name for the 'getStatFloat' member.
+        /// </summary>
         public new static readonly StringName GetStatFloat = "getStatFloat";
+        /// <summary>
+        /// Cached name for the 'getStatInt' member.
+        /// </summary>
         public new static readonly StringName GetStatInt = "getStatInt";
+        /// <summary>
+        /// Cached name for the 'getUserAchievement' member.
+        /// </summary>
         public new static readonly StringName GetUserAchievement = "getUserAchievement";
+        /// <summary>
+        /// Cached name for the 'getUserAchievementAndUnlockTime' member.
+        /// </summary>
         public new static readonly StringName GetUserAchievementAndUnlockTime = "getUserAchievementAndUnlockTime";
+        /// <summary>
+        /// Cached name for the 'getUserStatFloat' member.
+        /// </summary>
         public new static readonly StringName GetUserStatFloat = "getUserStatFloat";
+        /// <summary>
+        /// Cached name for the 'getUserStatInt' member.
+        /// </summary>
         public new static readonly StringName GetUserStatInt = "getUserStatInt";
+        /// <summary>
+        /// Cached name for the 'indicateAchievementProgress' member.
+        /// </summary>
         public new static readonly StringName IndicateAchievementProgress = "indicateAchievementProgress";
+        /// <summary>
+        /// Cached name for the 'requestGlobalAchievementPercentages' member.
+        /// </summary>
         public new static readonly StringName RequestGlobalAchievementPercentages = "requestGlobalAchievementPercentages";
+        /// <summary>
+        /// Cached name for the 'requestGlobalStats' member.
+        /// </summary>
         public new static readonly StringName RequestGlobalStats = "requestGlobalStats";
+        /// <summary>
+        /// Cached name for the 'requestUserStats' member.
+        /// </summary>
         public new static readonly StringName RequestUserStats = "requestUserStats";
+        /// <summary>
+        /// Cached name for the 'resetAllStats' member.
+        /// </summary>
         public new static readonly StringName ResetAllStats = "resetAllStats";
+        /// <summary>
+        /// Cached name for the 'setAchievement' member.
+        /// </summary>
         public new static readonly StringName SetAchievement = "setAchievement";
+        /// <summary>
+        /// Cached name for the 'setStatFloat' member.
+        /// </summary>
         public new static readonly StringName SetStatFloat = "setStatFloat";
+        /// <summary>
+        /// Cached name for the 'setStatInt' member.
+        /// </summary>
         public new static readonly StringName SetStatInt = "setStatInt";
+        /// <summary>
+        /// Cached name for the 'storeStats' member.
+        /// </summary>
         public new static readonly StringName StoreStats = "storeStats";
+        /// <summary>
+        /// Cached name for the 'updateAvgRateStat' member.
+        /// </summary>
         public new static readonly StringName UpdateAvgRateStat = "updateAvgRateStat";
+        /// <summary>
+        /// Cached name for the 'uploadLeaderboardScore' member.
+        /// </summary>
         public new static readonly StringName UploadLeaderboardScore = "uploadLeaderboardScore";
+        /// <summary>
+        /// Cached name for the 'checkFileSignature' member.
+        /// </summary>
         public new static readonly StringName CheckFileSignature = "checkFileSignature";
+        /// <summary>
+        /// Cached name for the 'dismissFloatingGamepadTextInput' member.
+        /// </summary>
         public new static readonly StringName DismissFloatingGamepadTextInput = "dismissFloatingGamepadTextInput";
+        /// <summary>
+        /// Cached name for the 'dismissGamepadTextInput' member.
+        /// </summary>
         public new static readonly StringName DismissGamepadTextInput = "dismissGamepadTextInput";
+        /// <summary>
+        /// Cached name for the 'filterText' member.
+        /// </summary>
         public new static readonly StringName FilterText = "filterText";
+        /// <summary>
+        /// Cached name for the 'getAPICallFailureReason' member.
+        /// </summary>
         public new static readonly StringName GetApiCallFailureReason = "getAPICallFailureReason";
+        /// <summary>
+        /// Cached name for the 'getAppID' member.
+        /// </summary>
         public new static readonly StringName GetAppId = "getAppID";
+        /// <summary>
+        /// Cached name for the 'getConnectedUniverse' member.
+        /// </summary>
         public new static readonly StringName GetConnectedUniverse = "getConnectedUniverse";
+        /// <summary>
+        /// Cached name for the 'getCurrentBatteryPower' member.
+        /// </summary>
         public new static readonly StringName GetCurrentBatteryPower = "getCurrentBatteryPower";
+        /// <summary>
+        /// Cached name for the 'getImageRGBA' member.
+        /// </summary>
         public new static readonly StringName GetImageRgba = "getImageRGBA";
+        /// <summary>
+        /// Cached name for the 'getImageSize' member.
+        /// </summary>
         public new static readonly StringName GetImageSize = "getImageSize";
+        /// <summary>
+        /// Cached name for the 'getIPCCallCount' member.
+        /// </summary>
         public new static readonly StringName GetIpcCallCount = "getIPCCallCount";
+        /// <summary>
+        /// Cached name for the 'getIPCountry' member.
+        /// </summary>
         public new static readonly StringName GetIpCountry = "getIPCountry";
+        /// <summary>
+        /// Cached name for the 'getIPv6ConnectivityState' member.
+        /// </summary>
         public new static readonly StringName GetIPv6ConnectivityState = "getIPv6ConnectivityState";
+        /// <summary>
+        /// Cached name for the 'getSecondsSinceAppActive' member.
+        /// </summary>
         public new static readonly StringName GetSecondsSinceAppActive = "getSecondsSinceAppActive";
+        /// <summary>
+        /// Cached name for the 'getSecondsSinceComputerActive' member.
+        /// </summary>
         public new static readonly StringName GetSecondsSinceComputerActive = "getSecondsSinceComputerActive";
+        /// <summary>
+        /// Cached name for the 'getServerRealTime' member.
+        /// </summary>
         public new static readonly StringName GetServerRealTime = "getServerRealTime";
+        /// <summary>
+        /// Cached name for the 'getSteamHardwareDefaultConfig' member.
+        /// </summary>
         public new static readonly StringName GetSteamHardwareDefaultConfig = "getSteamHardwareDefaultConfig";
+        /// <summary>
+        /// Cached name for the 'getSteamUILanguage' member.
+        /// </summary>
         public new static readonly StringName GetSteamUiLanguage = "getSteamUILanguage";
+        /// <summary>
+        /// Cached name for the 'initFilterText' member.
+        /// </summary>
         public new static readonly StringName InitFilterText = "initFilterText";
+        /// <summary>
+        /// Cached name for the 'isAPICallCompleted' member.
+        /// </summary>
         public new static readonly StringName IsApiCallCompleted = "isAPICallCompleted";
+        /// <summary>
+        /// Cached name for the 'isOverlayEnabled' member.
+        /// </summary>
         public new static readonly StringName IsOverlayEnabled = "isOverlayEnabled";
+        /// <summary>
+        /// Cached name for the 'isRunningOnSteamHardware' member.
+        /// </summary>
         public new static readonly StringName IsRunningOnSteamHardware = "isRunningOnSteamHardware";
+        /// <summary>
+        /// Cached name for the 'isSteamChinaLauncher' member.
+        /// </summary>
         public new static readonly StringName IsSteamChinaLauncher = "isSteamChinaLauncher";
+        /// <summary>
+        /// Cached name for the 'isRunningUnderProton' member.
+        /// </summary>
         public new static readonly StringName IsRunningUnderProton = "isRunningUnderProton";
+        /// <summary>
+        /// Cached name for the 'isSteamInBigPictureMode' member.
+        /// </summary>
         public new static readonly StringName IsSteamInBigPictureMode = "isSteamInBigPictureMode";
+        /// <summary>
+        /// Cached name for the 'isSteamRunningInVR' member.
+        /// </summary>
         public new static readonly StringName IsSteamRunningInVr = "isSteamRunningInVR";
+        /// <summary>
+        /// Cached name for the 'isVRHeadsetStreamingEnabled' member.
+        /// </summary>
         public new static readonly StringName IsVrHeadsetStreamingEnabled = "isVRHeadsetStreamingEnabled";
+        /// <summary>
+        /// Cached name for the 'overlayNeedsPresent' member.
+        /// </summary>
         public new static readonly StringName OverlayNeedsPresent = "overlayNeedsPresent";
+        /// <summary>
+        /// Cached name for the 'setGameLauncherMode' member.
+        /// </summary>
         public new static readonly StringName SetGameLauncherMode = "setGameLauncherMode";
+        /// <summary>
+        /// Cached name for the 'setOverlayNotificationInset' member.
+        /// </summary>
         public new static readonly StringName SetOverlayNotificationInset = "setOverlayNotificationInset";
+        /// <summary>
+        /// Cached name for the 'setOverlayNotificationPosition' member.
+        /// </summary>
         public new static readonly StringName SetOverlayNotificationPosition = "setOverlayNotificationPosition";
+        /// <summary>
+        /// Cached name for the 'setVRHeadsetStreamingEnabled' member.
+        /// </summary>
         public new static readonly StringName SetVrHeadsetStreamingEnabled = "setVRHeadsetStreamingEnabled";
+        /// <summary>
+        /// Cached name for the 'showFloatingGamepadTextInput' member.
+        /// </summary>
         public new static readonly StringName ShowFloatingGamepadTextInput = "showFloatingGamepadTextInput";
+        /// <summary>
+        /// Cached name for the 'showGamepadTextInput' member.
+        /// </summary>
         public new static readonly StringName ShowGamepadTextInput = "showGamepadTextInput";
+        /// <summary>
+        /// Cached name for the 'startVRDashboard' member.
+        /// </summary>
         public new static readonly StringName StartVrDashboard = "startVRDashboard";
+        /// <summary>
+        /// Cached name for the 'getOPFSettings' member.
+        /// </summary>
         public new static readonly StringName GetOpfSettings = "getOPFSettings";
+        /// <summary>
+        /// Cached name for the 'getOPFStringForApp' member.
+        /// </summary>
         public new static readonly StringName GetOpfStringForApp = "getOPFStringForApp";
+        /// <summary>
+        /// Cached name for the 'getVideoURL' member.
+        /// </summary>
         public new static readonly StringName GetVideoUrl = "getVideoURL";
+        /// <summary>
+        /// Cached name for the 'isBroadcasting' member.
+        /// </summary>
         public new static readonly StringName IsBroadcasting = "isBroadcasting";
     }
 
@@ -8332,16 +11068,16 @@ public partial class Steam : GodotObject
     public new void LoadUrl(string url, string postData, long browserHandle = 0) => 
         Call(GDExtensionMethodName.LoadUrl, [url, postData, browserHandle]);
 
-    public new void MouseDoubleClick(Steam.HtmlMouseButton mouseButton, long browserHandle = 0) => 
+    public new void MouseDoubleClick(Steam.HTMLMouseButton mouseButton, long browserHandle = 0) => 
         Call(GDExtensionMethodName.MouseDoubleClick, [Variant.From(mouseButton), browserHandle]);
 
-    public new void MouseDown(Steam.HtmlMouseButton mouseButton, long browserHandle = 0) => 
+    public new void MouseDown(Steam.HTMLMouseButton mouseButton, long browserHandle = 0) => 
         Call(GDExtensionMethodName.MouseDown, [Variant.From(mouseButton), browserHandle]);
 
     public new void MouseMove(long x, long y, long browserHandle = 0) => 
         Call(GDExtensionMethodName.MouseMove, [x, y, browserHandle]);
 
-    public new void MouseUp(Steam.HtmlMouseButton mouseButton, long browserHandle = 0) => 
+    public new void MouseUp(Steam.HTMLMouseButton mouseButton, long browserHandle = 0) => 
         Call(GDExtensionMethodName.MouseUp, [Variant.From(mouseButton), browserHandle]);
 
     public new void MouseWheel(long delta, long browserHandle = 0) => 
@@ -8398,7 +11134,7 @@ public partial class Steam : GodotObject
     public new long CreateCookieContainer(bool allowResponseToModify) => 
         Call(GDExtensionMethodName.CreateCookieContainer, [allowResponseToModify]).As<long>();
 
-    public new long CreateHttpRequest(Steam.HttpMethod requestMethod, string absoluteUrl) => 
+    public new long CreateHttpRequest(Steam.HTTPMethod requestMethod, string absoluteUrl) => 
         Call(GDExtensionMethodName.CreateHttpRequest, [Variant.From(requestMethod), absoluteUrl]).As<long>();
 
     public new bool DeferHttpRequest(long requestHandle) => 
@@ -8548,7 +11284,7 @@ public partial class Steam : GodotObject
     public new void RunFrame(bool reservedValue = true) => 
         Call(GDExtensionMethodName.RunFrame, [reservedValue]);
 
-    public new void SetLedColor(long inputHandle, long colorR, long colorG, long colorB, Steam.InputLedFlag flags) => 
+    public new void SetLedColor(long inputHandle, long colorR, long colorG, long colorB, Steam.InputLEDFlag flags) => 
         Call(GDExtensionMethodName.SetLedColor, [inputHandle, colorR, colorG, colorB, Variant.From(flags)]);
 
     public new bool ShowBindingPanel(long inputHandle) => 
@@ -8905,7 +11641,7 @@ public partial class Steam : GodotObject
     public new Godot.Collections.Dictionary ReadP2pPacket(long packetSize, long channel = 0) => 
         Call(GDExtensionMethodName.ReadP2pPacket, [packetSize, channel]).As<Godot.Collections.Dictionary>();
 
-    public new bool SendP2pPacket(long remoteSteamId, byte[] data, Steam.P2pSend sendType, long channel = 0) => 
+    public new bool SendP2pPacket(long remoteSteamId, byte[] data, Steam.P2PSend sendType, long channel = 0) => 
         Call(GDExtensionMethodName.SendP2pPacket, [remoteSteamId, data, Variant.From(sendType), channel]).As<bool>();
 
     public new bool AcceptSessionWithUser(long remoteSteamId) => 
@@ -9064,8 +11800,8 @@ public partial class Steam : GodotObject
     public new long GetDirectPingToPop(long popId) => 
         Call(GDExtensionMethodName.GetDirectPingToPop, [popId]).As<long>();
 
-    public new Steam.NetworkingFakeIpType GetIPv4FakeIpType(string ipv4) => 
-        Call(GDExtensionMethodName.GetIPv4FakeIpType, [ipv4]).As<Steam.NetworkingFakeIpType>();
+    public new Steam.NetworkingFakeIPType GetIPv4FakeIpType(string ipv4) => 
+        Call(GDExtensionMethodName.GetIPv4FakeIpType, [ipv4]).As<Steam.NetworkingFakeIPType>();
 
     public new Godot.Collections.Dictionary GetLocalPingLocation() => 
         Call(GDExtensionMethodName.GetLocalPingLocation, []).As<Godot.Collections.Dictionary>();
@@ -9328,13 +12064,13 @@ public partial class Steam : GodotObject
     public new void UgcDownloadToLocation(long content, string location, long priority) => 
         Call(GDExtensionMethodName.UgcDownloadToLocation, [content, location, priority]);
 
-    public new byte[] UgcRead(long content, long dataSize, long offset, Steam.UgcReadAction action) => 
+    public new byte[] UgcRead(long content, long dataSize, long offset, Steam.UGCReadAction action) => 
         Call(GDExtensionMethodName.UgcRead, [content, dataSize, offset, Variant.From(action)]).As<byte[]>();
 
     public new long AddScreenshotToLibrary(string filename, string thumbnailFilename, long width, long height) => 
         Call(GDExtensionMethodName.AddScreenshotToLibrary, [filename, thumbnailFilename, width, height]).As<long>();
 
-    public new long AddVrScreenshotToLibrary(Steam.VrScreenshotType type, string filename, string vrFilename) => 
+    public new long AddVrScreenshotToLibrary(Steam.VRScreenshotType type, string filename, string vrFilename) => 
         Call(GDExtensionMethodName.AddVrScreenshotToLibrary, [Variant.From(type), filename, vrFilename]).As<long>();
 
     public new void HookScreenshots(bool hook) => 
@@ -9415,7 +12151,7 @@ public partial class Steam : GodotObject
     public new void AddAppDependency(long publishedFileId, long appId) => 
         Call(GDExtensionMethodName.AddAppDependency, [publishedFileId, appId]);
 
-    public new bool AddContentDescriptor(long updateHandle, Steam.UgcContentDescriptorId descriptorId) => 
+    public new bool AddContentDescriptor(long updateHandle, Steam.UGCContentDescriptorID descriptorId) => 
         Call(GDExtensionMethodName.AddContentDescriptor, [updateHandle, Variant.From(descriptorId)]).As<bool>();
 
     public new void AddDependency(long publishedFileId, long childPublishedFileId) => 
@@ -9454,16 +12190,16 @@ public partial class Steam : GodotObject
     public new void CreateItem(long appId, Steam.WorkshopFileType fileType) => 
         Call(GDExtensionMethodName.CreateItem, [appId, Variant.From(fileType)]);
 
-    public new long CreateQueryAllUgcRequestPage(Steam.UgcQuery queryType, Steam.UgcMatchingUgcType matchingType, long creatorId, long consumerId, long page) => 
+    public new long CreateQueryAllUgcRequestPage(Steam.UGCQuery queryType, Steam.UGCMatchingUGCType matchingType, long creatorId, long consumerId, long page) => 
         Call(GDExtensionMethodName.CreateQueryAllUgcRequestPage, [Variant.From(queryType), Variant.From(matchingType), creatorId, consumerId, page]).As<long>();
 
-    public new long CreateQueryAllUgcRequestCursor(Steam.UgcQuery queryType, Steam.UgcMatchingUgcType matchingType, long creatorId, long consumerId, string cursor) => 
+    public new long CreateQueryAllUgcRequestCursor(Steam.UGCQuery queryType, Steam.UGCMatchingUGCType matchingType, long creatorId, long consumerId, string cursor) => 
         Call(GDExtensionMethodName.CreateQueryAllUgcRequestCursor, [Variant.From(queryType), Variant.From(matchingType), creatorId, consumerId, cursor]).As<long>();
 
     public new long CreateQueryUgcDetailsRequest(Godot.Collections.Array publishedFileIdArray) => 
         Call(GDExtensionMethodName.CreateQueryUgcDetailsRequest, [publishedFileIdArray]).As<long>();
 
-    public new long CreateQueryUserUgcRequest(long accountId, Steam.UserUgcList listType, Steam.UgcMatchingUgcType matchingUgcType, Steam.UserUgcListSortOrder sortOrder, long creatorId, long consumerId, long page) => 
+    public new long CreateQueryUserUgcRequest(long accountId, Steam.UserUGCList listType, Steam.UGCMatchingUGCType matchingUgcType, Steam.UserUGCListSortOrder sortOrder, long creatorId, long consumerId, long page) => 
         Call(GDExtensionMethodName.CreateQueryUserUgcRequest, [accountId, Variant.From(listType), Variant.From(matchingUgcType), Variant.From(sortOrder), creatorId, consumerId, page]).As<long>();
 
     public new void DeleteItem(long publishedFileId) => 
@@ -9559,7 +12295,7 @@ public partial class Steam : GodotObject
     public new void RemoveAppDependency(long publishedFileId, long appId) => 
         Call(GDExtensionMethodName.RemoveAppDependency, [publishedFileId, appId]);
 
-    public new bool RemoveContentDescriptor(long updateHandle, Steam.UgcContentDescriptorId descriptorId) => 
+    public new bool RemoveContentDescriptor(long updateHandle, Steam.UGCContentDescriptorID descriptorId) => 
         Call(GDExtensionMethodName.RemoveContentDescriptor, [updateHandle, Variant.From(descriptorId)]).As<bool>();
 
     public new void RemoveDependency(long publishedFileId, long childPublishedFileId) => 
@@ -9931,8 +12667,8 @@ public partial class Steam : GodotObject
     public new string FilterText(Steam.TextFilteringContext context, long steamId, string message) => 
         Call(GDExtensionMethodName.FilterText, [Variant.From(context), steamId, message]).As<string>();
 
-    public new Steam.ApiCallFailure GetApiCallFailureReason() => 
-        Call(GDExtensionMethodName.GetApiCallFailureReason, []).As<Steam.ApiCallFailure>();
+    public new Steam.APICallFailure GetApiCallFailureReason() => 
+        Call(GDExtensionMethodName.GetApiCallFailureReason, []).As<Steam.APICallFailure>();
 
     public new long GetAppId() => 
         Call(GDExtensionMethodName.GetAppId, []).As<long>();
@@ -10036,4 +12772,1396 @@ public partial class Steam : GodotObject
     public new Godot.Collections.Dictionary IsBroadcasting() => 
         Call(GDExtensionMethodName.IsBroadcasting, []).As<Godot.Collections.Dictionary>();
 
+}
+
+file static class AccountTypeExtensions
+{
+public static int SafeAsInt32(this Steam.AccountType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AccountType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AccountType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class APICallFailureExtensions
+{
+public static int SafeAsInt32(this Steam.APICallFailure enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.APICallFailure enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.APICallFailure? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class AudioPlaybackStatusExtensions
+{
+public static int SafeAsInt32(this Steam.AudioPlaybackStatus enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AudioPlaybackStatus enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AudioPlaybackStatus? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class AuthSessionResponseExtensions
+{
+public static int SafeAsInt32(this Steam.AuthSessionResponse enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AuthSessionResponse enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AuthSessionResponse? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class AvatarSizesExtensions
+{
+public static int SafeAsInt32(this Steam.AvatarSizes enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AvatarSizes enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.AvatarSizes? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class BeginAuthSessionResultExtensions
+{
+public static int SafeAsInt32(this Steam.BeginAuthSessionResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BeginAuthSessionResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BeginAuthSessionResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class BetaBranchFlagsExtensions
+{
+public static int SafeAsInt32(this Steam.BetaBranchFlags enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BetaBranchFlags enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BetaBranchFlags? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class BroadcastUploadResultExtensions
+{
+public static int SafeAsInt32(this Steam.BroadcastUploadResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BroadcastUploadResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.BroadcastUploadResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ChatEntryTypeExtensions
+{
+public static int SafeAsInt32(this Steam.ChatEntryType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatEntryType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatEntryType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ChatMemberStateChangeExtensions
+{
+public static int SafeAsInt32(this Steam.ChatMemberStateChange enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatMemberStateChange enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatMemberStateChange? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ChatRoomEnterResponseExtensions
+{
+public static int SafeAsInt32(this Steam.ChatRoomEnterResponse enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatRoomEnterResponse enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatRoomEnterResponse? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ChatSteamIDInstanceFlagsExtensions
+{
+public static int SafeAsInt32(this Steam.ChatSteamIDInstanceFlags enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatSteamIDInstanceFlags enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ChatSteamIDInstanceFlags? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class CheckFileSignatureEnumExtensions
+{
+public static int SafeAsInt32(this Steam.CheckFileSignatureEnum enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CheckFileSignatureEnum enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CheckFileSignatureEnum? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class CommunityProfileItemTypeExtensions
+{
+public static int SafeAsInt32(this Steam.CommunityProfileItemType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CommunityProfileItemType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CommunityProfileItemType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class CommunityProfileItemPropertyExtensions
+{
+public static int SafeAsInt32(this Steam.CommunityProfileItemProperty enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CommunityProfileItemProperty enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.CommunityProfileItemProperty? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ControllerHapticLocationExtensions
+{
+public static int SafeAsInt32(this Steam.ControllerHapticLocation enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ControllerHapticLocation enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ControllerHapticLocation? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ControllerHapticTypeExtensions
+{
+public static int SafeAsInt32(this Steam.ControllerHapticType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ControllerHapticType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ControllerHapticType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class DenyReasonExtensions
+{
+public static int SafeAsInt32(this Steam.DenyReason enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DenyReason enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DenyReason? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class DeviceFormFactorExtensions
+{
+public static int SafeAsInt32(this Steam.DeviceFormFactor enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DeviceFormFactor enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DeviceFormFactor? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class DurationControlNotificationExtensions
+{
+public static int SafeAsInt32(this Steam.DurationControlNotification enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlNotification enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlNotification? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class DurationControlOnlineStateExtensions
+{
+public static int SafeAsInt32(this Steam.DurationControlOnlineState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlOnlineState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlOnlineState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class DurationControlProgressExtensions
+{
+public static int SafeAsInt32(this Steam.DurationControlProgress enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlProgress enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.DurationControlProgress? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class FailureTypeExtensions
+{
+public static int SafeAsInt32(this Steam.FailureType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FailureType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FailureType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class FilePathTypeExtensions
+{
+public static int SafeAsInt32(this Steam.FilePathType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FilePathType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FilePathType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class FloatingGamepadTextInputModeExtensions
+{
+public static int SafeAsInt32(this Steam.FloatingGamepadTextInputMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FloatingGamepadTextInputMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FloatingGamepadTextInputMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class FriendFlagsExtensions
+{
+public static int SafeAsInt32(this Steam.FriendFlags enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FriendFlags enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FriendFlags? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class FriendRelationshipExtensions
+{
+public static int SafeAsInt32(this Steam.FriendRelationship enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FriendRelationship enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.FriendRelationship? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class GameIDTypeExtensions
+{
+public static int SafeAsInt32(this Steam.GameIDType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GameIDType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GameIDType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class GamepadTextInputLineModeExtensions
+{
+public static int SafeAsInt32(this Steam.GamepadTextInputLineMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamepadTextInputLineMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamepadTextInputLineMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class GamepadTextInputModeExtensions
+{
+public static int SafeAsInt32(this Steam.GamepadTextInputMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamepadTextInputMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamepadTextInputMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class GamePerformanceSettingExtensions
+{
+public static int SafeAsInt32(this Steam.GamePerformanceSetting enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamePerformanceSetting enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.GamePerformanceSetting? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class HTMLKeyModifiersExtensions
+{
+public static int SafeAsInt32(this Steam.HTMLKeyModifiers enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLKeyModifiers enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLKeyModifiers? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class HTMLMouseButtonExtensions
+{
+public static int SafeAsInt32(this Steam.HTMLMouseButton enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLMouseButton enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLMouseButton? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class HTMLMouseCursorExtensions
+{
+public static int SafeAsInt32(this Steam.HTMLMouseCursor enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLMouseCursor enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTMLMouseCursor? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class HTTPMethodExtensions
+{
+public static int SafeAsInt32(this Steam.HTTPMethod enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTTPMethod enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTTPMethod? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class HTTPStatusCodeExtensions
+{
+public static int SafeAsInt32(this Steam.HTTPStatusCode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTTPStatusCode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.HTTPStatusCode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputActionEventTypeExtensions
+{
+public static int SafeAsInt32(this Steam.InputActionEventType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputActionEventType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputActionEventType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputActionOriginExtensions
+{
+public static int SafeAsInt32(this Steam.InputActionOrigin enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputActionOrigin enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputActionOrigin? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputConfigurationEnableTypeExtensions
+{
+public static int SafeAsInt32(this Steam.InputConfigurationEnableType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputConfigurationEnableType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputConfigurationEnableType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputGlyphSizeExtensions
+{
+public static int SafeAsInt32(this Steam.InputGlyphSize enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputGlyphSize enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputGlyphSize? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputGlyphStyleExtensions
+{
+public static int SafeAsInt32(this Steam.InputGlyphStyle enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputGlyphStyle enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputGlyphStyle? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputLEDFlagExtensions
+{
+public static int SafeAsInt32(this Steam.InputLEDFlag enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputLEDFlag enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputLEDFlag? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputSourceModeExtensions
+{
+public static int SafeAsInt32(this Steam.InputSourceMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputSourceMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputSourceMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class InputTypeExtensions
+{
+public static int SafeAsInt32(this Steam.InputType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.InputType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class IPTypeExtensions
+{
+public static int SafeAsInt32(this Steam.IPType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class IPv6ConnectivityProtocolExtensions
+{
+public static int SafeAsInt32(this Steam.IPv6ConnectivityProtocol enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPv6ConnectivityProtocol enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPv6ConnectivityProtocol? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class IPv6ConnectivityStateExtensions
+{
+public static int SafeAsInt32(this Steam.IPv6ConnectivityState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPv6ConnectivityState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.IPv6ConnectivityState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ItemFlagsExtensions
+{
+public static int SafeAsInt32(this Steam.ItemFlags enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemFlags enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemFlags? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ItemPreviewTypeExtensions
+{
+public static int SafeAsInt32(this Steam.ItemPreviewType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemPreviewType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemPreviewType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ItemStateExtensions
+{
+public static int SafeAsInt32(this Steam.ItemState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ItemStatisticExtensions
+{
+public static int SafeAsInt32(this Steam.ItemStatistic enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemStatistic enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemStatistic? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ItemUpdateStatusExtensions
+{
+public static int SafeAsInt32(this Steam.ItemUpdateStatus enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemUpdateStatus enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ItemUpdateStatus? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LeaderboardDataRequestExtensions
+{
+public static int SafeAsInt32(this Steam.LeaderboardDataRequest enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardDataRequest enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardDataRequest? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LeaderboardDisplayTypeExtensions
+{
+public static int SafeAsInt32(this Steam.LeaderboardDisplayType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardDisplayType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardDisplayType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LeaderboardSortMethodExtensions
+{
+public static int SafeAsInt32(this Steam.LeaderboardSortMethod enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardSortMethod enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardSortMethod? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LeaderboardUploadScoreMethodExtensions
+{
+public static int SafeAsInt32(this Steam.LeaderboardUploadScoreMethod enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardUploadScoreMethod enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LeaderboardUploadScoreMethod? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LobbyComparisonExtensions
+{
+public static int SafeAsInt32(this Steam.LobbyComparison enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyComparison enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyComparison? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LobbyDistanceFilterExtensions
+{
+public static int SafeAsInt32(this Steam.LobbyDistanceFilter enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyDistanceFilter enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyDistanceFilter? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LobbyTypeExtensions
+{
+public static int SafeAsInt32(this Steam.LobbyType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LobbyType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class LocalFileChangeExtensions
+{
+public static int SafeAsInt32(this Steam.LocalFileChange enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LocalFileChange enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.LocalFileChange? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class MarketNotAllowedReasonFlagsExtensions
+{
+public static int SafeAsInt32(this Steam.MarketNotAllowedReasonFlags enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.MarketNotAllowedReasonFlags enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.MarketNotAllowedReasonFlags? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class MatchMakingServerResponseExtensions
+{
+public static int SafeAsInt32(this Steam.MatchMakingServerResponse enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.MatchMakingServerResponse enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.MatchMakingServerResponse? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingAvailabilityExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingAvailability enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingAvailability enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingAvailability? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingConfigDataTypeExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingConfigDataType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigDataType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigDataType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingConfigScopeExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingConfigScope enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigScope enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigScope? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingConfigValueExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingConfigValue enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigValue enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConfigValue? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingConnectionEndExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingConnectionEnd enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConnectionEnd enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConnectionEnd? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingConnectionStateExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingConnectionState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConnectionState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingConnectionState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingFakeIPTypeExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingFakeIPType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingFakeIPType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingFakeIPType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingGetConfigValueResultExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingGetConfigValueResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingGetConfigValueResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingGetConfigValueResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingIdentityTypeExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingIdentityType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingIdentityType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingIdentityType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NetworkingSocketsDebugOutputTypeExtensions
+{
+public static int SafeAsInt32(this Steam.NetworkingSocketsDebugOutputType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingSocketsDebugOutputType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NetworkingSocketsDebugOutputType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class NotificationPositionExtensions
+{
+public static int SafeAsInt32(this Steam.NotificationPosition enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NotificationPosition enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.NotificationPosition? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class OverlayToStoreFlagExtensions
+{
+public static int SafeAsInt32(this Steam.OverlayToStoreFlag enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.OverlayToStoreFlag enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.OverlayToStoreFlag? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class OverlayToWebPageModeExtensions
+{
+public static int SafeAsInt32(this Steam.OverlayToWebPageMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.OverlayToWebPageMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.OverlayToWebPageMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class P2PSendExtensions
+{
+public static int SafeAsInt32(this Steam.P2PSend enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.P2PSend enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.P2PSend? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class P2PSessionErrorExtensions
+{
+public static int SafeAsInt32(this Steam.P2PSessionError enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.P2PSessionError enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.P2PSessionError? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ParentalFeatureExtensions
+{
+public static int SafeAsInt32(this Steam.ParentalFeature enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ParentalFeature enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.ParentalFeature? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class PartyBeaconLocationDataExtensions
+{
+public static int SafeAsInt32(this Steam.PartyBeaconLocationData enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PartyBeaconLocationData enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PartyBeaconLocationData? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class PartyBeaconLocationTypeExtensions
+{
+public static int SafeAsInt32(this Steam.PartyBeaconLocationType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PartyBeaconLocationType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PartyBeaconLocationType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class PersonaChangeExtensions
+{
+public static int SafeAsInt32(this Steam.PersonaChange enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PersonaChange enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PersonaChange? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class PersonaStateExtensions
+{
+public static int SafeAsInt32(this Steam.PersonaState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PersonaState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.PersonaState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemotePlayInputTypeExtensions
+{
+public static int SafeAsInt32(this Steam.RemotePlayInputType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayInputType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayInputType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemotePlayKeyModifierExtensions
+{
+public static int SafeAsInt32(this Steam.RemotePlayKeyModifier enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayKeyModifier enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayKeyModifier? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemotePlayMouseButtonExtensions
+{
+public static int SafeAsInt32(this Steam.RemotePlayMouseButton enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayMouseButton enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayMouseButton? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemotePlayMouseWheelDirectionExtensions
+{
+public static int SafeAsInt32(this Steam.RemotePlayMouseWheelDirection enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayMouseWheelDirection enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayMouseWheelDirection? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemotePlayScancodeExtensions
+{
+public static int SafeAsInt32(this Steam.RemotePlayScancode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayScancode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemotePlayScancode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemoteStoragePlatformExtensions
+{
+public static int SafeAsInt32(this Steam.RemoteStoragePlatform enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemoteStoragePlatform enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemoteStoragePlatform? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class RemoteStoragePublishedFileVisibilityExtensions
+{
+public static int SafeAsInt32(this Steam.RemoteStoragePublishedFileVisibility enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemoteStoragePublishedFileVisibility enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.RemoteStoragePublishedFileVisibility? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class ResultExtensions
+{
+public static int SafeAsInt32(this Steam.Result enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.Result enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.Result? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SCEPadTriggerEffectModeExtensions
+{
+public static int SafeAsInt32(this Steam.SCEPadTriggerEffectMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SCEPadTriggerEffectMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SCEPadTriggerEffectMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SocketConnectionTypeExtensions
+{
+public static int SafeAsInt32(this Steam.SocketConnectionType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SocketConnectionType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SocketConnectionType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SocketStateExtensions
+{
+public static int SafeAsInt32(this Steam.SocketState enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SocketState enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SocketState? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SteamAPIInitResultExtensions
+{
+public static int SafeAsInt32(this Steam.SteamAPIInitResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamAPIInitResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamAPIInitResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SteamControllerPadExtensions
+{
+public static int SafeAsInt32(this Steam.SteamControllerPad enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamControllerPad enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamControllerPad? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SteamHardwareTypeExtensions
+{
+public static int SafeAsInt32(this Steam.SteamHardwareType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamHardwareType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamHardwareType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class SteamHardwareDefaultConfigExtensions
+{
+public static int SafeAsInt32(this Steam.SteamHardwareDefaultConfig enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamHardwareDefaultConfig enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.SteamHardwareDefaultConfig? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class TextFilteringContextExtensions
+{
+public static int SafeAsInt32(this Steam.TextFilteringContext enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TextFilteringContext enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TextFilteringContext? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class TimelineGameModeExtensions
+{
+public static int SafeAsInt32(this Steam.TimelineGameMode enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TimelineGameMode enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TimelineGameMode? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class TimelineEventClipPriorityExtensions
+{
+public static int SafeAsInt32(this Steam.TimelineEventClipPriority enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TimelineEventClipPriority enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.TimelineEventClipPriority? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UniverseExtensions
+{
+public static int SafeAsInt32(this Steam.Universe enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.Universe enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.Universe? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UGCContentDescriptorIDExtensions
+{
+public static int SafeAsInt32(this Steam.UGCContentDescriptorID enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCContentDescriptorID enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCContentDescriptorID? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UGCMatchingUGCTypeExtensions
+{
+public static int SafeAsInt32(this Steam.UGCMatchingUGCType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCMatchingUGCType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCMatchingUGCType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UGCQueryExtensions
+{
+public static int SafeAsInt32(this Steam.UGCQuery enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCQuery enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCQuery? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UGCReadActionExtensions
+{
+public static int SafeAsInt32(this Steam.UGCReadAction enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCReadAction enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UGCReadAction? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UserHasLicenseForAppResultExtensions
+{
+public static int SafeAsInt32(this Steam.UserHasLicenseForAppResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserHasLicenseForAppResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserHasLicenseForAppResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UserUGCListExtensions
+{
+public static int SafeAsInt32(this Steam.UserUGCList enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserUGCList enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserUGCList? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class UserUGCListSortOrderExtensions
+{
+public static int SafeAsInt32(this Steam.UserUGCListSortOrder enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserUGCListSortOrder enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.UserUGCListSortOrder? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class VoiceResultExtensions
+{
+public static int SafeAsInt32(this Steam.VoiceResult enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.VoiceResult enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.VoiceResult? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class VRScreenshotTypeExtensions
+{
+public static int SafeAsInt32(this Steam.VRScreenshotType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.VRScreenshotType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.VRScreenshotType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class WorkshopEnumerationTypeExtensions
+{
+public static int SafeAsInt32(this Steam.WorkshopEnumerationType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopEnumerationType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopEnumerationType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class WorkshopFileActionExtensions
+{
+public static int SafeAsInt32(this Steam.WorkshopFileAction enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopFileAction enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopFileAction? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class WorkshopFileTypeExtensions
+{
+public static int SafeAsInt32(this Steam.WorkshopFileType enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopFileType enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopFileType? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class WorkshopVideoProviderExtensions
+{
+public static int SafeAsInt32(this Steam.WorkshopVideoProvider enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopVideoProvider enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopVideoProvider? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class WorkshopVoteExtensions
+{
+public static int SafeAsInt32(this Steam.WorkshopVote enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopVote enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.WorkshopVote? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
+}
+
+file static class XboxOriginExtensions
+{
+public static int SafeAsInt32(this Steam.XboxOrigin enumValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.XboxOrigin enumValue, int defaultValue) =>
+Convert.ToInt32(enumValue);
+
+public static int SafeAsInt32(this Steam.XboxOrigin? enumValue, int defaultValue = 0) =>
+enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
 }
