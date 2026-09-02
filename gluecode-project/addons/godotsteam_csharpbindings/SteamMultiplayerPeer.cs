@@ -176,15 +176,3 @@ public partial class SteamMultiplayerPeer : MultiplayerPeerExtension
         Call(GDExtensionMethodName.GetPeerIdForSteamId, [steamId]).As<long>();
 
 }
-
-file static class DebugLevelEnumExtensions
-{
-public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum enumValue) =>
-Convert.ToInt32(enumValue);
-
-public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum enumValue, int defaultValue) =>
-Convert.ToInt32(enumValue);
-
-public static int SafeAsInt32(this SteamMultiplayerPeer.DebugLevelEnum? enumValue, int defaultValue = 0) =>
-enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
-}

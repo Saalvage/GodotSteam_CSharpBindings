@@ -393,6 +393,8 @@ public partial class WrapperGeneratorMain
 
         public void RenderEnumSafeAsInt32Extensions(StringBuilder builder, string indent, GenerationLogger logger)
         {
+            return;
+            
             using var _ = logger.BeginScope(GodotTypeName.ToString());
             var qualifiedEnumName = new StringBuilder();
             RenderType(qualifiedEnumName, logger);

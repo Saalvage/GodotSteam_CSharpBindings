@@ -121,15 +121,3 @@ public partial class SteamPacketPeer : PacketPeerExtension
         Call(GDExtensionMethodName.DisconnectPeer, [force]);
 
 }
-
-file static class PeerStateExtensions
-{
-public static int SafeAsInt32(this SteamPacketPeer.PeerState enumValue) =>
-Convert.ToInt32(enumValue);
-
-public static int SafeAsInt32(this SteamPacketPeer.PeerState enumValue, int defaultValue) =>
-Convert.ToInt32(enumValue);
-
-public static int SafeAsInt32(this SteamPacketPeer.PeerState? enumValue, int defaultValue = 0) =>
-enumValue.HasValue ? Convert.ToInt32(enumValue.Value) : defaultValue;
-}
