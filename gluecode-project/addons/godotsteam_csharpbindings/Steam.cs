@@ -59,18 +59,6 @@ public partial class Steam : GodotObject
     /// </summary>
     /// <returns>The wrapper instance linked to the underlying GDExtension "Steam" type.</returns>
     public new static Steam Instantiate() => Bind(ClassDB.Instantiate(NativeName).As<GodotObject>());
-    /// <summary>
-    /// Gets the existing Engine singleton instance of the underlying GDExtension "Steam" type, if available,
-    /// and attaches this C# wrapper to it.
-    /// </summary>
-    /// <returns>The wrapper instance bound to the existing Engine singleton, or null if not available.</returns>
-    public static Steam GetSingleton()
-    {
-        var obj = Engine.GetSingleton(NativeName);
-        if (obj is null)
-            return null;
-        return Bind(obj);
-    }
 
     public enum AccountType
     {
@@ -1976,16 +1964,17 @@ public partial class Steam : GodotObject
     }
 
     [Flags]
-    public enum RemoteStoragePlatform
+    public enum RemoteStoragePlatform : uint
     {
         None = 0,
         Windows = 1,
         Osx = 2,
         Ps3 = 4,
         Linux = 8,
-        Reserved1 = 16,
-        Reserved2 = 32,
-        All = -1,
+        Switch = 16,
+        Android = 32,
+        Ios = 64,
+        All = 4294967295,
     }
 
     public enum RemoteStoragePublishedFileVisibility
@@ -10627,7 +10616,7 @@ public partial class Steam : GodotObject
     public new string GetGodotsteamVersion() => 
         Call(GDExtensionMethodName.GetGodotsteamVersion, []).As<string>();
 
-    public new long GetSteamId32(ulong steamId) =>
+    public new long GetSteamId32(long steamId) => 
         Call(GDExtensionMethodName.GetSteamId32, [steamId]).As<long>();
 
     public new bool IsAnonAccount(long steamId) => 
@@ -12475,8 +12464,8 @@ public partial class Steam : GodotObject
     public new long GetPlayerSteamLevel() => 
         Call(GDExtensionMethodName.GetPlayerSteamLevel, []).As<long>();
 
-    public new ulong GetSteamId() =>
-        Call(GDExtensionMethodName.GetSteamId, []).As<ulong>();
+    public new long GetSteamId() => 
+        Call(GDExtensionMethodName.GetSteamId, []).As<long>();
 
     public new Godot.Collections.Dictionary GetVoice(long bufferSize = 1024) => 
         Call(GDExtensionMethodName.GetVoice, [bufferSize]).As<Godot.Collections.Dictionary>();

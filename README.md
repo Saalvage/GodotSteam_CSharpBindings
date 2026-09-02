@@ -19,9 +19,9 @@ Currently, we support **Godot 4.4+** with the **GodotSteam 4.22** plugin.
 Install the GodotSteam C# Bindings by adding the addon to your project's addons folder.
 
 ### Contributing
-The initial set of bindings were created by the CSharp-Wrapper-Generator-for-GDExtension project. For better usability, we have developed a patcher system that applies changes to the auto-generated gluecode.
-These patches and the script for applying them are located in the `godotsteam-patcher` folder.
-Please check out the patchers [README](godotsteam-patcher/README.md) for more information.
+The initial set of bindings were created by the CSharp-Wrapper-Generator-for-GDExtension project.
+The auto-generated glue code is amended by utilizing manually written additions, injected via the `partial` class definitions.
+For an example, see [Steam.Additions.cs](gluecode-project/addons/godotsteam_csharpbindings/Steam.Additions.cs).
 
 ### Special Thanks
 - **Gramps** & the GodotSteam **contributors** for their GodotSteam project
